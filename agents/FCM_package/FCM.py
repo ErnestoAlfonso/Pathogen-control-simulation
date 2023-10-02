@@ -33,7 +33,7 @@ class FCM:
         return self.causal_graph[x,y]
 
     def get_action_concepts(self):
-        return self.concepts[self._sensitive_concepts+ self._internal_concepts:]
+        return self.concepts[self._sensitive_concepts + self._internal_concepts:]
     
     def fuzzy(self, parameter, interval : tuple, inv=False):
         """method for fuzzification 

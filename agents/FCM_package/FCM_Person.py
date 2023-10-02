@@ -1,33 +1,41 @@
 from .FCM import FCM
 
-class FCM_Prey(FCM):
+class FCM_Person(FCM):
     def __init__(self):
         self._sens_index_params = {
-            "pred_close" : (0, 2),
-            "pred_far" : (1, 2),
-            "food_close" : (2, 3),
-            "food_far" : (3, 3),
+            "people_sick_high" : (0, 2),
+            "people_sick_low" : (1, 2),
+            "food_high" : (2, 3),
+            "food_low" : (3, 3),
             "energy_low" : (4, 1.5),
             "energy_high" : (5, 1.5),
-            "food_local_high" : (6, 5),
-            "food_local_low" : (7, 5)
+            "money_high" : (6, 5),
+            "money_low" : (7, 5),
+            "sickness_high" : (8,4),
+            "sickness_low" : (9,4)
         }
         self._internals_index = {
             "fear" : 8,
-            "hunger" : 9,
-            "satisfaction" : 10,
-            "nuisance" : 11
+            "loneliness" : 9,
+            "hunger" : 10,
+            "necessity" : 11,
+            "disease" : 12,
+            "indifference" : 13,
+            "tiredness" : 14
+            
         }
         self._actions_index = {
-            "escape" : 12,
-            "search_food" : 13,
-            "exploration" : 14,
-            "wait" : 15,
-            "eat" : 16
+            "go_to_work" : 15,
+            "go_to_market" : 16,
+            "go_to_hospital" : 17,
+            "go_around" : 18,
+            "study" : 19,
+            "rest" : 20,
+            "prevent": 21
         } 
-        sens = 8
-        internal = 4
-        actions = 5
+        sens = 10
+        internal = 7
+        actions = 7
         super().__init__(sens, internal, actions)
         self._build_connections()
 
@@ -37,6 +45,7 @@ class FCM_Prey(FCM):
         self._build_sensInternal_connections()
         self._build_internalActions_connections()
     
+    # TODO: implement this with the params in the init
     def _build_sensInternal_connections(self):
         #fear
         self.causal_graph[0,0] = 4

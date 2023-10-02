@@ -1,7 +1,6 @@
 from typing import Generic, TypeVar, Dict, List, Optional
 from random import random, randint, choices, sample
 from agents.Person import person
-from agents.Mosquitos import mosquitos
 from places.Locations import Hospital, Home, Market, Work
 from tools.graph_tools import find_cliques
 
@@ -9,11 +8,10 @@ from tools.graph_tools import find_cliques
 Node = TypeVar("Node")
 
 class Graph:
-    def __init__(self, amount_nodes, amount_edges, type_Graph):
+    def __init__(self, amount_nodes, amount_edges):
         self.reset()
         self.amount_nodes = amount_nodes
         self.amount_edges = amount_edges
-        self.type_Graph = type_Graph
         self.create_nodes()
         self.create_edges()
         self.bipartite_graph = Bipartite_Graph(self)
@@ -26,11 +24,7 @@ class Graph:
     def create_nodes(self):
         i = 0
         while i < self.amount_nodes:
-            agent_type = {
-                "person" : person(i),
-                "mosquitos" : mosquitos(i)
-            }
-            node = agent_type[self.type_Graph]
+            node = person(i)
             self.nodes[i] = node
             self.edges[i] = set()
             i += 1
@@ -95,6 +89,8 @@ class Bipartite_Graph(Graph):
             for j in clique:
                 self.edges[j] = set()
                 self.edges[j].add(self.nodes_L[i])
+                self.graph.nodes[j].place_at_moment = self.nodes_L[i]
+                self.graph.nodes[j].freq_placces.add(self.nodes_L[i])
             i+=1
         # TODO: Find a the best relation between people and places
         node = Hospital("Hospital" + str(i))
@@ -105,6 +101,22 @@ class Bipartite_Graph(Graph):
         i+=1
         node = Market("Market" + str(i))
         self.nodes_L[i] = node
+
+# TODO: Make the dinamic part of this graph (changings edges)
+    def replace_edges(self, edges_to_replace: list):
+        for item in edges_to_replace:
+            self.edges[item[0]].remove(item[1])
+            self.edges[item[0]] = set()
+            self.edges[item[0]].add(item[2])
+    
+    # Find all the type of nodes of one kind. Maked for Hospitals, Works and Markets nodes.
+    def find_place(self, places):
+        places_node = []
+        for node in self.nodes_L:
+            if places in node:
+                places_node.append(node)
+        
+        return places_node
 
 
 

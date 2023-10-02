@@ -8,6 +8,12 @@ class Place:
     
     def type(self):
         return "place"
+    
+    def __str__(self):
+        return self.nombre + "-" + str(self.amount_mosq)
+
+    def __repr__(self):
+        return self.nombre + "-" + str(self.amount_mosq)
 
 
 class Home(Place):

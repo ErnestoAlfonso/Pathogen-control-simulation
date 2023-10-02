@@ -1,6 +1,6 @@
 from .FCM import FCM
 
-class FCM_Predator(FCM):
+class FCM_Mosquito(FCM):
     def __init__(self):
         self._sens_index_params = {
             "prey_close" : (0, 1.6),
@@ -13,10 +13,14 @@ class FCM_Predator(FCM):
             "food_local_low" : (7, 5)
         }
         self._internals_index = {
-            "chase_away" : 8,
-            "hunger" : 9,
-            "satisfaction" : 10,
-            "nuisance" : 11
+            "fear" : 8,
+            "loneliness" : 9,
+            "hunger" : 10,
+            "necessity" : 11,
+            "disease" : 12,
+            "indifference" : 13,
+            "tiredness" : 14
+
         }
         self._actions_index = {
             "hunt" : 12,
