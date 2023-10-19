@@ -13,7 +13,7 @@ class mosquitos:
     #     return
 
     def __repr__(self):
-        return "mosquito" + self.id
+        return "mosquito" + str(self.id)
     
     def locate(self):
         pass

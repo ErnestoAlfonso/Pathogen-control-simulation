@@ -1,6 +1,5 @@
 from typing import Any
 from .FCM_package.FCM_Person import FCM_Person
-from ..simulation.Graphs import Graph, Bipartite_Graph
 from random import choice
 
 # "go_to_work" : 15,
@@ -14,9 +13,13 @@ class person:
     def __init__(self, id):
         self.id = id
         self.state = 0
-        self.energy = 16
+        self.max_energy = 18
+        self.energy = 18
+        self.amount_food = 10
+        self.max_amount_food = 42
         self.money = 0
-        self.infected = False
+        self.infected = 0
+        self.max_infection = 10
         self.place_at_moment = 0
         self.freq_places = set()
         self.fcm = FCM_Person()
@@ -26,16 +29,117 @@ class person:
     #     return p
 
     def __repr__(self):
-        return "person" + self.id
+        return "person" + str(self.id)
 
     def locate(self):
         pass
 
     
     def get_perception(self, graph):
-        pass
+        people_sick = graph.amount_people_sick()
+        amount_people = graph.amount_nodes
+        self.update_sensitives_concept(people_sick, amount_people, graph.market_cost)
 
-    def go_to_work(self, bgraph: Bipartite_Graph):
+        self.fcm.update_concepts()
+
+    def update_sensitives_concept(self, amount_people_sick, amount_people, market_cost):
+        sens = self.fcm._sens_index_params
+
+        # Sick_person
+        self.fcm.concepts[sens["people_sick_high"][0]] = self.fcm.fuzzy(
+            amount_people_sick,
+            (
+                amount_people / sens["people_sick_high"][1],
+                2 * (amount_people / sens["people_sick_high"][1])
+            ),
+            inv = True
+        )
+
+        self.fcm.concepts[sens["people_sick_low"][0]] = self.fcm.fuzzy(
+            amount_people_sick,
+            (
+                amount_people / sens["people_sick_low"][1],
+                2 * (amount_people / sens["people_sick_low"][1])
+            )
+        )
+
+        # Food
+        self.fcm.concepts[sens["food_high"][0]] = self.fcm.fuzzy(
+            self.amount_food,
+            (
+                self.max_amount_food / sens["food_high"][1],
+                2 * (self.amount_food / sens["food_high"][1])
+            ),
+            inv = True
+        )
+
+        self.fcm.concepts[sens["food_low"][0]] = self.fcm.fuzzy(
+            self.amount_food,
+            (
+                self.max_amount_food / sens["food_low"][1],
+                2 * (self.max_amount_food / sens["food_low"][1])
+            )
+        )
+
+
+        # Energy
+        self.fcm.concepts[sens["energy_high"][0]] = self.fcm.fuzzy(
+            self.energy,
+            (
+                self.max_energy / sens["energy_high"][1],
+                2 * (self.max_energy / sens["energy_high"][1])
+            ),
+            inv = True
+        )
+
+        self.fcm.concepts[sens["energy_low"][0]] = self.fcm.fuzzy(
+            self.energy,
+            (
+                self.max_energy / sens["energy_low"][1],
+                2 * (self.max_energy / sens["energy_low"][1])
+            )
+        )
+
+        # Money
+        self.fcm.concepts[sens["money_high"][0]] = self.fcm.fuzzy(
+            self.money + 210 * (self.amount_food / 3),
+            ( 
+                market_cost / sens["money_high"][1],
+                market_cost * (364 / self.max_amount_food / 3)
+            ),
+            inv = True
+        )
+
+        self.fcm.concepts[sens["money_low"][0]] = self.fcm.fuzzy(
+            self.money + 210 * (self.amount_food / 3),
+            ( 
+                market_cost / sens["money_low"][1],
+                market_cost * (364 / self.max_amount_food / 3)
+            )
+        )
+
+
+        # Sick
+        self.fcm.concepts[sens["sickness_high"][0]] = self.fcm.fuzzy(
+            self.infected,
+            (
+                self.max_infection / sens["sickness_high"][1],
+                3 * (self.max_infection / sens["sickness_high"][1])
+            ),
+            inv = True
+        )
+
+        self.fcm.concepts[sens["sickness_low"][0]] = self.fcm.fuzzy(
+            self.infected,
+            (
+                self.max_infection / sens["sickness_low"][1],
+                2 * (self.max_infection / sens["sickness_low"][1])
+            )
+        )
+
+
+
+    def go_to_work(self, bgraph):
         for item in self.freq_places:
             if "Work" in item:
                 work = item
@@ -46,7 +150,7 @@ class person:
         bgraph.replace_edges(list_loc_change)
 
 
-    def go_to_market(self, bgraph: Bipartite_Graph):
+    def go_to_market(self, bgraph):
         for item in self.freq_places:
             if "Market" in item:
                 market = item
@@ -57,7 +161,7 @@ class person:
         list_loc_change = [(self.id, self.place_at_moment, market)]
         bgraph.replace_edges(list_loc_change)
         
-    def go_to_hospital(self, bgraph: Bipartite_Graph):
+    def go_to_hospital(self, bgraph):
         for item in self.freq_places:
             if "Hospital" in item:
                 hospital = item
@@ -67,10 +171,10 @@ class person:
         list_loc_change = [(self.id, self.place_at_moment,hospital)]
         bgraph.replace_edges(list_loc_change)
     
-    def study(self, bgraph: Bipartite_Graph):
+    def study(self, bgraph):
         pass
 
-    def rest(self, bgraph: Bipartite_Graph):
+    def rest(self, bgraph):
         for item in self.freq_places:
             if "Home" in item:
                 home = item
@@ -80,7 +184,7 @@ class person:
 
         self.energy = 16
     
-    def prevent(self, bgraph: Bipartite_Graph):
+    def prevent(self, bgraph):
         for item in self.freq_places:
             if "Home" in item:
                 home = item
@@ -89,6 +193,8 @@ class person:
         bgraph.replace_edges(list_loc_change)
 
         # TODO: make a parameter in mosquitos to change here to prevent bites
+    
+    
 
 
 

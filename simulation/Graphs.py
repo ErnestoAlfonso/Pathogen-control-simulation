@@ -90,7 +90,7 @@ class Bipartite_Graph(Graph):
                 self.edges[j] = set()
                 self.edges[j].add(self.nodes_L[i])
                 self.graph.nodes[j].place_at_moment = self.nodes_L[i]
-                self.graph.nodes[j].freq_placces.add(self.nodes_L[i])
+                self.graph.nodes[j].freq_places.add(self.nodes_L[i])
             i+=1
         # TODO: Find a the best relation between people and places
         node = Hospital("Hospital" + str(i))
@@ -102,18 +102,20 @@ class Bipartite_Graph(Graph):
         node = Market("Market" + str(i))
         self.nodes_L[i] = node
 
-# TODO: Make the dinamic part of this graph (changings edges)
+# Done
     def replace_edges(self, edges_to_replace: list):
         for item in edges_to_replace:
             self.edges[item[0]].remove(item[1])
             self.edges[item[0]] = set()
             self.edges[item[0]].add(item[2])
+        return "edge replaced"
     
     # Find all the type of nodes of one kind. Maked for Hospitals, Works and Markets nodes.
+    # Done
     def find_place(self, places):
         places_node = []
-        for node in self.nodes_L:
-            if places in node:
+        for node in self.nodes_L.values():
+            if places in str(node):
                 places_node.append(node)
         
         return places_node
