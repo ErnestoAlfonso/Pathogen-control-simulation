@@ -18,7 +18,7 @@ def run_simulation(amount_nodes, amount_edges, market_cost):
     for key in graph.nodes:
         dictOfAction[key] = []
     # Realizar la simulación
-    # TODO: Use parallelism to make this more efficient 
+    # TODO: Use parallelism to make this more efficient.
     while hora_actual <= hora_inicial + duracion_simulacion:
         for person in graph.nodes.values():
             person.get_perception(graph)
