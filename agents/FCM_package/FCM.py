@@ -24,6 +24,7 @@ class FCM:
         for i in range(rows):
             current += self.causal_graph[i, current_concept - self._sensitive_concepts] * old_concepts[i]
         result = expit(array([current]))
+        # TODO: Check why in the first iteration all the action concept have 0.5 of value 
         return result[0]
 
     def get_node(self, index : int):

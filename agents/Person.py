@@ -1,5 +1,6 @@
 from typing import Any
 from .FCM_package.FCM_Person import FCM_Person
+import random
 from random import choice
 
 # "go_to_work" : 15,
@@ -33,6 +34,39 @@ class person:
 
     def locate(self):
         pass
+
+    def choose_action(self):
+        actions = list(self.fcm.get_action_concepts())
+        sum_actions = sum(actions)
+        for i in range(len(actions)):
+            actions[i] = actions[i] / sum_actions
+        r = random.random()
+        inf = 0
+        sup = 1
+        for i in range(len(actions)):
+            if actions[i] > inf and actions[i] < r:
+                inf = actions[i]
+            if actions[i] < sup and actions[i] > r:
+                sup = actions[i]
+        if sup == 1:
+            return actions.index(inf)
+        if inf == 0:
+            return 0
+        
+        return actions.index(sup)
+    
+    def make_action(self, action, bgrpah):
+        actions = {
+            0 : self.go_to_hospital,
+            1 : self.go_to_market,
+            2 : self.go_to_work,
+            3 : self.go_around,
+            4 : self.study,
+            5 : self.rest,
+            6 : self.prevent
+        }
+
+        return actions[action](bgrpah)
 
     
     def get_perception(self, graph):
@@ -141,7 +175,7 @@ class person:
 
     def go_to_work(self, bgraph):
         for item in self.freq_places:
-            if "Work" in item:
+            if "Work" in str(item):
                 work = item
             else: 
                 work_places = bgraph.find_place("Work")
@@ -152,7 +186,7 @@ class person:
 
     def go_to_market(self, bgraph):
         for item in self.freq_places:
-            if "Market" in item:
+            if "Market" in str(item):
                 market = item
             else:
                 market_places = bgraph.find_place("Market")
@@ -163,7 +197,7 @@ class person:
         
     def go_to_hospital(self, bgraph):
         for item in self.freq_places:
-            if "Hospital" in item:
+            if "Hospital" in str(item):
                 hospital = item
             else:
                 hospital_places = bgraph.find_place("Hospital")
@@ -174,9 +208,12 @@ class person:
     def study(self, bgraph):
         pass
 
+    def go_around(self, bgraph):
+        pass
+
     def rest(self, bgraph):
         for item in self.freq_places:
-            if "Home" in item:
+            if "Home" in str(item):
                 home = item
         
         list_loc_change = [(self.id, self.place_at_moment, home)]
@@ -186,7 +223,7 @@ class person:
     
     def prevent(self, bgraph):
         for item in self.freq_places:
-            if "Home" in item:
+            if "Home" in str(item):
                 home = item
         
         list_loc_change = [(self.id, self.place_at_moment, home)]

@@ -5,6 +5,7 @@ class Place:
     def __init__(self, nombre):
         self.nombre = nombre
         self.amount_mosq = 0
+        self.mosquitos = []
     
     def type(self):
         return "place"
