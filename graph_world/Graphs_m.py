@@ -2,12 +2,13 @@ from typing import Generic, TypeVar, Dict, List, Optional
 from random import random, randint, choices, sample
 from agents.Person import person
 from places.Locations import Hospital, Home, Market, Work
-from tools.graph_tools import find_cliques
+from tools.graph_m_tools import find_cliques
+
 
 
 Node = TypeVar("Node")
 
-class Graph:
+class Graph_m:
     def __init__(self, amount_nodes, amount_edges, market_cost):
         self.reset()
         self.amount_nodes = amount_nodes
@@ -81,8 +82,8 @@ class Graph:
 
 
 
-class Bipartite_Graph(Graph):
-    def __init__(self, graph: Graph):
+class Bipartite_Graph(Graph_m):
+    def __init__(self, graph: Graph_m):
         self.nodes_L = {}
         self.graph = graph
         self.edges = {}
@@ -99,10 +100,11 @@ class Bipartite_Graph(Graph):
         for clique in cliques:
             self.nodes_L[i] = Home("Home" + str(i))
             for j in clique:
-                self.edges[j] = set()
-                self.edges[j].add(self.nodes_L[i])
-                self.graph.nodes[j].place_at_moment = self.nodes_L[i]
-                self.graph.nodes[j].freq_places.add(self.nodes_L[i])
+                if len(self.graph.nodes[j].freq_places) == 0:
+                    self.edges[j] = set()
+                    self.edges[j].add(self.nodes_L[i])
+                    self.graph.nodes[j].place_at_moment = self.nodes_L[i]
+                    self.graph.nodes[j].freq_places.add(self.nodes_L[i])
             i+=1
         # TODO: Find a the best relation between people and places
         node = Hospital("Hospital" + str(i))
@@ -117,7 +119,7 @@ class Bipartite_Graph(Graph):
 # Done
     def replace_edges(self, edges_to_replace: list):
         for item in edges_to_replace:
-            self.edges[item[0]].remove(item[1])
+            self.edges[item[0]].discard(item[1])
             self.edges[item[0]] = set()
             self.edges[item[0]].add(item[2])
             self.graph.nodes[item[0]].place_at_moment = list(self.edges[item[0]])[0]
