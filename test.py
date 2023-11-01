@@ -22,7 +22,7 @@ def DFActions(action, person):
     elif action == 5:
         return "ESTOY PREVINIENDO " + str(person)
     
-def action_per_person(graph,person):
+def action_per_person(graph: Graph_m,person):
     person.get_perception(graph)
     action = person.choose_action()
     person.energy -= 1
@@ -87,9 +87,9 @@ def main():
     paso_de_tiempo = datetime.timedelta(hours = 1)
 
     # Definir la hora de inicio de la simulación
-    hora_actual = datetime.datetime(2023, 10, 22, 10, 0)  # Por ejemplo, 21 de septiembre de 2023 a las 9:00 a.m.
+    hora_actual = datetime.datetime(2023, 10, 22, 10, 0)  
 
-    graph = Graph(amount_nodes,amount_edges, market_cost)
+    graph = Graph_m(amount_nodes,amount_edges, market_cost)
     dictOfAction = {}
     for key in graph.nodes:
         dictOfAction[key] = []

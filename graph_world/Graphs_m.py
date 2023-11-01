@@ -3,17 +3,19 @@ from random import random, randint, choices, sample
 from agents.Person import person
 from places.Locations import Hospital, Home, Market, Work
 from tools.graph_m_tools import find_cliques
-
+import igraph as ig
 
 
 Node = TypeVar("Node")
 
-class Graph_m:
+class Graph_m():
     def __init__(self, amount_nodes, amount_edges, market_cost):
         self.reset()
         self.amount_nodes = amount_nodes
         self.amount_edges = amount_edges
         self.market_cost = market_cost
+        self.graph = ig.Graph.GRG(self.amount_nodes, 0.2)
+        self.add_prop_person()
         self.create_nodes()
         self.create_edges()
         self.bipartite_graph = Bipartite_Graph(self)
@@ -21,6 +23,17 @@ class Graph_m:
     def reset(self):
         self.nodes = {}
         self.edges = {}
+        self.graph = None
+
+    def add_prop_person(self):
+        my_list = []
+        i=0
+        while i < self.amount_nodes:
+            node = person(i)
+            my_list.append(node)
+            i+=1
+        self.graph.vs["person"] = my_list
+        print(self.graph.vs["person"])
 
     # region Nodes
     def create_nodes(self):
@@ -50,15 +63,17 @@ class Graph_m:
     
     # region Edges
     def create_edges(self):
-        nodes_chosens = []
-        edge_try = tuple(sample(list(self.nodes.keys()), k=2))
-        for i in range(self.amount_edges):
-            while edge_try in nodes_chosens:
-                edge_try = tuple(sample(list(self.nodes.keys()), k=2))
-            nodes_chosens.append(edge_try)
-        for edge in nodes_chosens:
-            self.edges[edge[0]].add(edge[1])
-            self.edges[edge[1]].add(edge[0])
+        nodes = []
+        for node in self.graph.vs:
+            nodes = self.graph.neighbors(node)
+        # edge_try = tuple(sample(list(self.nodes.keys()), k=2))
+        # for i in range(self.amount_edges):
+        #     while edge_try in nodes_chosens:
+        #         edge_try = tuple(sample(list(self.nodes.keys()), k=2))
+        #     nodes_chosens.append(edge_try)
+            for n in nodes:
+                self.edges[node.index].add(n)
+                self.edges[n].add(node.index)
 
     # def add_edges(self, edges: list(tuple)):
     #     for edge innodes_p
@@ -100,11 +115,14 @@ class Bipartite_Graph(Graph_m):
         for clique in cliques:
             self.nodes_L[i] = Home("Home" + str(i))
             for j in clique:
-                if len(self.graph.nodes[j].freq_places) == 0:
+                if len(self.graph.graph.vs["person"][j].freq_places) == 0:
                     self.edges[j] = set()
                     self.edges[j].add(self.nodes_L[i])
                     self.graph.nodes[j].place_at_moment = self.nodes_L[i]
                     self.graph.nodes[j].freq_places.add(self.nodes_L[i])
+                    self.graph.graph.vs["person"][j].place_at_moment = self.nodes_L[i]
+                    self.graph.graph.vs["person"][j].freq_places.add(self.nodes_L[i])
+                    # TODO: Delete self.graph.nodes and only use .vs["person"]
             i+=1
         # TODO: Find a the best relation between people and places
         node = Hospital("Hospital" + str(i))
@@ -122,7 +140,7 @@ class Bipartite_Graph(Graph_m):
             self.edges[item[0]].discard(item[1])
             self.edges[item[0]] = set()
             self.edges[item[0]].add(item[2])
-            self.graph.nodes[item[0]].place_at_moment = list(self.edges[item[0]])[0]
+            self.graph.graph.vs["person"][item[0]].place_at_moment = list(self.edges[item[0]])[0]
         return "edge replaced"
     
     # Find all the type of nodes of one kind. Maked for Hospitals, Works and Markets nodes.

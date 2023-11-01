@@ -202,7 +202,7 @@ class person:
             else:
                 hospital_places = bgraph.find_place("Hospital")
                 hospital = choice(hospital_places)
-        list_loc_change = [(self.id, self.place_at_moment,hospital)]
+        list_loc_change = [(self.id, self.place_at_moment, hospital)]
         bgraph.replace_edges(list_loc_change)
     
     def study(self, bgraph):
