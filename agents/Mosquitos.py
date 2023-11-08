@@ -9,7 +9,7 @@ class mosquitos:
         self.state = 0
         self.hunger = 0
         self.infected = False
-        self.prob_of_byte = 0.2
+        self.prob_of_byte = 0.06
     # def __call__(self, ):
     #     return
 

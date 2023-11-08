@@ -1,6 +1,7 @@
 from typing import Generic, TypeVar, Dict, List, Optional
 from random import random, randint, choices, sample
 from agents.Person import person
+from agents.Mosquitos import mosquitos
 from places.Locations import Hospital, Home, Market, Work
 from tools.graph_m_tools import find_cliques
 import igraph as ig
@@ -14,7 +15,7 @@ class Graph_m():
         self.amount_nodes = amount_nodes
         self.amount_edges = amount_edges
         self.market_cost = market_cost
-        self.graph = ig.Graph.GRG(self.amount_nodes, 0.2)
+        self.graph = ig.Graph.GRG(self.amount_nodes, 0.05)
         self.add_prop_person()
         self.create_nodes()
         self.create_edges()
@@ -56,8 +57,8 @@ class Graph_m():
         if node not in self.nodes:
             raise KeyError("Node is not in graph")
         else:
-            self.delete_edges(node.id)
-            self.nodes.pop(node.id)
+            self.delete_edges(node)
+            self.nodes.pop(node)
     
     #endregion
     
@@ -80,8 +81,8 @@ class Graph_m():
     #         self.edges[edge[0]].append(edge[1])
     #         self.edges[edge[1]].append(edge[0])
     
-    # def delete_edges(self, node):
-    #     self.edges.pop(node.id)
+    def delete_edges(self, node):
+        self.edges.pop(node)
     #endregion
 
 
@@ -114,6 +115,9 @@ class Bipartite_Graph(Graph_m):
         i=0
         for clique in cliques:
             self.nodes_L[i] = Home("Home" + str(i))
+            for item in range(self.nodes_L[i].amount_mosq):
+                mos = mosquitos(item)
+                self.nodes_L[i].mosquitos.append(mos)
             for j in clique:
                 if len(self.graph.graph.vs["person"][j].freq_places) == 0:
                     self.edges[j] = set()
@@ -127,12 +131,22 @@ class Bipartite_Graph(Graph_m):
         # TODO: Find a the best relation between people and places
         node = Hospital("Hospital" + str(i))
         self.nodes_L[i] = node
+        for item in range(self.nodes_L[i].amount_mosq):
+            mos = mosquitos(item)
+            self.nodes_L[i].mosquitos.append(mos)
+            self.nodes_L[i].mosquitos[item].infected = True
         i += 1
         node = Work("Work" + str(i))
         self.nodes_L[i] = node
+        for item in range(self.nodes_L[i].amount_mosq):
+            mos = mosquitos(item)
+            self.nodes_L[i].mosquitos.append(mos)
         i += 1
         node = Market("Market" + str(i))
         self.nodes_L[i] = node
+        for item in range(self.nodes_L[i].amount_mosq):
+            mos = mosquitos(item)
+            self.nodes_L[i].mosquitos.append(mos)
 
 # Done
     def replace_edges(self, edges_to_replace: list):

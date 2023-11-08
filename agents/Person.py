@@ -17,8 +17,9 @@ class person:
         self.max_energy = 18
         self.energy = 18
         self.amount_food = 10
+        self.count = 0
         self.max_amount_food = 42
-        self.money = 0
+        self.money = 10
         self.infected = 0
         self.max_infection = 10
         self.place_at_moment = 0
@@ -36,6 +37,8 @@ class person:
         pass
 
     def choose_action(self):
+        if self.energy <= 0:
+            return 5
         actions = list(self.fcm.get_action_concepts())
         sum_actions = sum(actions)
         for i in range(len(actions)):
@@ -56,10 +59,17 @@ class person:
         return actions.index(sup)
     
     def make_action(self, action, bgrpah):
+        self.count += 1
+        if self.count % 6 == 0:
+            if self.amount_food - 1 >= 0:
+                self.amount_food -= 1
+        if self.infected == 10:
+            bgrpah.graph.delete_node(self.id)
+            return 0
         actions = {
-            0 : self.go_to_hospital,
+            0 : self.go_to_work,
             1 : self.go_to_market,
-            2 : self.go_to_work,
+            2 : self.go_to_hospital,
             3 : self.go_around,
             4 : self.study,
             5 : self.rest,
@@ -73,8 +83,8 @@ class person:
         people_sick = graph.amount_people_sick()
         amount_people = graph.amount_nodes
         self.update_sensitives_concept(people_sick, amount_people, graph.market_cost)
-
-        self.fcm.update_concepts()
+        for i in range(3):
+            self.fcm.update_concepts()
 
     def update_sensitives_concept(self, amount_people_sick, amount_people, market_cost):
         sens = self.fcm._sens_index_params
@@ -102,7 +112,7 @@ class person:
             self.amount_food,
             (
                 self.max_amount_food / sens["food_high"][1],
-                2 * (self.amount_food / sens["food_high"][1])
+                2 * (self.max_amount_food / sens["food_high"][1])
             ),
             inv = True
         )
@@ -121,7 +131,7 @@ class person:
             self.energy,
             (
                 self.max_energy / sens["energy_high"][1],
-                2 * (self.max_energy / sens["energy_high"][1])
+                3 * (self.max_energy / sens["energy_high"][1])
             ),
             inv = True
         )
@@ -130,13 +140,13 @@ class person:
             self.energy,
             (
                 self.max_energy / sens["energy_low"][1],
-                2 * (self.max_energy / sens["energy_low"][1])
+                3 * (self.max_energy / sens["energy_low"][1])
             )
         )
 
         # Money
         self.fcm.concepts[sens["money_high"][0]] = self.fcm.fuzzy(
-            self.money + 210 * (self.amount_food / 3),
+            self.money * (self.amount_food / 3),
             ( 
                 market_cost / sens["money_high"][1],
                 market_cost * (364 / self.max_amount_food / 3)
@@ -145,7 +155,7 @@ class person:
         )
 
         self.fcm.concepts[sens["money_low"][0]] = self.fcm.fuzzy(
-            self.money + 210 * (self.amount_food / 3),
+            self.money * (self.amount_food / 3),
             ( 
                 market_cost / sens["money_low"][1],
                 market_cost * (364 / self.max_amount_food / 3)
@@ -182,6 +192,17 @@ class person:
                 work = choice(work_places)
         list_loc_change = [(self.id, self.place_at_moment, work)]
         bgraph.replace_edges(list_loc_change)
+        self.money += 30
+        self.energy -= 1
+        for i in range(work.amount_mosq):
+            result = random.random() < work.mosquitos[i].prob_of_byte
+            if self.infected > 0:
+                work.mosquitos[i].infected = True
+            
+            elif result and work.mosquitos[i].infected:
+                self.infected = random.random() * 5
+            
+            
 
 
     def go_to_market(self, bgraph):
@@ -191,9 +212,22 @@ class person:
             else:
                 market_places = bgraph.find_place("Market")
                 market = choice(market_places)
-        
+
         list_loc_change = [(self.id, self.place_at_moment, market)]
         bgraph.replace_edges(list_loc_change)
+
+        if self.money - bgraph.graph.market_cost < 0:
+            self.amount_food += 10
+            self.money -= bgraph.graph.market_cost
+
+
+        for i in range(market.amount_mosq):
+            result = random.random() < market.mosquitos[i].prob_of_byte
+            if self.infected > 0:
+                market.mosquitos[i].infected = True
+            
+            elif result and market.mosquitos[i].infected:
+                self.infected = random.random() * 5
         
     def go_to_hospital(self, bgraph):
         for item in self.freq_places:
@@ -204,6 +238,14 @@ class person:
                 hospital = choice(hospital_places)
         list_loc_change = [(self.id, self.place_at_moment, hospital)]
         bgraph.replace_edges(list_loc_change)
+        self.infected -= 1
+        for i in range(hospital.amount_mosq):
+            result = random.random() < hospital.mosquitos[i].prob_of_byte
+            if self.infected > 0:
+                hospital.mosquitos[i].infected = True
+            
+            elif result and hospital.mosquitos[i].infected:
+                self.infected = random.random() * 5
     
     def study(self, bgraph):
         pass
@@ -218,20 +260,40 @@ class person:
         
         list_loc_change = [(self.id, self.place_at_moment, home)]
         bgraph.replace_edges(list_loc_change)
+        for i in range(home.amount_mosq):
+            result = random.random() < home.mosquitos[i].prob_of_byte
+            if self.infected > 0:
+                home.mosquitos[i].infected = True
+            
+            elif result and home.mosquitos[i].infected:
+                self.infected = random.random() * 5
 
-        self.energy = 16
+        self.energy +=3
     
     def prevent(self, bgraph):
         for item in self.freq_places:
             if "Home" in str(item):
                 home = item
-        
+
         list_loc_change = [(self.id, self.place_at_moment, home)]
         bgraph.replace_edges(list_loc_change)
+        result_of_prevent = random.random()
+        for i in range(home.amount_mosq):
+            if result_of_prevent > 0.5:
+                home.mosquitos[i].prob_of_byte -= 0.03
 
-        # TODO: make a parameter in mosquitos to change here to prevent bites
-    
-    
+            if result_of_prevent <= 0.5:
+                home.mosquitos[i].prob_of_byte -= 0.01
+
+            result = random.random() < home.mosquitos[i].prob_of_byte
+            if self.infected > 0:
+                home.mosquitos[i].infected = True
+            
+            elif result and home.mosquitos[i].infected:
+                self.infected = random.random() * 5
+        
+
+
 
 
 

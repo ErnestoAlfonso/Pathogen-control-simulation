@@ -4,7 +4,7 @@
 class Place:
     def __init__(self, nombre):
         self.nombre = nombre
-        self.amount_mosq = 0
+        self.amount_mosq = 10
         self.mosquitos = []
     
     def type(self):
