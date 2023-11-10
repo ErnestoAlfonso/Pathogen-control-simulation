@@ -2,9 +2,9 @@
 
 
 class Place:
-    def __init__(self, nombre):
+    def __init__(self, nombre, amount_mosquito):
         self.nombre = nombre
-        self.amount_mosq = 10
+        self.amount_mosq = amount_mosquito
         self.mosquitos = []
     
     def type(self):

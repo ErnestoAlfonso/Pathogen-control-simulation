@@ -1,7 +1,7 @@
 
 from customtkinter import CTk, CTkFrame, CTkButton, CTkEntry, CTkLabel, CTkCheckBox
 from tkinter import PhotoImage
-from simulation.dinamic_control_dengue import run_simulation
+from simulation.dinamic_control_dengue import Simulation
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import igraph as ig
@@ -32,9 +32,15 @@ class App(CTk):
         self.frame_graph = CTkFrame(self,fg_color= c_black, bg_color=c_black, border_color= c_black)
         self.frame_graph.grid(column = 1, row = 1, sticky = 'nsew', padx = 50, pady = 50, columnspan = 3, rowspan = 3)
 
+        self.frame_plot = CTkFrame(self,fg_color= c_black, bg_color=c_black, border_color= c_black)
+        self.frame_plot.grid(column = 0, row = 2, sticky = 'nsew', padx = 50, pady = 50, columnspan =1)
+
 
         self.fram_option.columnconfigure(0, weight = 1)
         self.fram_option.rowconfigure((0,1,2,3,4,5), weight = 1)
+
+        self.frame_plot.rowconfigure(0, weight = 1)
+        self.frame_plot.columnconfigure(0, weight = 1)
 
         
 
@@ -53,20 +59,37 @@ class App(CTk):
         
         self.time.grid(columnspan = 2, row = 1, padx = 1, pady = 1)
 
+        self.prob_edges = CTkEntry(self.fram_option, font = ('sans rerif', 12), placeholder_text = "Probabilidad de Aristas",
+                        border_color = c_green, fg_color = c_black, width = 220, height = 40)
+        
+        self.prob_edges.grid(columnspan = 2, row = 2, padx = 1, pady = 1) 
+
+        self.mosq = CTkEntry(self.fram_option, font = ('sans rerif', 12), placeholder_text = "Mosquitos por Lugares",
+                        border_color = c_green, fg_color = c_black, width = 220, height = 40)
+
+        self.mosq.grid(columnspan = 2, row = 3, padx = 1, pady = 1) 
+
 
         self.run_sim = CTkButton(self.fram_option, font = ('sans rerif',12),corner_radius=12, border_color = c_green, 
                             fg_color=c_black, text= "Simular", text_color = c_green, width=220, height=40,
                             border_width=2, command = self.run_sim_callback)
-        
-        
+
+
         self.run_sim.grid(columnspan=2, row = 4, padx = 1, pady = 1)
 
-        self.run_sim = CTkButton(self.fram_option, font = ('sans rerif',12),corner_radius=12, border_color = c_green, 
+        self.clean_graph = CTkButton(self.fram_option, font = ('sans rerif',12),corner_radius=12, border_color = c_green, 
                             fg_color=c_black, text= "Limpiar el grafo", text_color = c_green, width=220, height=40,
                             border_width=2, command = self.destroy_canvas)
-        
-        
-        self.run_sim.grid(columnspan=2, row = 5, padx = 1, pady = 1)
+
+
+        self.clean_graph.grid(columnspan=2, row = 5, padx = 1, pady = 1)
+
+        self.plot_sim = CTkButton(self.frame_plot, font = ('sans rerif',12),corner_radius=12, border_color = c_green, 
+                            fg_color=c_black, text= "Graficar simulación", text_color = c_green, width=220, height=40,
+                            border_width=2, command = self.simulation_plot)
+        self.plot_sim.configure(state= 'disabled')
+
+        self.plot_sim.grid(row=0, columnspan = 1, padx = 1, pady = 1)
 
 
 
@@ -84,8 +107,14 @@ class App(CTk):
                 self.canvas.get_tk_widget().destroy()
             people = int(self.people.get())
             time = int(self.time.get())
+            prob_of_edges = float(self.prob_edges.get())
+            mosquitos = int(self.mosq.get())
+        
+            self.sim = Simulation(people,time,240,prob_of_edges,mosquitos)
 
-            self.graph = run_simulation(people, time, 240)
+            self.graph = self.sim.run_simulation()
+
+            self.plot_sim.configure(state = 'normal')
 
             # layout = self.graph.layout('kk')
             layout = self.graph.layout_kamada_kawai()
@@ -105,7 +134,28 @@ class App(CTk):
 
         
         except Exception as e:
-            return "ERROR: el valor de las personas o el tiempo debe ser un numero"
+            print(e)
+            # return "ERROR: el valor de las personas, el tiempo y la probabilidad de aristas debe ser un numero"
+    
+    def simulation_plot(self):
+        ventana_grafico = CTk()
+        pers_hour = self.sim.dictOfHours
+        cont = [0 for x in range(len(pers_hour))]
+        count = -1
+        for lista in pers_hour.values():
+            count +=1
+            for i in range(len(lista)):
+                if lista[i][1]:
+                    cont[count] += 1
+        
+        ventana_grafico.title("Gráfico")
+        plt.clf()
+
+        plt.plot(cont)
+        plt.xlabel('Dias de simulacion')
+        plt.ylabel('Personas enfermas')
+        plt.title('Grafico de la simulacion')
+        plt.show()
 
 
 

@@ -3,13 +3,6 @@ from .FCM_package.FCM_Person import FCM_Person
 import random
 from random import choice
 
-# "go_to_work" : 15,
-#             "go_to_market" : 16,
-#             "go_to_hospital" : 17,
-#             "go_around" : 18,
-#             "study" : 19,
-#             "rest" : 20,
-#             "prevent": 21
 class person:
     def __init__(self, id):
         self.id = id
