@@ -10,11 +10,13 @@ import igraph as ig
 Node = TypeVar("Node")
 
 class Graph_m():
-    def __init__(self, amount_nodes, prob_of_edges, market_cost,amount_mosq_per_places):
+    def __init__(self, amount_nodes, prob_of_edges, market_cost, amount_mosq_per_places, prob_mosq_bite_ap, prob_inf_if_mosq_bite):
         self.reset()
         self.amount_nodes = amount_nodes
         self.prob_of_edges = prob_of_edges
         self.market_cost = market_cost
+        self.prob_mosq_bite_ap = prob_mosq_bite_ap
+        self.prob_inf_if_mosq_bite = prob_inf_if_mosq_bite
         self.amount_mosq_per_places = amount_mosq_per_places
         self.graph = ig.Graph.GRG(self.amount_nodes, prob_of_edges)
         
@@ -118,7 +120,7 @@ class Bipartite_Graph(Graph_m):
         for clique in cliques:
             self.nodes_L[i] = Home("Home" + str(i), self.graph.amount_mosq_per_places)
             for item in range(self.nodes_L[i].amount_mosq):
-                mos = mosquitos(item, 0.06)
+                mos = mosquitos(item, 0.005)
                 self.nodes_L[i].mosquitos.append(mos)
             for j in clique:
                 if len(self.graph.graph.vs["person"][j].freq_places) == 0:
@@ -134,21 +136,21 @@ class Bipartite_Graph(Graph_m):
         node = Hospital("Hospital" + str(i), self.graph.amount_mosq_per_places)
         self.nodes_L[i] = node
         for item in range(self.nodes_L[i].amount_mosq):
-            mos = mosquitos(item, 0.06)
+            mos = mosquitos(item, 0.005)
             self.nodes_L[i].mosquitos.append(mos)
             
         i += 1
         node = Work("Work" + str(i), self.graph.amount_mosq_per_places)
         self.nodes_L[i] = node
         for item in range(self.nodes_L[i].amount_mosq):
-            mos = mosquitos(item, 0.06)
+            mos = mosquitos(item, 0.005)
             self.nodes_L[i].mosquitos.append(mos)
             self.nodes_L[i].mosquitos[item].infected = True
         i += 1
         node = Market("Market" + str(i), self.graph.amount_mosq_per_places)
         self.nodes_L[i] = node
         for item in range(self.nodes_L[i].amount_mosq):
-            mos = mosquitos(item, 0.06)
+            mos = mosquitos(item, 0.005)
             self.nodes_L[i].mosquitos.append(mos)
 
 # Done

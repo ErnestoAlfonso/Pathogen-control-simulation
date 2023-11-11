@@ -2,6 +2,8 @@ from typing import Any
 from .FCM_package.FCM_Person import FCM_Person
 import random
 from random import choice
+import datetime
+import time
 
 class person:
     def __init__(self, id):
@@ -14,6 +16,9 @@ class person:
         self.max_amount_food = 42
         self.money = 10
         self.infected = 0
+        self.amount_people_sick = 0
+        self.i_atleast_one_time = False
+        self.last_infection = 0
         self.max_infection = 10
         self.place_at_moment = 0
         self.freq_places = set()
@@ -51,14 +56,23 @@ class person:
         
         return actions.index(sup)
     
-    def make_action(self, action, bgrpah):
+    def make_action(self, action, bgrpah, hora_actual):
         self.count += 1
         if self.count % 6 == 0:
             if self.amount_food - 1 >= 0:
                 self.amount_food -= 1
-        if self.infected == 10:
-            bgrpah.graph.delete_node(self.id)
-            return 0
+        if hora_actual.hour == 0 and hora_actual.minute == 0:
+            if self.infected > 0:
+                self.i_atleast_one_time = True
+                self.recovery_or_not()
+            if self.infected > 10:
+                self.infected = 10
+
+        if self.infected:
+            r = random.random() < self.infected * 0.001
+            if r:
+                bgrpah.graph.delete_node(self.id)
+                return 0
         actions = {
             0 : self.go_to_work,
             1 : self.go_to_market,
@@ -73,9 +87,8 @@ class person:
 
     
     def get_perception(self, graph):
-        people_sick = graph.amount_people_sick()
         amount_people = graph.amount_nodes
-        self.update_sensitives_concept(people_sick, amount_people, graph.market_cost)
+        self.update_sensitives_concept(self.amount_people_sick, amount_people, graph.market_cost)
         for i in range(3):
             self.fcm.update_concepts()
 
@@ -175,6 +188,15 @@ class person:
         )
 
 
+    def recovery_or_not(self):
+        if self.infected == self.last_infection:
+            self.infected += 0.05
+        elif self.infected < self.last_infection:
+            self.last_infection = self.infected
+            self.infected -= 0.1
+        elif self.infected > self.last_infection:
+            self.last_infection = self.infected
+            self.infected += 0.05
 
     def go_to_work(self, bgraph):
         for item in self.freq_places:
@@ -187,13 +209,18 @@ class person:
         bgraph.replace_edges(list_loc_change)
         self.money += 30
         self.energy -= 1
-        for i in range(work.amount_mosq):
-            result = random.random() < work.mosquitos[i].prob_of_byte
-            if self.infected > 0:
-                work.mosquitos[i].infected = True
-            
-            elif result and work.mosquitos[i].infected:
-                self.infected = random.random() * 5
+        mosq_can_bite = random.random() < bgraph.graph.prob_mosq_bite_ap
+        if mosq_can_bite:
+            for i in range(int(work.amount_mosq * random.random())):
+                mosq_selected = random.choice(work.mosquitos)
+                result = random.random() < mosq_selected.prob_of_byte
+                r = random.random() < bgraph.graph.prob_inf_if_mosq_bite
+                if self.infected > 0 and r:
+                    work.mosquitos[i].infected = True
+                
+                elif result and mosq_selected.infected and r and not self.i_atleast_one_time:
+                    self.infected = random.random() * 5
+                    self.last_infection = self.infected
             
             
 
@@ -213,14 +240,19 @@ class person:
             self.amount_food += 10
             self.money -= bgraph.graph.market_cost
 
+        mosq_can_bite = random.random() < bgraph.graph.prob_mosq_bite_ap
 
-        for i in range(market.amount_mosq):
-            result = random.random() < market.mosquitos[i].prob_of_byte
-            if self.infected > 0:
-                market.mosquitos[i].infected = True
-            
-            elif result and market.mosquitos[i].infected:
-                self.infected = random.random() * 5
+        if mosq_can_bite:
+            for i in range(int(market.amount_mosq * random.random())):
+                mosq_selected = random.choice(market.mosquitos)
+                result = random.random() < mosq_selected.prob_of_byte
+                r = random.random() < bgraph.graph.prob_inf_if_mosq_bite
+                if self.infected > 0 and r:
+                    market.mosquitos[i].infected = True
+                
+                elif result and mosq_selected.infected and r and not self.i_atleast_one_time:
+                    self.infected = random.random() * 5
+                    self.last_infection = self.infected
         
     def go_to_hospital(self, bgraph):
         for item in self.freq_places:
@@ -231,17 +263,26 @@ class person:
                 hospital = choice(hospital_places)
         list_loc_change = [(self.id, self.place_at_moment, hospital)]
         bgraph.replace_edges(list_loc_change)
-        self.infected -= 1
-        for i in range(hospital.amount_mosq):
-            result = random.random() < hospital.mosquitos[i].prob_of_byte
-            if self.infected > 0:
-                hospital.mosquitos[i].infected = True
-            
-            elif result and hospital.mosquitos[i].infected:
-                self.infected = random.random() * 5
+        ran = random.random() < 0.6
+        if ran:
+            self.infected -= 1
+
+        mosq_can_bite = random.random() < bgraph.graph.prob_mosq_bite_ap
+
+        if mosq_can_bite:
+            for i in range(int(hospital.amount_mosq * random.random())):
+                mosq_selected = random.choice(hospital.mosquitos)
+                result = random.random() < mosq_selected.prob_of_byte
+                r = random.random() < bgraph.graph.prob_inf_if_mosq_bite
+                if self.infected > 0 and r:
+                    hospital.mosquitos[i].infected = True
+                
+                elif result and mosq_selected.infected and r and not self.i_atleast_one_time:
+                    self.infected = random.random() * 5
+                    self.last_infection = self.infected
     
     def study(self, bgraph):
-        pass
+        self.amount_people_sick = bgraph.graph.amount_people_sick()
 
     def go_around(self, bgraph):
         pass
@@ -253,13 +294,20 @@ class person:
         
         list_loc_change = [(self.id, self.place_at_moment, home)]
         bgraph.replace_edges(list_loc_change)
-        for i in range(home.amount_mosq):
-            result = random.random() < home.mosquitos[i].prob_of_byte
-            if self.infected > 0:
-                home.mosquitos[i].infected = True
-            
-            elif result and home.mosquitos[i].infected:
-                self.infected = random.random() * 5
+
+        mosq_can_bite = random.random() < bgraph.graph.prob_mosq_bite_ap
+
+        if mosq_can_bite:
+            for i in range(int(home.amount_mosq * random.random())):
+                mosq_selected = random.choice(home.mosquitos)
+                result = random.random() < mosq_selected.prob_of_byte
+                r = random.random() < bgraph.graph.prob_inf_if_mosq_bite
+                if self.infected > 0 and r:
+                    home.mosquitos[i].infected = True
+                
+                elif result and mosq_selected.infected and r and not self.i_atleast_one_time:
+                    self.infected = random.random() * 5
+                    self.last_infection = self.infected
 
         self.energy +=3
     
@@ -271,19 +319,25 @@ class person:
         list_loc_change = [(self.id, self.place_at_moment, home)]
         bgraph.replace_edges(list_loc_change)
         result_of_prevent = random.random()
-        for i in range(home.amount_mosq):
-            if result_of_prevent > 0.5:
-                home.mosquitos[i].prob_of_byte -= 0.03
 
-            if result_of_prevent <= 0.5:
-                home.mosquitos[i].prob_of_byte -= 0.01
+        mosq_can_bite = random.random() < bgraph.graph.prob_mosq_bite_ap
 
-            result = random.random() < home.mosquitos[i].prob_of_byte
-            if self.infected > 0:
-                home.mosquitos[i].infected = True
-            
-            elif result and home.mosquitos[i].infected:
-                self.infected = random.random() * 5
+        if mosq_can_bite:
+            for i in range(int(home.amount_mosq * random.random())):
+                if result_of_prevent > 0.5:
+                    home.mosquitos[i].prob_of_byte -= 0.0003
+
+                if result_of_prevent <= 0.5:
+                    home.mosquitos[i].prob_of_byte -= 0.0001
+                    mosq_selected = random.choice(home.mosquitos)
+                    result = random.random() < mosq_selected.prob_of_byte
+                r = random.random() < bgraph.graph.prob_inf_if_mosq_bite
+                if self.infected > 0 and r:
+                    home.mosquitos[i].infected = True
+                
+                elif result and mosq_selected.infected and r and not self.i_atleast_one_time:
+                    self.infected = random.random() * 5
+                    self.last_infection = self.infected
         
 
 

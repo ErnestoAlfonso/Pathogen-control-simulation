@@ -37,7 +37,7 @@ class App(CTk):
 
 
         self.fram_option.columnconfigure(0, weight = 1)
-        self.fram_option.rowconfigure((0,1,2,3,4,5), weight = 1)
+        self.fram_option.rowconfigure((0,1,2,3,4,5,6,7), weight = 1)
 
         self.frame_plot.rowconfigure(0, weight = 1)
         self.frame_plot.columnconfigure(0, weight = 1)
@@ -67,7 +67,17 @@ class App(CTk):
         self.mosq = CTkEntry(self.fram_option, font = ('sans rerif', 12), placeholder_text = "Mosquitos por Lugares",
                         border_color = c_green, fg_color = c_black, width = 220, height = 40)
 
-        self.mosq.grid(columnspan = 2, row = 3, padx = 1, pady = 1) 
+        self.mosq.grid(columnspan = 2, row = 3, padx = 1, pady = 1)
+
+        self.mosq_prob_bite_ap = CTkEntry(self.fram_option, font = ('sans rerif', 12), placeholder_text = "Probabilidad de picar por hora",
+                        border_color = c_green, fg_color = c_black, width = 220, height = 40)
+
+        self.mosq_prob_bite_ap.grid(columnspan = 2, row = 4, padx = 1, pady = 1) 
+
+        self.mosq_inf_if_bite = CTkEntry(self.fram_option, font = ('sans rerif', 12), placeholder_text = "Probabilidad de infectarse",
+                        border_color = c_green, fg_color = c_black, width = 220, height = 40)
+
+        self.mosq_inf_if_bite.grid(columnspan = 2, row = 5, padx = 1, pady = 1) 
 
 
         self.run_sim = CTkButton(self.fram_option, font = ('sans rerif',12),corner_radius=12, border_color = c_green, 
@@ -75,14 +85,14 @@ class App(CTk):
                             border_width=2, command = self.run_sim_callback)
 
 
-        self.run_sim.grid(columnspan=2, row = 4, padx = 1, pady = 1)
+        self.run_sim.grid(columnspan=2, row = 6, padx = 1, pady = 1)
 
         self.clean_graph = CTkButton(self.fram_option, font = ('sans rerif',12),corner_radius=12, border_color = c_green, 
                             fg_color=c_black, text= "Limpiar el grafo", text_color = c_green, width=220, height=40,
                             border_width=2, command = self.destroy_canvas)
 
 
-        self.clean_graph.grid(columnspan=2, row = 5, padx = 1, pady = 1)
+        self.clean_graph.grid(columnspan=2, row = 7, padx = 1, pady = 1)
 
         self.plot_sim = CTkButton(self.frame_plot, font = ('sans rerif',12),corner_radius=12, border_color = c_green, 
                             fg_color=c_black, text= "Graficar simulación", text_color = c_green, width=220, height=40,
@@ -109,8 +119,10 @@ class App(CTk):
             time = int(self.time.get())
             prob_of_edges = float(self.prob_edges.get())
             mosquitos = int(self.mosq.get())
+            prob_bite = float(self.mosq_prob_bite_ap.get())
+            prob_inf = float(self.mosq_inf_if_bite.get())
         
-            self.sim = Simulation(people,time,240,prob_of_edges,mosquitos)
+            self.sim = Simulation(people,time,240,prob_of_edges,mosquitos, prob_bite, prob_inf)
 
             self.graph = self.sim.run_simulation()
 
@@ -140,13 +152,21 @@ class App(CTk):
     def simulation_plot(self):
         ventana_grafico = CTk()
         pers_hour = self.sim.dictOfHours
-        cont = [0 for x in range(len(pers_hour))]
+        cont = [0 for x in range(int(len(pers_hour)/24))]
+        pers_counted = []
         count = -1
+        indice = 0
         for lista in pers_hour.values():
             count +=1
+            if count == 24:
+                count = -1
+                indice += 1
+                pers_counted.clear()
             for i in range(len(lista)):
-                if lista[i][1]:
-                    cont[count] += 1
+                if lista[i][1] and lista[i][0] not in pers_counted:
+                    pers_counted.append(lista[i][0])
+                    cont[indice] += 1
+            
         
         ventana_grafico.title("Gráfico")
         plt.clf()
