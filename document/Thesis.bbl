@@ -59,6 +59,67 @@
       \field{volume}{5}
       \field{year}{2002}
     \endentry
+    \entry{Balcan2009}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=ad2861c172974067b5514021c6749c84}{%
+           family={Balcan},
+           familyi={B\bibinitperiod},
+           given={Duygu},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f731fa93df6fd43118b11841cf1d484d}{%
+           family={Colizza},
+           familyi={C\bibinitperiod},
+           given={Vittoria},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1a5d85b2830a95c97212ffd4751f9be4}{%
+           family={Gonçalves},
+           familyi={G\bibinitperiod},
+           given={Bruno},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8a86586f493de6f754d35b4e9cf7c286}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Hao},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=99fe9ac60d3c964a46c59baca6611ada}{%
+           family={Ramasco},
+           familyi={R\bibinitperiod},
+           given={José},
+           giveni={J\bibinitperiod},
+           givenun=0,
+           suffix={J.},
+           suffixi={J\bibinitperiod},
+           suffixun=0}}%
+        {{un=0,uniquepart=base,hash=8f9932ed1839be02bb53a62b258449a8}{%
+           family={Vespignani},
+           familyi={V\bibinitperiod},
+           given={Alessandro},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3228440225180f56276e55eb36496e60}
+      \strng{fullhash}{cc1620cf9842501a5b5c5caf2f2554d6}
+      \strng{bibnamehash}{cc1620cf9842501a5b5c5caf2f2554d6}
+      \strng{authorbibnamehash}{cc1620cf9842501a5b5c5caf2f2554d6}
+      \strng{authornamehash}{3228440225180f56276e55eb36496e60}
+      \strng{authorfullhash}{cc1620cf9842501a5b5c5caf2f2554d6}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{PNAS}
+      \field{number}{51}
+      \field{title}{Multiscale mobility networks and the spatial spreading of infectious diseases}
+      \field{volume}{106}
+      \field{year}{2009}
+    \endentry
     \entry{Bissett2021}{article}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=47ce26c52acaa446fbe9fc1eede60f59}{%
@@ -103,6 +164,34 @@
       \field{volume}{303–327}
       \field{year}{2021}
     \endentry
+    \entry{Epstein2008}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=baaba4ae833250b58d25d0292a11c7ae}{%
+           family={Epstein},
+           familyi={E\bibinitperiod},
+           given={J.\bibnamedelimi M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{baaba4ae833250b58d25d0292a11c7ae}
+      \strng{fullhash}{baaba4ae833250b58d25d0292a11c7ae}
+      \strng{bibnamehash}{baaba4ae833250b58d25d0292a11c7ae}
+      \strng{authorbibnamehash}{baaba4ae833250b58d25d0292a11c7ae}
+      \strng{authornamehash}{baaba4ae833250b58d25d0292a11c7ae}
+      \strng{authorfullhash}{baaba4ae833250b58d25d0292a11c7ae}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Artificial Societies and Social Simulation}
+      \field{number}{4}
+      \field{title}{Why Model?}
+      \field{volume}{11}
+      \field{year}{2008}
+    \endentry
     \entry{Eubank2004}{article}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=45477ecc261c27f2340071170d4ae0d0}{%
@@ -142,10 +231,54 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Nature 429}
+      \field{journaltitle}{Nature}
       \field{title}{Modelling disease outbreaks in realistic urban social networks}
-      \field{volume}{180-184}
+      \field{volume}{429}
       \field{year}{2004}
+    \endentry
+    \entry{Ferguson2006}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=d520aa9f5e24845d5748a99a8f46c6e8}{%
+           family={Ferguson},
+           familyi={F\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f916e576d8292cef08b75c18930d2561}{%
+           family={Cummings},
+           familyi={C\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=268ec14849cfd73036103051d378ea56}{%
+           family={Fraser},
+           familyi={F\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=38026ba4ee6b102b47bf3ffb41325c8f}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{f39f98ee5e5cf00ffc3c0a8ccebe2c8e}
+      \strng{fullhash}{eb2ea19de615b3e68ce2e0349a26105d}
+      \strng{bibnamehash}{eb2ea19de615b3e68ce2e0349a26105d}
+      \strng{authorbibnamehash}{eb2ea19de615b3e68ce2e0349a26105d}
+      \strng{authornamehash}{f39f98ee5e5cf00ffc3c0a8ccebe2c8e}
+      \strng{authorfullhash}{eb2ea19de615b3e68ce2e0349a26105d}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature}
+      \field{title}{Strategies for mitigating an influenza pandemic}
+      \field{volume}{442}
+      \field{year}{2006}
     \endentry
     \entry{Gubler1995}{article}{}
       \name{author}{2}{}{%
@@ -310,6 +443,45 @@
       \field{title}{Tutorial on agent-based modelling and simulation}
       \field{volume}{151–162}
       \field{year}{2010}
+    \endentry
+    \entry{Morens2004}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=3eeba7c5edf4636c5bedc110e740fe1e}{%
+           family={Morens},
+           familyi={M\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6ebed2caea2296719e2ab4b5075b8b83}{%
+           family={Folkers},
+           familyi={F\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1ae7d1ca47251e007fab889d7f0a55d2}{%
+           family={Fauci},
+           familyi={F\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9980a49cb528ddb279a83e50358e71d3}
+      \strng{fullhash}{43b44675dde8ba35685e5dc4bf97d1c5}
+      \strng{bibnamehash}{43b44675dde8ba35685e5dc4bf97d1c5}
+      \strng{authorbibnamehash}{43b44675dde8ba35685e5dc4bf97d1c5}
+      \strng{authornamehash}{9980a49cb528ddb279a83e50358e71d3}
+      \strng{authorfullhash}{43b44675dde8ba35685e5dc4bf97d1c5}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature}
+      \field{title}{The challenge of emerging and re-emerging infectious diseases}
+      \field{volume}{430}
+      \field{year}{2004}
     \endentry
     \entry{Nachazel2021}{article}{}
       \name{author}{1}{}{%
@@ -446,6 +618,67 @@
       \field{volume}{5}
       \field{year}{2002}
     \endentry
+    \entry{Balcan2009}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=ad2861c172974067b5514021c6749c84}{%
+           family={Balcan},
+           familyi={B\bibinitperiod},
+           given={Duygu},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f731fa93df6fd43118b11841cf1d484d}{%
+           family={Colizza},
+           familyi={C\bibinitperiod},
+           given={Vittoria},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1a5d85b2830a95c97212ffd4751f9be4}{%
+           family={Gonçalves},
+           familyi={G\bibinitperiod},
+           given={Bruno},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8a86586f493de6f754d35b4e9cf7c286}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Hao},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=99fe9ac60d3c964a46c59baca6611ada}{%
+           family={Ramasco},
+           familyi={R\bibinitperiod},
+           given={José},
+           giveni={J\bibinitperiod},
+           givenun=0,
+           suffix={J.},
+           suffixi={J\bibinitperiod},
+           suffixun=0}}%
+        {{un=0,uniquepart=base,hash=8f9932ed1839be02bb53a62b258449a8}{%
+           family={Vespignani},
+           familyi={V\bibinitperiod},
+           given={Alessandro},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3228440225180f56276e55eb36496e60}
+      \strng{fullhash}{cc1620cf9842501a5b5c5caf2f2554d6}
+      \strng{bibnamehash}{cc1620cf9842501a5b5c5caf2f2554d6}
+      \strng{authorbibnamehash}{cc1620cf9842501a5b5c5caf2f2554d6}
+      \strng{authornamehash}{3228440225180f56276e55eb36496e60}
+      \strng{authorfullhash}{cc1620cf9842501a5b5c5caf2f2554d6}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{PNAS}
+      \field{number}{51}
+      \field{title}{Multiscale mobility networks and the spatial spreading of infectious diseases}
+      \field{volume}{106}
+      \field{year}{2009}
+    \endentry
     \entry{Bissett2021}{article}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=47ce26c52acaa446fbe9fc1eede60f59}{%
@@ -490,6 +723,34 @@
       \field{volume}{303–327}
       \field{year}{2021}
     \endentry
+    \entry{Epstein2008}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=baaba4ae833250b58d25d0292a11c7ae}{%
+           family={Epstein},
+           familyi={E\bibinitperiod},
+           given={J.\bibnamedelimi M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{baaba4ae833250b58d25d0292a11c7ae}
+      \strng{fullhash}{baaba4ae833250b58d25d0292a11c7ae}
+      \strng{bibnamehash}{baaba4ae833250b58d25d0292a11c7ae}
+      \strng{authorbibnamehash}{baaba4ae833250b58d25d0292a11c7ae}
+      \strng{authornamehash}{baaba4ae833250b58d25d0292a11c7ae}
+      \strng{authorfullhash}{baaba4ae833250b58d25d0292a11c7ae}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Artificial Societies and Social Simulation}
+      \field{number}{4}
+      \field{title}{Why Model?}
+      \field{volume}{11}
+      \field{year}{2008}
+    \endentry
     \entry{Eubank2004}{article}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=45477ecc261c27f2340071170d4ae0d0}{%
@@ -529,10 +790,54 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Nature 429}
+      \field{journaltitle}{Nature}
       \field{title}{Modelling disease outbreaks in realistic urban social networks}
-      \field{volume}{180-184}
+      \field{volume}{429}
       \field{year}{2004}
+    \endentry
+    \entry{Ferguson2006}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=d520aa9f5e24845d5748a99a8f46c6e8}{%
+           family={Ferguson},
+           familyi={F\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f916e576d8292cef08b75c18930d2561}{%
+           family={Cummings},
+           familyi={C\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=268ec14849cfd73036103051d378ea56}{%
+           family={Fraser},
+           familyi={F\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=38026ba4ee6b102b47bf3ffb41325c8f}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{f39f98ee5e5cf00ffc3c0a8ccebe2c8e}
+      \strng{fullhash}{eb2ea19de615b3e68ce2e0349a26105d}
+      \strng{bibnamehash}{eb2ea19de615b3e68ce2e0349a26105d}
+      \strng{authorbibnamehash}{eb2ea19de615b3e68ce2e0349a26105d}
+      \strng{authornamehash}{f39f98ee5e5cf00ffc3c0a8ccebe2c8e}
+      \strng{authorfullhash}{eb2ea19de615b3e68ce2e0349a26105d}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature}
+      \field{title}{Strategies for mitigating an influenza pandemic}
+      \field{volume}{442}
+      \field{year}{2006}
     \endentry
     \entry{Gubler1995}{article}{}
       \name{author}{2}{}{%
@@ -697,6 +1002,45 @@
       \field{title}{Tutorial on agent-based modelling and simulation}
       \field{volume}{151–162}
       \field{year}{2010}
+    \endentry
+    \entry{Morens2004}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=3eeba7c5edf4636c5bedc110e740fe1e}{%
+           family={Morens},
+           familyi={M\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6ebed2caea2296719e2ab4b5075b8b83}{%
+           family={Folkers},
+           familyi={F\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1ae7d1ca47251e007fab889d7f0a55d2}{%
+           family={Fauci},
+           familyi={F\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9980a49cb528ddb279a83e50358e71d3}
+      \strng{fullhash}{43b44675dde8ba35685e5dc4bf97d1c5}
+      \strng{bibnamehash}{43b44675dde8ba35685e5dc4bf97d1c5}
+      \strng{authorbibnamehash}{43b44675dde8ba35685e5dc4bf97d1c5}
+      \strng{authornamehash}{9980a49cb528ddb279a83e50358e71d3}
+      \strng{authorfullhash}{43b44675dde8ba35685e5dc4bf97d1c5}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature}
+      \field{title}{The challenge of emerging and re-emerging infectious diseases}
+      \field{volume}{430}
+      \field{year}{2004}
     \endentry
     \entry{Nachazel2021}{article}{}
       \name{author}{1}{}{%
