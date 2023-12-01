@@ -152,8 +152,10 @@ class App(CTk):
     def simulation_plot(self):
         ventana_grafico = CTk()
         pers_hour = self.sim.dictOfHours
-        cont = [0 for x in range(int(len(pers_hour)/24))]
-        pers_counted = []
+        infected_people = [0 for x in range(int(len(pers_hour)/24))]
+        healthy_people = [0 for x in range(int(len(pers_hour)/24))]
+        pers_counted_i = []
+        pers_counted_h = []
         count = -1
         indice = 0
         for lista in pers_hour.values():
@@ -161,17 +163,22 @@ class App(CTk):
             if count == 24:
                 count = -1
                 indice += 1
-                pers_counted.clear()
+                pers_counted_i.clear()
+                pers_counted_h.clear()
             for i in range(len(lista)):
-                if lista[i][1] and lista[i][0] not in pers_counted:
-                    pers_counted.append(lista[i][0])
-                    cont[indice] += 1
+                if lista[i][1] and lista[i][0] not in pers_counted_i:
+                    pers_counted_i.append(lista[i][0])
+                    infected_people[indice] += 1
+                elif lista[i][0] not in  pers_counted_h:
+                    pers_counted_h.append(lista[i][0])
+                    healthy_people[indice] += 1
             
         
         ventana_grafico.title("Gráfico")
         plt.clf()
 
-        plt.plot(cont)
+        plt.plot(infected_people, color = 'red')
+        plt.plot(healthy_people, color = 'green')
         plt.xlabel('Dias de simulacion')
         plt.ylabel('Personas enfermas')
         plt.title('Grafico de la simulacion')
