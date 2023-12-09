@@ -576,6 +576,231 @@
       \field{volume}{8}
       \field{year}{2020}
     \endentry
+    \entry{Reisen2010}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=524f702643cca117089525f9e7234a67}{%
+           family={Reisen},
+           familyi={R\bibinitperiod},
+           given={W.\bibnamedelimi K.},
+           giveni={W\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{524f702643cca117089525f9e7234a67}
+      \strng{fullhash}{524f702643cca117089525f9e7234a67}
+      \strng{bibnamehash}{524f702643cca117089525f9e7234a67}
+      \strng{authorbibnamehash}{524f702643cca117089525f9e7234a67}
+      \strng{authornamehash}{524f702643cca117089525f9e7234a67}
+      \strng{authorfullhash}{524f702643cca117089525f9e7234a67}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Annual Review of Entomology}
+      \field{title}{Landscape epidemiology of vector-borne diseases}
+      \field{volume}{55}
+      \field{year}{2010}
+    \endentry
+    \entry{Simmons2012}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=905f4c15622c6950b095dcca0e166015}{%
+           family={Simmons},
+           familyi={S\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0,
+           suffix={C.},
+           suffixi={C\bibinitperiod},
+           suffixun=0}}%
+        {{un=0,uniquepart=base,hash=cceae39bb0e8d896ac3bfa97a1ed351f}{%
+           family={Farrar},
+           familyi={F\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0,
+           suffix={J.},
+           suffixi={J\bibinitperiod},
+           suffixun=0}}%
+        {{un=0,uniquepart=base,hash=dbf8b8c113ff8c570a977d48f92ab0b4}{%
+           family={Vinh\bibnamedelima Chau},
+           familyi={V\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=202bf19abf5fef674752137f240013d1}{%
+           family={Wills},
+           familyi={W\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2a3c0356b661f87c4bbe59e6e284c447}
+      \strng{fullhash}{98ab058e88d59f8e031041107a38f36a}
+      \strng{bibnamehash}{98ab058e88d59f8e031041107a38f36a}
+      \strng{authorbibnamehash}{98ab058e88d59f8e031041107a38f36a}
+      \strng{authornamehash}{2a3c0356b661f87c4bbe59e6e284c447}
+      \strng{authorfullhash}{98ab058e88d59f8e031041107a38f36a}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{N. Engl. J. Med.}
+      \field{title}{Dengue}
+      \field{volume}{366}
+      \field{year}{2012}
+    \endentry
+    \entry{Tercero2008}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=8c5cc3ddcdfe6f1dead45bfba2b48648}{%
+           family={Tercero-Gutiérrez},
+           familyi={T\bibinithyphendelim G\bibinitperiod},
+           given={María},
+           giveni={M\bibinitperiod},
+           givenun=0,
+           suffix={José},
+           suffixi={J\bibinitperiod},
+           suffixun=0}}%
+        {{un=0,uniquepart=base,hash=fd15dedfd7e5d15c17d15e641a7efc7a}{%
+           family={Olalla-Herbosa},
+           familyi={O\bibinithyphendelim H\bibinitperiod},
+           given={Raquel},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{73dd811ec863467f2bb7864b8709ca46}
+      \strng{fullhash}{73dd811ec863467f2bb7864b8709ca46}
+      \strng{bibnamehash}{73dd811ec863467f2bb7864b8709ca46}
+      \strng{authorbibnamehash}{73dd811ec863467f2bb7864b8709ca46}
+      \strng{authornamehash}{73dd811ec863467f2bb7864b8709ca46}
+      \strng{authorfullhash}{73dd811ec863467f2bb7864b8709ca46}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Elsevier}
+      \field{number}{6}
+      \field{title}{Enfermedades tropicales transmitidas por vectores. Medidas preventivas y profilaxis}
+      \field{volume}{27}
+      \field{year}{2008}
+    \endentry
+    \entry{Torres2020}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=0da87c1d5cfbb0da66989d74700d60b7}{%
+           family={Torres-Castro},
+           familyi={T\bibinithyphendelim C\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9c9fb11a23056e5b10e249fd54e0e1ac}{%
+           family={Noh-Pech},
+           familyi={N\bibinithyphendelim P\bibinitperiod},
+           given={Henry},
+           giveni={H\bibinitperiod},
+           givenun=0,
+           suffix={René},
+           suffixi={R\bibinitperiod},
+           suffixun=0}}%
+        {{un=0,uniquepart=base,hash=88f23f3b6c9f13d1559eccbf19b7e547}{%
+           family={Lugo-Caballero},
+           familyi={L\bibinithyphendelim C\bibinitperiod},
+           given={César},
+           giveni={C\bibinitperiod},
+           givenun=0,
+           suffix={Israel},
+           suffixi={I\bibinitperiod},
+           suffixun=0}}%
+        {{un=0,uniquepart=base,hash=4261116313171d8e92c61c9e542fbb51}{%
+           family={Dzul-Rosado},
+           familyi={D\bibinithyphendelim R\bibinitperiod},
+           given={Karla},
+           giveni={K\bibinitperiod},
+           givenun=0,
+           suffix={Rossanet},
+           suffixi={R\bibinitperiod},
+           suffixun=0}}%
+        {{un=0,uniquepart=base,hash=2810f76652d786ac69df2c68efad4b5a}{%
+           family={Puerto},
+           familyi={P\bibinitperiod},
+           given={Fernando},
+           giveni={F\bibinitperiod},
+           givenun=0,
+           suffix={I.},
+           suffixi={I\bibinitperiod},
+           suffixun=0}}%
+      }
+      \strng{namehash}{e9749093cfedffa5b328bfe1b29f30ea}
+      \strng{fullhash}{96752c6adc4193c5168aad844c931fad}
+      \strng{bibnamehash}{96752c6adc4193c5168aad844c931fad}
+      \strng{authorbibnamehash}{96752c6adc4193c5168aad844c931fad}
+      \strng{authornamehash}{e9749093cfedffa5b328bfe1b29f30ea}
+      \strng{authorfullhash}{96752c6adc4193c5168aad844c931fad}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bioagrociencias}
+      \field{number}{1}
+      \field{title}{Las enfermedades transmitidas por vector: importancia y aspectos epidemiológicos}
+      \field{volume}{13}
+      \field{year}{2020}
+    \endentry
+    \entry{OMS2020}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9ed1e9f759b27c20c0ee8a56113c84e3}{%
+           family={WHO},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9ed1e9f759b27c20c0ee8a56113c84e3}
+      \strng{fullhash}{9ed1e9f759b27c20c0ee8a56113c84e3}
+      \strng{bibnamehash}{9ed1e9f759b27c20c0ee8a56113c84e3}
+      \strng{authorbibnamehash}{9ed1e9f759b27c20c0ee8a56113c84e3}
+      \strng{authornamehash}{9ed1e9f759b27c20c0ee8a56113c84e3}
+      \strng{authorfullhash}{9ed1e9f759b27c20c0ee8a56113c84e3}
+      \field{extraname}{1}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Vector-borne diseases}
+      \field{year}{2020}
+    \endentry
+    \entry{OMS2023}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9ed1e9f759b27c20c0ee8a56113c84e3}{%
+           family={WHO},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9ed1e9f759b27c20c0ee8a56113c84e3}
+      \strng{fullhash}{9ed1e9f759b27c20c0ee8a56113c84e3}
+      \strng{bibnamehash}{9ed1e9f759b27c20c0ee8a56113c84e3}
+      \strng{authorbibnamehash}{9ed1e9f759b27c20c0ee8a56113c84e3}
+      \strng{authornamehash}{9ed1e9f759b27c20c0ee8a56113c84e3}
+      \strng{authorfullhash}{9ed1e9f759b27c20c0ee8a56113c84e3}
+      \field{extraname}{2}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Dengue and severe dengue}
+      \field{year}{2023}
+    \endentry
   \enddatalist
   \datalist[entry]{apa/global//global/global}
     \entry{Bagni2002}{article}{}
@@ -1134,6 +1359,231 @@
       \field{title}{Fuzzy Cognitive Maps Optimization for Decision Making and Prediction}
       \field{volume}{8}
       \field{year}{2020}
+    \endentry
+    \entry{Reisen2010}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=524f702643cca117089525f9e7234a67}{%
+           family={Reisen},
+           familyi={R\bibinitperiod},
+           given={W.\bibnamedelimi K.},
+           giveni={W\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{524f702643cca117089525f9e7234a67}
+      \strng{fullhash}{524f702643cca117089525f9e7234a67}
+      \strng{bibnamehash}{524f702643cca117089525f9e7234a67}
+      \strng{authorbibnamehash}{524f702643cca117089525f9e7234a67}
+      \strng{authornamehash}{524f702643cca117089525f9e7234a67}
+      \strng{authorfullhash}{524f702643cca117089525f9e7234a67}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Annual Review of Entomology}
+      \field{title}{Landscape epidemiology of vector-borne diseases}
+      \field{volume}{55}
+      \field{year}{2010}
+    \endentry
+    \entry{Simmons2012}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=905f4c15622c6950b095dcca0e166015}{%
+           family={Simmons},
+           familyi={S\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0,
+           suffix={C.},
+           suffixi={C\bibinitperiod},
+           suffixun=0}}%
+        {{un=0,uniquepart=base,hash=cceae39bb0e8d896ac3bfa97a1ed351f}{%
+           family={Farrar},
+           familyi={F\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0,
+           suffix={J.},
+           suffixi={J\bibinitperiod},
+           suffixun=0}}%
+        {{un=0,uniquepart=base,hash=dbf8b8c113ff8c570a977d48f92ab0b4}{%
+           family={Vinh\bibnamedelima Chau},
+           familyi={V\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=202bf19abf5fef674752137f240013d1}{%
+           family={Wills},
+           familyi={W\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2a3c0356b661f87c4bbe59e6e284c447}
+      \strng{fullhash}{98ab058e88d59f8e031041107a38f36a}
+      \strng{bibnamehash}{98ab058e88d59f8e031041107a38f36a}
+      \strng{authorbibnamehash}{98ab058e88d59f8e031041107a38f36a}
+      \strng{authornamehash}{2a3c0356b661f87c4bbe59e6e284c447}
+      \strng{authorfullhash}{98ab058e88d59f8e031041107a38f36a}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{N. Engl. J. Med.}
+      \field{title}{Dengue}
+      \field{volume}{366}
+      \field{year}{2012}
+    \endentry
+    \entry{Tercero2008}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=8c5cc3ddcdfe6f1dead45bfba2b48648}{%
+           family={Tercero-Gutiérrez},
+           familyi={T\bibinithyphendelim G\bibinitperiod},
+           given={María},
+           giveni={M\bibinitperiod},
+           givenun=0,
+           suffix={José},
+           suffixi={J\bibinitperiod},
+           suffixun=0}}%
+        {{un=0,uniquepart=base,hash=fd15dedfd7e5d15c17d15e641a7efc7a}{%
+           family={Olalla-Herbosa},
+           familyi={O\bibinithyphendelim H\bibinitperiod},
+           given={Raquel},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{73dd811ec863467f2bb7864b8709ca46}
+      \strng{fullhash}{73dd811ec863467f2bb7864b8709ca46}
+      \strng{bibnamehash}{73dd811ec863467f2bb7864b8709ca46}
+      \strng{authorbibnamehash}{73dd811ec863467f2bb7864b8709ca46}
+      \strng{authornamehash}{73dd811ec863467f2bb7864b8709ca46}
+      \strng{authorfullhash}{73dd811ec863467f2bb7864b8709ca46}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Elsevier}
+      \field{number}{6}
+      \field{title}{Enfermedades tropicales transmitidas por vectores. Medidas preventivas y profilaxis}
+      \field{volume}{27}
+      \field{year}{2008}
+    \endentry
+    \entry{Torres2020}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=0da87c1d5cfbb0da66989d74700d60b7}{%
+           family={Torres-Castro},
+           familyi={T\bibinithyphendelim C\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9c9fb11a23056e5b10e249fd54e0e1ac}{%
+           family={Noh-Pech},
+           familyi={N\bibinithyphendelim P\bibinitperiod},
+           given={Henry},
+           giveni={H\bibinitperiod},
+           givenun=0,
+           suffix={René},
+           suffixi={R\bibinitperiod},
+           suffixun=0}}%
+        {{un=0,uniquepart=base,hash=88f23f3b6c9f13d1559eccbf19b7e547}{%
+           family={Lugo-Caballero},
+           familyi={L\bibinithyphendelim C\bibinitperiod},
+           given={César},
+           giveni={C\bibinitperiod},
+           givenun=0,
+           suffix={Israel},
+           suffixi={I\bibinitperiod},
+           suffixun=0}}%
+        {{un=0,uniquepart=base,hash=4261116313171d8e92c61c9e542fbb51}{%
+           family={Dzul-Rosado},
+           familyi={D\bibinithyphendelim R\bibinitperiod},
+           given={Karla},
+           giveni={K\bibinitperiod},
+           givenun=0,
+           suffix={Rossanet},
+           suffixi={R\bibinitperiod},
+           suffixun=0}}%
+        {{un=0,uniquepart=base,hash=2810f76652d786ac69df2c68efad4b5a}{%
+           family={Puerto},
+           familyi={P\bibinitperiod},
+           given={Fernando},
+           giveni={F\bibinitperiod},
+           givenun=0,
+           suffix={I.},
+           suffixi={I\bibinitperiod},
+           suffixun=0}}%
+      }
+      \strng{namehash}{e9749093cfedffa5b328bfe1b29f30ea}
+      \strng{fullhash}{96752c6adc4193c5168aad844c931fad}
+      \strng{bibnamehash}{96752c6adc4193c5168aad844c931fad}
+      \strng{authorbibnamehash}{96752c6adc4193c5168aad844c931fad}
+      \strng{authornamehash}{e9749093cfedffa5b328bfe1b29f30ea}
+      \strng{authorfullhash}{96752c6adc4193c5168aad844c931fad}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bioagrociencias}
+      \field{number}{1}
+      \field{title}{Las enfermedades transmitidas por vector: importancia y aspectos epidemiológicos}
+      \field{volume}{13}
+      \field{year}{2020}
+    \endentry
+    \entry{OMS2020}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9ed1e9f759b27c20c0ee8a56113c84e3}{%
+           family={WHO},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9ed1e9f759b27c20c0ee8a56113c84e3}
+      \strng{fullhash}{9ed1e9f759b27c20c0ee8a56113c84e3}
+      \strng{bibnamehash}{9ed1e9f759b27c20c0ee8a56113c84e3}
+      \strng{authorbibnamehash}{9ed1e9f759b27c20c0ee8a56113c84e3}
+      \strng{authornamehash}{9ed1e9f759b27c20c0ee8a56113c84e3}
+      \strng{authorfullhash}{9ed1e9f759b27c20c0ee8a56113c84e3}
+      \field{extraname}{1}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Vector-borne diseases}
+      \field{year}{2020}
+    \endentry
+    \entry{OMS2023}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9ed1e9f759b27c20c0ee8a56113c84e3}{%
+           family={WHO},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9ed1e9f759b27c20c0ee8a56113c84e3}
+      \strng{fullhash}{9ed1e9f759b27c20c0ee8a56113c84e3}
+      \strng{bibnamehash}{9ed1e9f759b27c20c0ee8a56113c84e3}
+      \strng{authorbibnamehash}{9ed1e9f759b27c20c0ee8a56113c84e3}
+      \strng{authornamehash}{9ed1e9f759b27c20c0ee8a56113c84e3}
+      \strng{authorfullhash}{9ed1e9f759b27c20c0ee8a56113c84e3}
+      \field{extraname}{2}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Dengue and severe dengue}
+      \field{year}{2023}
     \endentry
   \enddatalist
 \endrefsection

@@ -5,14 +5,19 @@
 \contentsline {section}{\numberline {0.3}Problema de Investigación}{3}{section.0.3}%
 \contentsline {section}{\numberline {0.4}Objetivos}{3}{section.0.4}%
 \contentsline {subsection}{\numberline {0.4.1}Objetivo general}{3}{subsection.0.4.1}%
-\contentsline {subsection}{\numberline {0.4.2}Objetivos específicos}{3}{subsection.0.4.2}%
+\contentsline {subsection}{\numberline {0.4.2}Objetivos específicos}{4}{subsection.0.4.2}%
+\contentsline {section}{\numberline {0.5}Estructura}{4}{section.0.5}%
 \contentsline {chapter}{\numberline {1}Estado del Arte}{5}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Redes complejas}{5}{section.1.1}%
 \contentsline {subsection}{\numberline {1.1.1}Redes sociales}{6}{subsection.1.1.1}%
 \contentsline {section}{\numberline {1.2}Modelos Basados en Agentes}{7}{section.1.2}%
 \contentsline {section}{\numberline {1.3}Mapas Cognitivos Difusos}{8}{section.1.3}%
-\contentsline {chapter}{\numberline {2}Propuesta}{11}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Detalles de Implementación y Experimentos}{12}{chapter.3}%
-\contentsline {chapter}{Conclusiones}{13}{section*.10}%
-\contentsline {chapter}{Recomendaciones}{14}{section*.12}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{15}{chapter*.14}%
+\contentsline {chapter}{\numberline {2}Modelación para la simulación de enfermedades transmitidas por vectores}{11}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Vectores}{11}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Enfermedades Transmitidas por Vectores (ETV)}{12}{subsection.2.1.1}%
+\contentsline {section}{\numberline {2.2}Dengue}{13}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Modelación del entorno}{14}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Detalles de Implementación y Experimentos}{15}{chapter.3}%
+\contentsline {chapter}{Conclusiones}{16}{section*.11}%
+\contentsline {chapter}{Recomendaciones}{17}{section*.13}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{18}{chapter*.15}%

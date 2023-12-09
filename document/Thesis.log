@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.22)  1 DEC 2023 04:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.22)  9 DEC 2023 10:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1159,7 +1159,7 @@ Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count500
-<Graphics/uhlogo.pdf, id=75, 375.98297pt x 481.67456pt>
+<Graphics/uhlogo.pdf, id=95, 375.98297pt x 481.67456pt>
 File: Graphics/uhlogo.pdf Graphic file (type pdf)
 <use Graphics/uhlogo.pdf>
 Package pdftex.def Info: Graphics/uhlogo.pdf  used on input line 81.
@@ -1282,16 +1282,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--57
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--63
+Underfull \hbox (badness 10000) in paragraph at lines 59--69
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 65--83
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 71--89
 
  []
 
-[2] [3]) [4]
+[3]) [4]
 \openout2 = `MainMatter/Background.aux'.
 
  (./MainMatter/Background.tex
@@ -1348,7 +1348,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--111
 LaTeX Info: Redefining \. on input line 125.
 LaTeX Info: Redefining \% on input line 125.
 [8]
-<Graphics/fcm_example.png, id=249, 334.851pt x 248.127pt>
+<Graphics/fcm_example.png, id=280, 334.851pt x 248.127pt>
 File: Graphics/fcm_example.png Graphic file (type png)
 <use Graphics/fcm_example.png>
 Package pdftex.def Info: Graphics/fcm_example.png  used on input line 128.
@@ -1373,17 +1373,69 @@ LaTeX Info: Redefining \% on input line 92.
 
  (./MainMatter/Proposal.tex
 Cap\'{\i }tulo 2.
-) [11
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--17
+
+ []
+
+[11
 
 
 
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 31--36
+
+ []
+
+<Graphics/EnfVec.jpeg, id=318, 735.49782pt x 253.69781pt>
+File: Graphics/EnfVec.jpeg Graphic file (type jpg)
+<use Graphics/EnfVec.jpeg>
+Package pdftex.def Info: Graphics/EnfVec.jpeg  used on input line 39.
+(pdftex.def)             Requested size: 433.62pt x 149.57202pt.
+LaTeX Info: Redefining \. on input line 48.
+LaTeX Info: Redefining \% on input line 48.
+[12 <./Graphics/EnfVec.jpeg>]
+Underfull \hbox (badness 10000) in paragraph at lines 54--59
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--67
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--74
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--80
+
+ []
+
+LaTeX Info: Redefining \. on input line 80.
+LaTeX Info: Redefining \% on input line 80.
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 91--96
+
+ []
+
+)
+LaTeX Info: Redefining \. on input line 93.
+LaTeX Info: Redefining \% on input line 93.
+ [14]
 \openout2 = `MainMatter/Implementation.aux'.
 
  (./MainMatter/Implementation.tex
 Cap\'{\i }tulo 3.
-) [12
+) [15
 
 
 
@@ -1391,7 +1443,7 @@ Cap\'{\i }tulo 3.
 ]
 \openout2 = `BackMatter/Conclusions.aux'.
 
- (./BackMatter/Conclusions.tex) [13
+ (./BackMatter/Conclusions.tex) [16
 
 
 
@@ -1400,7 +1452,7 @@ Cap\'{\i }tulo 3.
 ]
 \openout2 = `BackMatter/Recomendations.aux'.
 
- (./BackMatter/Recomendations.tex) [14
+ (./BackMatter/Recomendations.tex) [17
 
 
 
@@ -1409,12 +1461,12 @@ Cap\'{\i }tulo 3.
 ]
 \openout2 = `BackMatter/Bibliography.aux'.
 
- (./BackMatter/Bibliography.tex) [15
+ (./BackMatter/Bibliography.tex [18
 
 
 
 
-] (./Thesis.aux
+]) [19] (./Thesis.aux
 LaTeX Info: Redefining \sptext on input line 13.
 LaTeX Info: Redefining \. on input line 13.
 LaTeX Info: Redefining \% on input line 13.
@@ -1424,24 +1476,24 @@ LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-09>
  ***********
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 08C44708FEDE58CC8FE7AC2209CAABDA;2390.
+(rerunfilecheck)             Checksum: C2FFC5A21B03D866EE0EB0C057744EF0;3490.
 Package logreq Info: Writing requests to 'Thesis.run.xml'.
 \openout1 = `Thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36818 strings out of 474267
- 690030 string characters out of 5751464
- 1936558 words of memory out of 5000000
- 58301 multiletter control sequences out of 15000+600000
+ 36906 strings out of 474267
+ 691946 string characters out of 5751464
+ 1937558 words of memory out of 5000000
+ 58358 multiletter control sequences out of 15000+600000
  627804 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 125i,12n,121p,719b,2905s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi9.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmro10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb>
-Output written on Thesis.pdf (24 pages, 419617 bytes).
+ 125i,12n,121p,719b,4333s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi9.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmro10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy9.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb>
+Output written on Thesis.pdf (28 pages, 501704 bytes).
 PDF statistics:
- 383 PDF objects out of 1000 (max. 8388607)
- 327 compressed objects within 4 object streams
- 79 named destinations out of 1000 (max. 500000)
- 159 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 493 PDF objects out of 1000 (max. 8388607)
+ 427 compressed objects within 5 object streams
+ 110 named destinations out of 1000 (max. 500000)
+ 204 words of extra memory for PDF output out of 10000 (max. 10000000)
 
