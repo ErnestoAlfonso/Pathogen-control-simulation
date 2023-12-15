@@ -801,6 +801,36 @@
       \field{title}{Dengue and severe dengue}
       \field{year}{2023}
     \endentry
+    \entry{Zadeh1965}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=596c823166720165ec6627a9c36a9b7d}{%
+           family={Zadeh},
+           familyi={Z\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod},
+           givenun=0,
+           suffix={A.},
+           suffixi={A\bibinitperiod},
+           suffixun=0}}%
+      }
+      \strng{namehash}{596c823166720165ec6627a9c36a9b7d}
+      \strng{fullhash}{596c823166720165ec6627a9c36a9b7d}
+      \strng{bibnamehash}{596c823166720165ec6627a9c36a9b7d}
+      \strng{authorbibnamehash}{596c823166720165ec6627a9c36a9b7d}
+      \strng{authornamehash}{596c823166720165ec6627a9c36a9b7d}
+      \strng{authorfullhash}{596c823166720165ec6627a9c36a9b7d}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Information and Control}
+      \field{title}{Fuzzy Sets}
+      \field{volume}{8}
+      \field{year}{1965}
+    \endentry
   \enddatalist
   \datalist[entry]{apa/global//global/global}
     \entry{Bagni2002}{article}{}
@@ -1584,6 +1614,36 @@
       \field{labeltitlesource}{title}
       \field{title}{Dengue and severe dengue}
       \field{year}{2023}
+    \endentry
+    \entry{Zadeh1965}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=596c823166720165ec6627a9c36a9b7d}{%
+           family={Zadeh},
+           familyi={Z\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod},
+           givenun=0,
+           suffix={A.},
+           suffixi={A\bibinitperiod},
+           suffixun=0}}%
+      }
+      \strng{namehash}{596c823166720165ec6627a9c36a9b7d}
+      \strng{fullhash}{596c823166720165ec6627a9c36a9b7d}
+      \strng{bibnamehash}{596c823166720165ec6627a9c36a9b7d}
+      \strng{authorbibnamehash}{596c823166720165ec6627a9c36a9b7d}
+      \strng{authornamehash}{596c823166720165ec6627a9c36a9b7d}
+      \strng{authorfullhash}{596c823166720165ec6627a9c36a9b7d}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Information and Control}
+      \field{title}{Fuzzy Sets}
+      \field{volume}{8}
+      \field{year}{1965}
     \endentry
   \enddatalist
 \endrefsection

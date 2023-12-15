@@ -96,12 +96,294 @@ donde viven.\\
 
 \section{Modelación del entorno}
 Lo primero que se debe crear y modelar para simular como ocurre la propagación de enfermedades es el 
-entorno en que ocurrirá la misma. 
+entorno en que ocurrirá la misma. La idea de este trabajo es lograr representar la realidad de la sociedad
+y para esto se entiende que existen parámetros a desarrollar: las relaciones personales, los lugares y el comportamiento
+de las personas.\\
+
+\subsection{Loaclizaciones}
+En la actualidad la mayoría de las personas tienen un programa de vida definido, es decir, una persona $x$ tiene una 
+vivienda, un centro de trabajo y otros lugares a los que asiste por determinadas circunstancias; por lo que
+para representar la sociedad, es necesario según se entiende, modelar estos lugares.\\
+
+Para esto, los lugares son considerados un objeto en nuestro proyecto. Se entiende por lugar una localización en
+la cual pueden asistir personas y vectores y además este puede brindar cierto recurso. Por ejemplo: ¿cómo se
+representaría un mercado en nuestra simulación?, un mercado posee una capacidad para albergar personas y vectores 
+y además brinda la posibilidad de obtener comida, aseo, entre otros.\\
+
+\textbf{Resultaron interesantes los siguientes lugares para representar:}
+\begin{enumerate}
+    \item Casas: representa un hogar familiar.
+    \item Hospitales: indica un centro de atención médica.
+    \item Centros de trabajo: hace referencia a todo lugar laboral, pero no significa que si una persona está en este, se encuentra trabajando, por ejemplo: en una escuela (centro de trabajo) hay personas que no están trabajando como los niños.
+    \item Mercados.
+\end{enumerate}
+
+Este tipo de localizaciones nos permite abarcar toda construcción en la que pueden relacionarce las personas, pués
+el tipo de lugar "Centro de Trabajo" sirve de comodín en nuestra simulación.\\
+
+\subsection{Personas}
+Una de las herramientas conocidas para describir relaciones entre agentes son los grafos. Un grafo
+es un par ordenado $G = (V,E)$ donde $V$ es un conjunto no vacío de nodos y $E$ es un conjunto de pares 
+no ordenados de aristas.\\
+
+\begin{center}
+    $G=(V,E)$ tal que:\\
+    \begin{enumerate}
+        \item $V$ = $\lbrace$ $v_{1}$, $v_{2}$, $v_{3}$, ..., $v_{n}$ $\rbrace$ es un conjunto finito de vértices.
+        \item $E$ = $\lbrace$($v_{i}$,$v_{j}$)|$v_{i}$, $v_{j}$ $\in$ $V$ $\rbrace$  es un conjunto de pares no ordenados de vértices que representan las aristas del grafo.
+    \end{enumerate}
+\end{center}
+
+En nuestro proyecto se construye un grafo que representa la relación ser familia y la relación conocidos, brindando
+la posibilidad de escoger la probabilidad con la que se genere una arista entre dos nodos y la cantidad de nodos a crear. 
+En este, un nodo $v_{i}$ representa a la persona $i$ de la simulación y una arista ($v_{i}$, $v_{j}$) simboliza,
+o bien la relación $i$ $\rightarrow$ $j$ son familiares, o son conocidos, es decir no existe un tipo de arista para cada
+tipo de relación. ¿Cómo se identifica entonces si la arista ($v_{i}$, $v_{j}$) representa la relación 
+ser familia o la relación conocidos?\\
+
+Para esto se realiza un proceso estocástico que ocurre una sola vez (al inicio de la simulación), el cual consiste 
+en escoger de manera aleatoria el conjunto $C$ que se define a continuación.
+\begin{center}
+    Sea $G = (V,E)$ un grafo de nuestra simulación.\\
+    Sea $H \subset V$ tal que $v_{i} \in H \Leftrightarrow \forall v_{j} \in H, (v_{i},v_{j}) \in E$\\
+    Sea $C = \lbrace H_{1}, H_{2}, ..., H_{l} \rbrace$,$\forall i$ $H_{i} \subset V$ tal que si $v_{j} \in H_{i} \Rightarrow v_{j} \notin H_{k}$ $\forall k \neq i$\\
+\end{center}
+
+Teniendo esto en cuenta entonces las relaciones están definidas de la siguiente forma:
+\begin{center}
+    $\forall i,j$ $(v_{i}, v_{j}) \in E$ representa la relación ser familia  $\Leftrightarrow \exists k$ tal que $v_{i}, v_{j} \in H_{k}$, $H_{k} \in C$.\\
+    Si $v_{i} \in H_{k}, v_{j} \notin H_{k}$, $H_{k} \in C$ y $\exists (v_{i}, v_{j}) \Rightarrow$ la arista $(v_{i}, v_{j})$  representa
+    la relación ser conocidos.
+\end{center}
 
 
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Graphics/Grafo_Pers.png}
+    \caption{Ejemplo de grafo de relaciones personales. Personas: 300, probabilidad de arista: 0.05}
+\end{figure}
+
+En la figura 2.2 se observa un posible grafo generado. En este grafo los posibles conjuntos $H$ serían: 
+$H_{1} = (1,2)$; $H_{2}=(1,3)$;$H_{3}=(2,3)$; $H_{4} = (1,2,3)$; $H_{5} = (1,5)$; $H_{6}=(1,4)$; $H_{7} = (4,6)$; $H_{8} = (5,6)$ y por último tantos conjuntos $H$ como nodos haya, es decir
+todos los posibles cliques del grafo. De estos conjuntos se seleccionarían aleatoriamente algunos para formar el conjunto $C$;
+por ejemplo $C = \lbrace H_{4}, H_{7}, H_{15} \rbrace$; y los nodos que estan en los $H_{i} \in C$ serían considerados
+familias entre ellos.\\
+
+Las personas, en el curso de la realización de sus actividades diarias (como el trabajo, el estudio o las compras),
+se desplazan entre varios lugares, exponiéndose a agentes infecciosos dentro de estos lugares y transportando las
+enfermedades. Para lograr representar y modelar estos procesos se genera una red de contactos sociales que puede
+ser vista como un grafo bipartito, en el cual el conjunto $A$ está compuesto por todas las personas de la simulación
+y el conjunto $B$ por todas las localizaciones. Las aristas en este grafo son dirigidas y representan 
+el lugar en donde se encuentra la persona.\\
+\begin{center}
+    Sea $G = (V,E)$ grafo dirigido. 
+    $\forall i,j$ si $(v_i,v_j) \in E \Rightarrow$ la persona $v_i$ se encuentra en el lugar $v_j$ 
+\end{center}
 
 
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.3\textwidth]{Graphics/Grafo_Loc_Pers.jpeg}
+    \caption{Ejemplo de grafo que representa a la red de contactos sociales.}
+\end{figure}
+
+El grafo definido anteriormente es un grafo dinámico, es decir este varía en dependencia del lugar en donde se encuentre
+una persona, pues al decidir un agente ir a otro lugar, se elimina la arista que antes este tenía en el grafo y se 
+añade la nueva arista, la cual representa el lugar en donde se encuentra en el momento. (Los vértices que representan
+personas tienen $outdegree$ igual a 1)\\
+
+\subsection{Vectores}
+Los vectores son seres vivos al igual que las personas, pero a diferencia de estas estos poseen menos movilidad que las
+personas. Para la representación de los vectores en el modelo no se tiene en cuenta la relación que 
+poseen entre ellos pues se entiende que es suficiente con las relaciones de las personas para lograr simular 
+la propagación de una enfermedad.\\ 
+
+Los mosquitos como bien se mencionó anteriormente se establecen en un lugar y poco o nada se mueven de 
+sus alrededores, por tanto, se decidió que los vectores en nuestra simulación no tuviesen la capacidad de moverse por
+las localizaciones como las personas ya que esto nos acerca más a lo que ocurre en la realidad.\\
+
+Los vectores se modelan con la posibilidad de morder y de infectarse. Estos según mecanismos estocástico
+deciden si picar o no y teniendo en cuenta el nivel de infección de la persona y la susceptibilidad del mismo este
+se infecta o no. También poseen un parámetro que representa la probabilidad de infectarse debido a una mordida, mientras
+más alto más probable que este se infecte si pica o muerde a una persona enferma.\\
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Graphics/Pers_Loc_Vec.png}
+    \caption{Esquema que representa el entorno modelado.}
+\end{figure}
+En la figura 2.4 se observa como se encuentra modelado el entorno de la simulación. Existen unos agentes que son las
+personas y los vectores, los cuales poseen ciertas características y estos interactúan con las localizaciones para
+cumplir sus propósitos; el de las personas trabajar y socializar y el de los vectores alimentarse, logrando así
+acercarnos a un modelo que representa de forma precisa como se propaga un efermedad transmitida por vectores.
+
+\section{Interacción de los agentes con el entorno}
+Una vez diseñado el entorno y los agentes que conviven en el mismo, se abre paso al siguiente aspecto:
+como interactúan entre sí. La interacción entre los agentes y su medio es esencial para comprender 
+cómo se desarrollará y evolucionará el sistema en cuestión.\\
+Existen muchas formas de desarrollar las interacciones, dependiendo del contexto y los objetivos establecidos
+para los agentes. Pueden ser directas, donde los agentes interactúan entre sí de manera mutuamente perceptible,
+indirectas, donde los agentes influyen en el entorno, y a su vez, el entorno afecta a la forma en que estos se 
+comportan y un híbrido en el que los agentes según sus decisiones afectan al medio y a otros agentes, y también, 
+el entorno los afecta.\\
+Las interacciones pueden estar basadas en reglas predefinidas, donde se establecen normas, objetivos y una serie
+de comportamientos específicos, o pueden ser adaptativas, donde los agentes aprenden a medida que intercambian con
+el entorno, obteniendo retroalimentación del mismo, para modificar su comportamiento.\\
+Una herramienta computacional que brinda la posibilidad de crear agentes con cierta inteligencia para manejar
+sus decisiones son los Mapas Cognitivos Difusos (FCM). Para el diseño de un $FCM$ es necesario definir los 
+conceptos que este agrupará, así como las categorías de conceptos.\\
+¿Qué son los conjuntos difusos? Zadeh en \autocite{Zadeh1965} da respuesta a esta interrogante de la siguiente forma.
+\begin{center}
+    Sea $X$ un espacio de puntos en los que los elementos de $X$ son $x$. $X = \lbrace x \rbrace$
+\end{center}
+Un conjunto difuso $A$ en $X$ es caracterizado por una función de membresía $f_A(x)$ que asocia a cada punto en 
+$X$ un valor real en el intervalo $[0, 1]$ con el valor de $f_A(x)$ en $x$ representando el 
+grado de membresía de $x$ en $A$, tal que mientras más cerca el valor de $f_A(x)$ a la unidad más alto es 
+el grado de membresía de $x$ en $A$. Pongamos un ejemplo representado en \autocite{Zadeh1965}.\\
+Sea $X$ el conjunto de los números reales $R$ y sea $A$ un conjunto difuso de los números que son mucho mayores que 1.
+La función $f_A(X)$ podría tener ciertos valores representativos como: $f_A(0) = 0$, $f_A(1) = 0$,
+$f_A(5) = 0.01$, $f_A(10) = 0.2$, $f_A(100) = 0.95$, $f_A(500) = 1$.\\
+
+Es importante notar que cuando el conjunto $X$ es un conjunto contable la función de membresía es parecida a una 
+función de probabilidad (o parecido a la función de densidad cuando $X$ es continuo), evidentemente existen
+diferencias entre estos conceptos las cuales son especificadas por Zadeh en \autocite{Zadeh1965}.\\
+
+% \textbf{Algunas definiciones de conjuntos difusos:}\autocite{Zadeh1965}\\
+% \begin{itemize}
+%     \item Se dice que dos conjuntos difusos $A$ y $B$ son iguales, $\Leftrightarrow$ $f_A(X) = f_B(x)$ $\forall x$ en $X$.
+%     \item Un conjunto difuso $A$ es vacío $\Leftrightarrow$ $f_A(x) = 0$ $\forall x$ en $X$.
+%     \item El complemento de un conjunto difuso $A$ es $A'$ y es definido de la siguiente forma: $f_{A'} = 1 - f_A$.
+%     \item $A \subset B \Leftrightarrow f_A \leqq f_B$
+% \end{itemize}
+
+En el Capítulo $"Estado del Arte"$ se realiza un acercamiento a la posibilidad de crear un $FCM$ con tres clases de 
+conceptos; $Perspectiva$, $Sentimientos$ y $Acciones$. Cada clase tiene una serie de conceptos que posibilitan la 
+interacción entre clases.\\
+Al separar los conceptos se comienza a ver el grafo del $FCM$ como un grafo bipartito, en el cual el conjunto $A$
+se encuentra formado por los conceptos de las clases $Perspectiva$ y $Acciones$ y el conjunto $B$ por la clase
+$Sentimientos$. Entonces surge una interrogante, ¿cuál sería el flujo a seguir de este $FCM$ para que los agentes
+decidan una acción u otra?.\\
+La idea es la siguiente, un agente percibe un estado del entorno, este estado, provoca un sentimiento en el agente
+y, a su vez, este sentimiento provoca una acción.\\
+\begin{center}
+    $Perspectiva \rightarrow Sentimientos \rightarrow Acciones$
+\end{center}
+
+A medida que va cambiando el entorno, va cambiando la perspectiva del agente esta afecta a los sentimientos del mismo 
+y con esto cambia la probabilidad de efectuar una acción u otra. Por tanto, el tipo de relación utilizada en este $FCM$
+es híbrida, cada pequeño cambio, ya sea, en el entorno, o en el mapa cognitivo difuso de un agente, afecta al $FCM$ de los
+agentes restantes.\\
+
+\subsection{Conceptos}
+\subsubsection{Perspectiva}
+Para la sección de los conceptos de percepción se observa que una idea útil es que, para cada concepto, crear su contrapuesto
+como concepto, por ejemplo, si se definiese el concepto $"cercanía de hospital"$, entonces sería útil definir el concepto
+$"lejanía de hospital"$ pués las posibles acciones a ejecutar se beneficiarían por uno y se perjudicarían por el otro,
+añadiendo facilidad a la decisión del agente.\\
+\\
+\textbf{Conceptos definidos para la categoría Perspectiva:}
+\begin{itemize}
+    \item Personas enfermas alta. (1.4)
+    \item Personas enfermas baja. (1.4)
+    \item Comida alta. (1.5)
+    \item Comida baja. (1.5)
+    \item Energía alta. (3)
+    \item Energía baja. (3)
+    \item Dinero alto. (1.5)
+    \item Dinero bajo. (1.5)
+    \item Enfermedad alta. (3.2)
+    \item Enfermedad baja. (3.2)
+\end{itemize}
+
+Cada concepto en esta categoría, tiene un parámetro que representa cuan grande es el intervalo que se considera para darle un valor en la 
+$fuziificación$ entre $(0,1)$ al concepto (el número que se encuentra entre paréntesis al lado del concepto), en caso 
+de que sea menor o mayor a los límites del intervalo, su valor final es $0$ o $1$ respectivamente, pero, ¿por qué
+se realiza este procedimiento?\\
+
+La idea de implentar de esta forma esta categoría es para $fuzzificar$ teniendo en cuenta lo que se percibe 
+del entorno. El valor de este parámetro por concepto nunca cambia, entonces surge la interrogante siguiente: 
+¿cómo modelar que la perspectiva del entorno varía? Este valor pasa por un proceso en el cual se toman variables que si
+cambian en el entorno y se utiliza el mismo para $fuzzificar$ el valor del concepto, el cual es distinto al parámetro 
+representado en la lista anterior.\\
+
+El proceso de $fuzzificación$ es distinto para concepto, pero por regla general se sigue la siguiente idea:\\
+\begin{enumerate}
+    \item Se toma un valor del entorno del entorno del agente que tenga relación con el concepto a $fuzzificar$, llamémosle $variable$ $de$ $fuzzificación$.
+    \item Se obtiene un intervalo de valores utilizando el parámetro del concepto, llamémosle $intervalo$ $de$ $fuzzificación$.
+    \item Se compara la $variable$ $de$ $fuzzificación$ con los extremos del $intervalo$ $de$ $fuzzificación$, en el caso de encontrarse incluida en este se decide si es más importante que este cerca del máximo o del mínimo del $intervalo$ $de$ $fuzzificación$ y se $fuzzifica$ de acuerdo al intervalo, teniendo en cuenta cual extremo es considerado $1$ y cual $0$ en el proceso de $fuzzificación$.
+\end{enumerate}
+
+\begin{center}
+    Sea $v$ la $variable$ $de$ $fuzzificación$.\\
+    Sea $(i_0, i_1)$ el $intervalo$ $de$ $fuzzificación$.\\
+    Sea $r$ el resultado del proceso de $fuzzificación$.\\
+    Sea $inv$ una variable booleana, tal que: $if$ $inv = True, v \geq i_1 \Rightarrow r = 1$ , $if$ $inv = False, v \leq i_0 \Rightarrow r = 1$\\
+\end{center}
+    Cuando $v$ se encuentra dentro del intervalo ocurre lo siguiente:\\
+\begin{center}
+    $if$ $inv = True$ $\Rightarrow$ $r = \frac{v - i_0}{i_1 - i_0}$\\
+    $if$ $inv = False$ $\Rightarrow$ $r = \frac{i_1 - v}{i_1 - i_0}$
+\end{center}
+
+La combinación de valores en estos conceptos, o el valor de un concepto por sí mismo, afecta al valor que toma algún
+concepto en la categoría $Sentimientos$.\\
+
+\subsection{Sentimientos}
+En esta categoría se tuvieron en cuenta los sentimientos básicos de un ser humano y los que mejor se adaptaban para
+representar la movilidad de los mismos.\\
+\\
+\textbf{Conceptos definidos para la categoría Sentimientos:}
+\begin{itemize}
+    \item Miedo.
+    \item Hambre.
+    \item Necesidad.
+    \item Enfermedad.
+    \item Indiferencia.
+    \item Cansancio.
+\end{itemize}
+
+\subsection{Acciones}
+Las acciones que se decidieron tener en cuenta, son las acciones que a nuestro entender, modelan el 
+comportamiento de una persona en caso de epidemia de una manera correcta.\\
+\\
+\textbf{Conceptos definidos para la categoría Acciones:}
+\begin{itemize}
+    \item Ir a trabajar.
+    \item Ir al mercado.
+    \item Ir al hospital.
+    \item Caminar.
+    \item Estudiar.
+    \item Descansar.
+    \item Prevenir.
+\end{itemize}
+
+Definamos ahora los conceptos que tienen relación entre sí, es decir que conceptos influyen en el valor de otros.
+Para esto será necesario ilustrar en una imagen el grafo resultante.
+
+% "people_sick_high" : (0, 1.4),
+%             "people_sick_low" : (1, 1.4),
+%             "food_high" : (2, 1.5),
+%             "food_low" : (3, 1.5),
+%             "energy_high" : (4, 3),
+%             "energy_low" : (5, 3),
+%             "money_high" : (6, 1.5),
+%             "money_low" : (7, 1.5),
+%             "sickness_high" : (8, 3.2),
+%             "sickness_low" : (9, 3.2)
+
+% "fear" : 10,
+%             # "loneliness" : 11,
+%             "hunger" : 12,
+%             "necessity" : 13,
+%             "disease" : 14,
+%             "indifference" : 15,
+%             "tiredness" : 16
 
 
-
-
+% "go_to_work" : 17,
+%             "go_to_market" : 18,
+%             "go_to_hospital" : 19,
+%             "go_around" : 20,
+%             "study" : 21,
+%             "rest" : 22,
+%             "prevent": 23

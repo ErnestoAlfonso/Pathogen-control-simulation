@@ -3,10 +3,11 @@
 \contentsline {section}{\numberline {0.1}Motivación}{2}{section.0.1}%
 \contentsline {section}{\numberline {0.2}Antecedentes}{2}{section.0.2}%
 \contentsline {section}{\numberline {0.3}Problema de Investigación}{3}{section.0.3}%
-\contentsline {section}{\numberline {0.4}Objetivos}{3}{section.0.4}%
-\contentsline {subsection}{\numberline {0.4.1}Objetivo general}{3}{subsection.0.4.1}%
-\contentsline {subsection}{\numberline {0.4.2}Objetivos específicos}{4}{subsection.0.4.2}%
-\contentsline {section}{\numberline {0.5}Estructura}{4}{section.0.5}%
+\contentsline {section}{\numberline {0.4}Pregunta Científica}{3}{section.0.4}%
+\contentsline {section}{\numberline {0.5}Objetivos}{4}{section.0.5}%
+\contentsline {subsection}{\numberline {0.5.1}Objetivo general}{4}{subsection.0.5.1}%
+\contentsline {subsection}{\numberline {0.5.2}Objetivos específicos}{4}{subsection.0.5.2}%
+\contentsline {section}{\numberline {0.6}Estructura}{4}{section.0.6}%
 \contentsline {chapter}{\numberline {1}Estado del Arte}{5}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Redes complejas}{5}{section.1.1}%
 \contentsline {subsection}{\numberline {1.1.1}Redes sociales}{6}{subsection.1.1.1}%
@@ -17,7 +18,15 @@
 \contentsline {subsection}{\numberline {2.1.1}Enfermedades Transmitidas por Vectores (ETV)}{12}{subsection.2.1.1}%
 \contentsline {section}{\numberline {2.2}Dengue}{13}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Modelación del entorno}{14}{section.2.3}%
-\contentsline {chapter}{\numberline {3}Detalles de Implementación y Experimentos}{15}{chapter.3}%
-\contentsline {chapter}{Conclusiones}{16}{section*.11}%
-\contentsline {chapter}{Recomendaciones}{17}{section*.13}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{18}{chapter*.15}%
+\contentsline {subsection}{\numberline {2.3.1}Loaclizaciones}{14}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Personas}{15}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Vectores}{18}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Interacción de los agentes con el entorno}{19}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Conceptos}{20}{subsection.2.4.1}%
+\contentsline {subsubsection}{Perspectiva}{20}{section*.14}%
+\contentsline {subsection}{\numberline {2.4.2}Sentimientos}{22}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Acciones}{22}{subsection.2.4.3}%
+\contentsline {chapter}{\numberline {3}Detalles de Implementación y Experimentos}{24}{chapter.3}%
+\contentsline {chapter}{Conclusiones}{25}{section*.15}%
+\contentsline {chapter}{Recomendaciones}{26}{section*.17}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{27}{chapter*.19}%
