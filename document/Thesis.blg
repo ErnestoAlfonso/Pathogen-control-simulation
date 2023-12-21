@@ -1,17 +1,17 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'Thesis.blg'
-[101] biber-MSWIN64:340> INFO - === 
-[136] Biber.pm:419> INFO - Reading 'Thesis.bcf'
-[248] Biber.pm:979> INFO - Found 22 citekeys in bib section 0
-[268] Biber.pm:4419> INFO - Processing section 0
-[279] Biber.pm:4610> INFO - Looking for bibtex file 'Bibliography.bib' for section 0
-[324] bibtex.pm:1713> INFO - LaTeX decoding ...
-[351] bibtex.pm:1519> INFO - Found BibTeX data source 'Bibliography.bib'
-[499] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[499] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[499] Biber.pm:4239> INFO - Sorting list 'apa/apasortcite//global/global' of type 'entry' with template 'apa' and locale 'es-ES'
-[535] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[535] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[535] Biber.pm:4239> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'es-ES'
-[553] bbl.pm:660> INFO - Writing 'Thesis.bbl' with encoding 'UTF-8'
-[574] bbl.pm:763> INFO - Output to Thesis.bbl
+[195] biber-MSWIN64:340> INFO - === 
+[290] Biber.pm:419> INFO - Reading 'Thesis.bcf'
+[431] Biber.pm:979> INFO - Found 22 citekeys in bib section 0
+[455] Biber.pm:4419> INFO - Processing section 0
+[478] Biber.pm:4610> INFO - Looking for bibtex file 'Bibliography.bib' for section 0
+[533] bibtex.pm:1713> INFO - LaTeX decoding ...
+[559] bibtex.pm:1519> INFO - Found BibTeX data source 'Bibliography.bib'
+[704] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[704] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[704] Biber.pm:4239> INFO - Sorting list 'apa/apasortcite//global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[740] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[740] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[740] Biber.pm:4239> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[758] bbl.pm:660> INFO - Writing 'Thesis.bbl' with encoding 'UTF-8'
+[779] bbl.pm:763> INFO - Output to Thesis.bbl

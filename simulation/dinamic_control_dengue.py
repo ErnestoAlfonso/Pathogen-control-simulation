@@ -9,6 +9,7 @@ class Simulation:
         self.dur_hour = dur_hour * 24
         self.market_cost = market_cost
         self.prob_of_edges = prob_of_edges
+        self.dictOfAction = {}
         self.prob_mosq_bite_ap = prob_mosq_bite_ap
         self.prob_inf_if_mosq_bite = prob_inf_if_mosq_bite
         self.amount_mosq_per_place = amount_mosq_per_place
@@ -27,13 +28,13 @@ class Simulation:
         hora_actual = datetime.datetime(2023, 10, 22, 8, 0)  # Por ejemplo, 22 de septiembre de 2023 a las 8:00 a.m.
 
         graph = Graph_m(self.amount_nodes,self.prob_of_edges, self.market_cost, self.amount_mosq_per_place, self.prob_mosq_bite_ap, self.prob_inf_if_mosq_bite)
-        dictOfAction = {}
+        
         self.dictOfHours = {}
         pers = []
-        dead_person = []
+        self.dead_person = []
         
         for key in graph.graph.vs["person"]:
-            dictOfAction[key.id] = []
+            self.dictOfAction[key.id] = []
         for hour in range(self.dur_hour):
             self.dictOfHours[hour] = []
         # Realizar la simulación
@@ -63,8 +64,9 @@ class Simulation:
                 try:
                     node = graph.nodes[person.id]
                 except:
-                    dead_person.append(person.id)
-                dictOfAction[person.id].append(self.DFActions(action, person))
+                    self.dead_person.append(person.id)
+                    self.dictOfHours[count].append((person.id, "Muerta"))
+                self.dictOfAction[person.id].append(self.DFActions(action, person))
                 self.dictOfHours[count].append((person.id, True if person.infected > 0 else False))
             # Actualizar la hora actual
 
@@ -77,17 +79,20 @@ class Simulation:
             #         if person.infected > 10:
             #             person.infected = 10
 
+        list_inf = []
         for person in graph.graph.vs["person"]:
+            list_inf.append("I" if person.infected > 0 else "NI")
             if person.infected > 0:
                 pers.append(person)
+            graph.graph.vs["infected"] = list_inf
         end = time.time()
-        print(f"Hechos que hizo una persona...{dictOfAction[3]}")
+        print(f"Hechos que hizo una persona...{self.dictOfAction[3]}")
         print(f"Tiempo sin paralelismo {end - start}")
         print("La ejecución a concluído.")
         print("Personas infectadas")
         print(pers)
         print("Personas muertas")
-        print(dead_person)
+        print(self.dead_person)
         # simulat = "Termino la simulacion"
         return graph.graph
 

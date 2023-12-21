@@ -120,7 +120,7 @@ class Bipartite_Graph(Graph_m):
         for clique in cliques:
             self.nodes_L[i] = Home("Home" + str(i), self.graph.amount_mosq_per_places)
             for item in range(self.nodes_L[i].amount_mosq):
-                mos = mosquitos(item, 0.005)
+                mos = mosquitos(item, self.graph.prob_mosq_bite_ap)
                 self.nodes_L[i].mosquitos.append(mos)
             for j in clique:
                 if len(self.graph.graph.vs["person"][j].freq_places) == 0:
@@ -136,21 +136,21 @@ class Bipartite_Graph(Graph_m):
         node = Hospital("Hospital" + str(i), self.graph.amount_mosq_per_places)
         self.nodes_L[i] = node
         for item in range(self.nodes_L[i].amount_mosq):
-            mos = mosquitos(item, 0.005)
+            mos = mosquitos(item, self.graph.prob_mosq_bite_ap)
             self.nodes_L[i].mosquitos.append(mos)
             
         i += 1
         node = Work("Work" + str(i), self.graph.amount_mosq_per_places)
         self.nodes_L[i] = node
         for item in range(self.nodes_L[i].amount_mosq):
-            mos = mosquitos(item, 0.005)
+            mos = mosquitos(item, self.graph.prob_mosq_bite_ap)
             self.nodes_L[i].mosquitos.append(mos)
             self.nodes_L[i].mosquitos[item].infected = True
         i += 1
         node = Market("Market" + str(i), self.graph.amount_mosq_per_places)
         self.nodes_L[i] = node
         for item in range(self.nodes_L[i].amount_mosq):
-            mos = mosquitos(item, 0.005)
+            mos = mosquitos(item, self.graph.prob_mosq_bite_ap)
             self.nodes_L[i].mosquitos.append(mos)
 
 # Done

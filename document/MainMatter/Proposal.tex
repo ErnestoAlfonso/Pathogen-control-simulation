@@ -1,5 +1,5 @@
 \chapter{Modelación para la simulación de enfermedades transmitidas por vectores}\label{chapter:proposal}
-\section{Vectores}
+\section{Vectores en la naturaleza}
 Un vector es un organismo vivo, como un insecto o artrópodo, que puede transmitir un agente 
 infeccioso, como un virus, una bacteria o un parásito, de un huésped infectado a un huésped 
 susceptible. Los vectores pueden actuar como intermediarios en la transmisión de enfermedades, 
@@ -110,7 +110,7 @@ la cual pueden asistir personas y vectores y además este puede brindar cierto r
 representaría un mercado en nuestra simulación?, un mercado posee una capacidad para albergar personas y vectores 
 y además brinda la posibilidad de obtener comida, aseo, entre otros.\\
 
-\textbf{Resultaron interesantes los siguientes lugares para representar:}
+\textbf{Localizaciones relevantes a representar:}
 \begin{enumerate}
     \item Casas: representa un hogar familiar.
     \item Hospitales: indica un centro de atención médica.
@@ -119,10 +119,10 @@ y además brinda la posibilidad de obtener comida, aseo, entre otros.\\
 \end{enumerate}
 
 Este tipo de localizaciones nos permite abarcar toda construcción en la que pueden relacionarce las personas, pués
-el tipo de lugar "Centro de Trabajo" sirve de comodín en nuestra simulación.\\
+el tipo de lugar $"Centro$ $de$ $Trabajo"$ sirve de comodín en nuestra simulación.\\
 
 \subsection{Personas}
-Una de las herramientas conocidas para describir relaciones entre agentes son los grafos. Un grafo
+Una de las herramientas conocidas para describir relaciones entre agentes son los grafos \autocite{Newman2003}. Un grafo
 es un par ordenado $G = (V,E)$ donde $V$ es un conjunto no vacío de nodos y $E$ es un conjunto de pares 
 no ordenados de aristas.\\
 
@@ -160,10 +160,16 @@ Teniendo esto en cuenta entonces las relaciones están definidas de la siguiente
 \begin{figure}[htb]
     \centering
     \includegraphics[width=0.8\textwidth]{Graphics/Grafo_Pers.png}
-    \caption{Ejemplo de grafo de relaciones personales. Personas: 300, probabilidad de arista: 0.05}
+    \caption{Ejemplo de grafo de relaciones personales generados por el modelo. Personas: 300, probabilidad de arista: 0.05}
 \end{figure}
 
-En la figura 2.2 se observa un posible grafo generado. En este grafo los posibles conjuntos $H$ serían: 
+\begin{figure}
+    \centering
+    \includegraphics[width=0.3\textwidth]{Graphics/Grafo_Familias.jpeg}
+    \caption{Ejemplo de grafo de relaciones personales para ilustrar.}
+\end{figure}
+
+En la figura 2.3 se observa un posible grafo generado. En este grafo los posibles conjuntos $H$ serían: 
 $H_{1} = (1,2)$; $H_{2}=(1,3)$;$H_{3}=(2,3)$; $H_{4} = (1,2,3)$; $H_{5} = (1,5)$; $H_{6}=(1,4)$; $H_{7} = (4,6)$; $H_{8} = (5,6)$ y por último tantos conjuntos $H$ como nodos haya, es decir
 todos los posibles cliques del grafo. De estos conjuntos se seleccionarían aleatoriamente algunos para formar el conjunto $C$;
 por ejemplo $C = \lbrace H_{4}, H_{7}, H_{15} \rbrace$; y los nodos que estan en los $H_{i} \in C$ serían considerados
@@ -256,7 +262,7 @@ diferencias entre estos conceptos las cuales son especificadas por Zadeh en \aut
 %     \item $A \subset B \Leftrightarrow f_A \leqq f_B$
 % \end{itemize}
 
-En el Capítulo $"Estado del Arte"$ se realiza un acercamiento a la posibilidad de crear un $FCM$ con tres clases de 
+En el Capítulo $"Estado$ $del$ $Arte"$ se realiza un acercamiento a la posibilidad de crear un $FCM$ con tres clases de 
 conceptos; $Perspectiva$, $Sentimientos$ y $Acciones$. Cada clase tiene una serie de conceptos que posibilitan la 
 interacción entre clases.\\
 Al separar los conceptos se comienza a ver el grafo del $FCM$ como un grafo bipartito, en el cual el conjunto $A$
@@ -264,9 +270,9 @@ se encuentra formado por los conceptos de las clases $Perspectiva$ y $Acciones$ 
 $Sentimientos$. Entonces surge una interrogante, ¿cuál sería el flujo a seguir de este $FCM$ para que los agentes
 decidan una acción u otra?.\\
 La idea es la siguiente, un agente percibe un estado del entorno, este estado, provoca un sentimiento en el agente
-y, a su vez, este sentimiento provoca una acción.\\
+y, a su vez, este sentimiento provoca una acción.
 \begin{center}
-    $Perspectiva \rightarrow Sentimientos \rightarrow Acciones$
+    $Perspectiva \rightarrow Sentimientos \rightarrow Acciones$\\
 \end{center}
 
 A medida que va cambiando el entorno, va cambiando la perspectiva del agente esta afecta a los sentimientos del mismo 
@@ -274,7 +280,7 @@ y con esto cambia la probabilidad de efectuar una acción u otra. Por tanto, el 
 es híbrida, cada pequeño cambio, ya sea, en el entorno, o en el mapa cognitivo difuso de un agente, afecta al $FCM$ de los
 agentes restantes.\\
 
-\subsection{Conceptos}
+\subsection{Conceptos (Personas)}
 \subsubsection{Perspectiva}
 Para la sección de los conceptos de percepción se observa que una idea útil es que, para cada concepto, crear su contrapuesto
 como concepto, por ejemplo, si se definiese el concepto $"cercanía de hospital"$, entonces sería útil definir el concepto
@@ -306,7 +312,7 @@ del entorno. El valor de este parámetro por concepto nunca cambia, entonces sur
 cambian en el entorno y se utiliza el mismo para $fuzzificar$ el valor del concepto, el cual es distinto al parámetro 
 representado en la lista anterior.\\
 
-El proceso de $fuzzificación$ es distinto para concepto, pero por regla general se sigue la siguiente idea:\\
+El proceso de $fuzzificación$ es distinto para cada concepto, pero por regla general se sigue la siguiente idea:\\
 \begin{enumerate}
     \item Se toma un valor del entorno del entorno del agente que tenga relación con el concepto a $fuzzificar$, llamémosle $variable$ $de$ $fuzzificación$.
     \item Se obtiene un intervalo de valores utilizando el parámetro del concepto, llamémosle $intervalo$ $de$ $fuzzificación$.
@@ -319,7 +325,7 @@ El proceso de $fuzzificación$ es distinto para concepto, pero por regla general
     Sea $r$ el resultado del proceso de $fuzzificación$.\\
     Sea $inv$ una variable booleana, tal que: $if$ $inv = True, v \geq i_1 \Rightarrow r = 1$ , $if$ $inv = False, v \leq i_0 \Rightarrow r = 1$\\
 \end{center}
-    Cuando $v$ se encuentra dentro del intervalo ocurre lo siguiente:\\
+    Cuando $v$ se encuentra dentro del intervalo ocurre lo siguiente:
 \begin{center}
     $if$ $inv = True$ $\Rightarrow$ $r = \frac{v - i_0}{i_1 - i_0}$\\
     $if$ $inv = False$ $\Rightarrow$ $r = \frac{i_1 - v}{i_1 - i_0}$
@@ -329,7 +335,7 @@ La combinación de valores en estos conceptos, o el valor de un concepto por sí
 concepto en la categoría $Sentimientos$.\\
 
 \subsection{Sentimientos}
-En esta categoría se tuvieron en cuenta los sentimientos básicos de un ser humano y los que mejor se adaptaban para
+En esta categoría se tienen en cuenta los sentimientos básicos de un ser humano y los que mejor se adaptaban para
 representar la movilidad de los mismos.\\
 \\
 \textbf{Conceptos definidos para la categoría Sentimientos:}
@@ -343,8 +349,7 @@ representar la movilidad de los mismos.\\
 \end{itemize}
 
 \subsection{Acciones}
-Las acciones que se decidieron tener en cuenta, son las acciones que a nuestro entender, modelan el 
-comportamiento de una persona en caso de epidemia de una manera correcta.\\
+Se definen las acciones fundamentales que modelan el comportamiento de una persona en un ambiente epidémico.\\
 \\
 \textbf{Conceptos definidos para la categoría Acciones:}
 \begin{itemize}

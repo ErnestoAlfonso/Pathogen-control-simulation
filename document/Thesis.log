@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.22)  14 DEC 2023 20:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.22)  15 DEC 2023 17:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1462,131 +1462,113 @@ Underfull \hbox (badness 10000) in paragraph at lines 137--143
 LaTeX Info: Redefining \. on input line 143.
 LaTeX Info: Redefining \% on input line 143.
 [15]
-<Graphics/Grafo_Pers.png, id=424, 611.886pt x 460.72125pt>
+<Graphics/Grafo_Pers.png, id=426, 611.886pt x 460.72125pt>
 File: Graphics/Grafo_Pers.png Graphic file (type png)
 <use Graphics/Grafo_Pers.png>
 Package pdftex.def Info: Graphics/Grafo_Pers.png  used on input line 162.
 (pdftex.def)             Requested size: 346.89731pt x 261.2008pt.
+<Graphics/Grafo_Familias.jpeg, id=427, 505.89pt x 285.065pt>
+File: Graphics/Grafo_Familias.jpeg Graphic file (type jpg)
+<use Graphics/Grafo_Familias.jpeg>
+Package pdftex.def Info: Graphics/Grafo_Familias.jpeg  used on input line 168.
+(pdftex.def)             Requested size: 130.08731pt x 73.30174pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 166--171
+Underfull \hbox (badness 10000) in paragraph at lines 172--177
 
  []
 
-LaTeX Info: Redefining \. on input line 171.
-LaTeX Info: Redefining \% on input line 171.
+LaTeX Info: Redefining \. on input line 177.
+LaTeX Info: Redefining \% on input line 177.
 [16 <./Graphics/Grafo_Pers.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 172--178
+Underfull \hbox (badness 10000) in paragraph at lines 178--184
 
  []
 
-<Graphics/Grafo_Loc_Pers.jpeg, id=430, 310.15875pt x 370.38374pt>
+<Graphics/Grafo_Loc_Pers.jpeg, id=433, 310.15875pt x 370.38374pt>
 File: Graphics/Grafo_Loc_Pers.jpeg Graphic file (type jpg)
 <use Graphics/Grafo_Loc_Pers.jpeg>
-Package pdftex.def Info: Graphics/Grafo_Loc_Pers.jpeg  used on input line 186.
+Package pdftex.def Info: Graphics/Grafo_Loc_Pers.jpeg  used on input line 192.
 (pdftex.def)             Requested size: 130.08731pt x 155.34534pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 190--194
-
- []
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 196--200
 
  []
 
-LaTeX Info: Redefining \. on input line 200.
-LaTeX Info: Redefining \% on input line 200.
-[17 <./Graphics/Grafo_Loc_Pers.jpeg>]
-Underfull \hbox (badness 10000) in paragraph at lines 201--204
+
+Underfull \hbox (badness 10000) in paragraph at lines 202--206
+
+ []
+
+LaTeX Info: Redefining \. on input line 207.
+LaTeX Info: Redefining \% on input line 207.
+[17 <./Graphics/Grafo_Familias.jpeg>]
+Underfull \hbox (badness 10000) in paragraph at lines 207--210
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 205--209
+Underfull \hbox (badness 10000) in paragraph at lines 211--215
 
  []
 
-<Graphics/Pers_Loc_Vec.png, id=435, 545.6385pt x 370.986pt>
+<Graphics/Pers_Loc_Vec.png, id=438, 545.6385pt x 370.986pt>
 File: Graphics/Pers_Loc_Vec.png Graphic file (type png)
 <use Graphics/Pers_Loc_Vec.png>
-Package pdftex.def Info: Graphics/Pers_Loc_Vec.png  used on input line 212.
+Package pdftex.def Info: Graphics/Pers_Loc_Vec.png  used on input line 218.
 (pdftex.def)             Requested size: 390.25534pt x 265.34354pt.
-LaTeX Info: Redefining \. on input line 219.
-LaTeX Info: Redefining \% on input line 219.
-[18 <./Graphics/Pers_Loc_Vec.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 239--246
+LaTeX Info: Redefining \. on input line 242.
+LaTeX Info: Redefining \% on input line 242.
+[18 <./Graphics/Grafo_Loc_Pers.jpeg>]
+Underfull \hbox (badness 10000) in paragraph at lines 245--252
 
  []
 
-LaTeX Info: Redefining \. on input line 247.
-LaTeX Info: Redefining \% on input line 247.
-[19]
-Underfull \hbox (badness 10000) in paragraph at lines 247--250
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 259--268
+LaTeX Info: Redefining \. on input line 252.
+LaTeX Info: Redefining \% on input line 252.
+[19 <./Graphics/Pers_Loc_Vec.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 253--256
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 272--276
+Underfull \hbox (badness 10000) in paragraph at lines 278--282
 
  []
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 280.
+LaTeX Warning: Command \' invalid in math mode on input line 286.
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 281.
+LaTeX Warning: Command \' invalid in math mode on input line 287.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 279--285
+Underfull \hbox (badness 10000) in paragraph at lines 285--291
 
  []
 
-LaTeX Info: Redefining \. on input line 289.
-LaTeX Info: Redefining \% on input line 289.
+LaTeX Info: Redefining \. on input line 291.
+LaTeX Info: Redefining \% on input line 291.
 [20]
 
-LaTeX Warning: Command \' invalid in math mode on input line 299.
+LaTeX Warning: Command \' invalid in math mode on input line 305.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 298--302
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 303--308
+Underfull \hbox (badness 10000) in paragraph at lines 304--308
 
  []
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 309.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 309--310
+Underfull \hbox (badness 10000) in paragraph at lines 309--314
 
  []
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 311.
+LaTeX Warning: Command \' invalid in math mode on input line 315.
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 312.
+Underfull \hbox (badness 10000) in paragraph at lines 315--316
 
-
-LaTeX Warning: Command \' invalid in math mode on input line 313.
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 313.
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 313.
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 313.
+ []
 
 
 LaTeX Warning: Command \' invalid in math mode on input line 317.
@@ -1594,34 +1576,47 @@ LaTeX Warning: Command \' invalid in math mode on input line 317.
 
 LaTeX Warning: Command \' invalid in math mode on input line 318.
 
-LaTeX Info: Redefining \. on input line 319.
-LaTeX Info: Redefining \% on input line 319.
-[21]
 
 LaTeX Warning: Command \' invalid in math mode on input line 319.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 322--323
+LaTeX Warning: Command \' invalid in math mode on input line 319.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 319.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 319.
+
+LaTeX Info: Redefining \. on input line 320.
+LaTeX Info: Redefining \% on input line 320.
+[21]
+
+LaTeX Warning: Command \' invalid in math mode on input line 323.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 324.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 325.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--336
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--330
+Underfull \hbox (badness 10000) in paragraph at lines 338--342
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 332--336
+Underfull \hbox (badness 10000) in paragraph at lines 352--355
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 346--350
-
- []
-
-LaTeX Info: Redefining \. on input line 354.
-LaTeX Info: Redefining \% on input line 354.
+LaTeX Info: Redefining \. on input line 355.
+LaTeX Info: Redefining \% on input line 355.
 [22])
 LaTeX Info: Redefining \. on input line 93.
 LaTeX Info: Redefining \% on input line 93.
@@ -1671,24 +1666,24 @@ LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-09>
  ***********
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: DCAAF33AC186E34352650C32931C2DEC;4595.
+(rerunfilecheck)             Checksum: 9B6850030FCD3B314E3B0ECA74C463E0;4753.
 Package logreq Info: Writing requests to 'Thesis.run.xml'.
 \openout1 = `Thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36981 strings out of 474267
- 693389 string characters out of 5751464
+ 36990 strings out of 474267
+ 693661 string characters out of 5751464
  1937558 words of memory out of 5000000
- 58401 multiletter control sequences out of 15000+600000
+ 58409 multiletter control sequences out of 15000+600000
  627804 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  125i,13n,121p,719b,4333s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi9.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmro10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy9.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb>
-Output written on Thesis.pdf (38 pages, 757240 bytes).
+Output written on Thesis.pdf (38 pages, 769438 bytes).
 PDF statistics:
- 618 PDF objects out of 1000 (max. 8388607)
- 534 compressed objects within 6 object streams
- 142 named destinations out of 1000 (max. 500000)
- 283 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 622 PDF objects out of 1000 (max. 8388607)
+ 537 compressed objects within 6 object streams
+ 143 named destinations out of 1000 (max. 500000)
+ 288 words of extra memory for PDF output out of 10000 (max. 10000000)
 
