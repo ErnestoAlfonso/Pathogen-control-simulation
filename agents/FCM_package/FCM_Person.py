@@ -17,21 +17,21 @@ class FCM_Person(FCM):
         self._internals_index = {
             "fear" : 10,
             # "loneliness" : 11,
-            "hunger" : 12,
-            "necessity" : 13,
-            "disease" : 14,
-            "indifference" : 15,
-            "tiredness" : 16
+            "hunger" : 11,#12
+            "necessity" : 12,
+            "disease" : 13,
+            "indifference" : 14,
+            "tiredness" : 15
             
         }
         self._actions_index = {
-            "go_to_work" : 17,
-            "go_to_market" : 18,
-            "go_to_hospital" : 19,
-            "go_around" : 20,
-            "study" : 21,
-            "rest" : 22,
-            "prevent": 23
+            "go_to_work" : 16,
+            "go_to_market" : 17,
+            "go_to_hospital" : 18,
+            "go_around" : 19,
+            "study" : 20,
+            "rest" : 21,
+            "prevent": 22
         } 
         sens = 10
         internal = 7
@@ -52,27 +52,27 @@ class FCM_Person(FCM):
         self.causal_graph[8,0] = 6
         self.causal_graph[9,0] = -6
         #hunger
+        self.causal_graph[2,1] = 2.5#2
+        self.causal_graph[3,1] = -2.5
+        #necessity
         self.causal_graph[2,2] = 2.5
         self.causal_graph[3,2] = -2.5
-        #necessity
-        self.causal_graph[2,3] = 2.5
-        self.causal_graph[3,3] = -2.5
-        self.causal_graph[6,3] = 4
-        self.causal_graph[7,3] = -4
+        self.causal_graph[6,2] = 4
+        self.causal_graph[7,2] = -4
         #disease
-        self.causal_graph[8,4] = 4
-        self.causal_graph[9,4] = -4
+        self.causal_graph[8,3] = 4
+        self.causal_graph[9,3] = -4
         #indiference
-        self.causal_graph[0,5] = -1
-        self.causal_graph[1,5] = 0.8
-        self.causal_graph[4,5] = 1
-        self.causal_graph[5,5] = -1
-        self.causal_graph[6,5] = 1
-        self.causal_graph[7,5] = -2
-        self.causal_graph[9,5] = 1
+        self.causal_graph[0,4] = -1
+        self.causal_graph[1,4] = 0.8
+        self.causal_graph[4,4] = 1
+        self.causal_graph[5,4] = -1
+        self.causal_graph[6,4] = 1
+        self.causal_graph[7,4] = -2
+        self.causal_graph[9,4] = 1
         #tiredness
-        self.causal_graph[4,6] = 4
-        self.causal_graph[5,6] = -4
+        self.causal_graph[4,5] = 4
+        self.causal_graph[5,5] = -4
 
     def _build_internalActions_connections(self):
         #go_to_work
@@ -103,6 +103,6 @@ class FCM_Person(FCM):
         # self.causal_graph[11,12] = -2
         self.causal_graph[15,11] = 1.5
         #prevent
-        self.causal_graph[10,11] = 2.5
-        self.causal_graph[12,11] = -1
-        self.causal_graph[14,11] = 0.7
+        self.causal_graph[10,12] = 2.5 #11
+        self.causal_graph[12,12] = -1
+        self.causal_graph[14,12] = 0.7

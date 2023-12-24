@@ -5,6 +5,10 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Algunas enfermedades transmitidas por vectores.\blx@tocontentsinit {0}\autocite {Tercero2008}}}{12}{figure.caption.10}%
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Ejemplo de grafo de relaciones personales generados por el modelo. Personas: 300, probabilidad de arista: 0.05}}{16}{figure.caption.11}%
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Ejemplo de grafo de relaciones personales para ilustrar.}}{17}{figure.caption.12}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Ejemplo de grafo que representa a la red de contactos sociales.}}{18}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Ejemplo de grafo que representa a la red de contactos sociales.}}{17}{figure.caption.13}%
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Esquema que representa el entorno modelado.}}{19}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Grafo que representa las relaciones entre los nodos de $percepci$ó$n$ y $sentimientos$ del $FCM$ inicial de cada persona}}{24}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Matriz de adyacencia del grafo de la figura 2.6 con los pesos de las aristas.}}{25}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Grafo que representa las relaciones entre los nodos de $sentimientos$ y $acciones$ del $FCM$ inicial de cada persona}}{26}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Matriz de adyacencia del grafo de la figura 2.8 con los pesos de las aristas.}}{26}{figure.caption.18}%
 \addvspace {10\p@ }
