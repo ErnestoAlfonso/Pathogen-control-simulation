@@ -164,6 +164,29 @@
       \field{volume}{303–327}
       \field{year}{2021}
     \endentry
+    \entry{CDC2022}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b451ae487bde3a3338f110920744afa8}{%
+           family={CDC},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{b451ae487bde3a3338f110920744afa8}
+      \strng{fullhash}{b451ae487bde3a3338f110920744afa8}
+      \strng{bibnamehash}{b451ae487bde3a3338f110920744afa8}
+      \strng{authorbibnamehash}{b451ae487bde3a3338f110920744afa8}
+      \strng{authornamehash}{b451ae487bde3a3338f110920744afa8}
+      \strng{authorfullhash}{b451ae487bde3a3338f110920744afa8}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Clinical Outreach and Comunication Activity}
+      \field{title}{Clinical Considerations for Dengue Virus Infection}
+      \field{year}{2022}
+    \endentry
     \entry{Epstein2008}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=baaba4ae833250b58d25d0292a11c7ae}{%
@@ -804,7 +827,7 @@
       \field{title}{Vector-borne diseases}
       \field{year}{2020}
     \endentry
-    \entry{OMS2023}{article}{}
+    \entry{WHO2023S}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=9ed1e9f759b27c20c0ee8a56113c84e3}{%
            family={WHO},
@@ -819,6 +842,32 @@
       \field{extraname}{2}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Disease Outbreak News}
+      \field{title}{Dengue – the Region of the Americas}
+      \field{year}{2023}
+    \endentry
+    \entry{OMS2023}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9ed1e9f759b27c20c0ee8a56113c84e3}{%
+           family={WHO},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9ed1e9f759b27c20c0ee8a56113c84e3}
+      \strng{fullhash}{9ed1e9f759b27c20c0ee8a56113c84e3}
+      \strng{bibnamehash}{9ed1e9f759b27c20c0ee8a56113c84e3}
+      \strng{authorbibnamehash}{9ed1e9f759b27c20c0ee8a56113c84e3}
+      \strng{authornamehash}{9ed1e9f759b27c20c0ee8a56113c84e3}
+      \strng{authorfullhash}{9ed1e9f759b27c20c0ee8a56113c84e3}
+      \field{extraname}{3}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{2}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \true{uniqueprimaryauthor}
@@ -1004,6 +1053,29 @@
       \field{volume}{303–327}
       \field{year}{2021}
     \endentry
+    \entry{CDC2022}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b451ae487bde3a3338f110920744afa8}{%
+           family={CDC},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{b451ae487bde3a3338f110920744afa8}
+      \strng{fullhash}{b451ae487bde3a3338f110920744afa8}
+      \strng{bibnamehash}{b451ae487bde3a3338f110920744afa8}
+      \strng{authorbibnamehash}{b451ae487bde3a3338f110920744afa8}
+      \strng{authornamehash}{b451ae487bde3a3338f110920744afa8}
+      \strng{authorfullhash}{b451ae487bde3a3338f110920744afa8}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Clinical Outreach and Comunication Activity}
+      \field{title}{Clinical Considerations for Dengue Virus Infection}
+      \field{year}{2022}
+    \endentry
     \entry{Epstein2008}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=baaba4ae833250b58d25d0292a11c7ae}{%
@@ -1644,7 +1716,7 @@
       \field{title}{Vector-borne diseases}
       \field{year}{2020}
     \endentry
-    \entry{OMS2023}{article}{}
+    \entry{WHO2023S}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=9ed1e9f759b27c20c0ee8a56113c84e3}{%
            family={WHO},
@@ -1659,6 +1731,32 @@
       \field{extraname}{2}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Disease Outbreak News}
+      \field{title}{Dengue – the Region of the Americas}
+      \field{year}{2023}
+    \endentry
+    \entry{OMS2023}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9ed1e9f759b27c20c0ee8a56113c84e3}{%
+           family={WHO},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9ed1e9f759b27c20c0ee8a56113c84e3}
+      \strng{fullhash}{9ed1e9f759b27c20c0ee8a56113c84e3}
+      \strng{bibnamehash}{9ed1e9f759b27c20c0ee8a56113c84e3}
+      \strng{authorbibnamehash}{9ed1e9f759b27c20c0ee8a56113c84e3}
+      \strng{authornamehash}{9ed1e9f759b27c20c0ee8a56113c84e3}
+      \strng{authorfullhash}{9ed1e9f759b27c20c0ee8a56113c84e3}
+      \field{extraname}{3}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradate}{2}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \true{uniqueprimaryauthor}

@@ -40,9 +40,9 @@ class App(CTk):
 
 
         self.fram_option.columnconfigure(0, weight = 1)
-        self.fram_option.rowconfigure((0,1,2,3,4,5,6,7), weight = 1)
+        self.fram_option.rowconfigure((0,1,2,3,4,5,6,7,8), weight = 1)
 
-        self.frame_legend.columnconfigure((0,1,2,3,4,5,6,7), weight = 1, pad=0)
+        self.frame_legend.columnconfigure((0,1,2,3,4,5,6,7,8), weight = 1, pad=0)
         self.frame_legend.rowconfigure((0,1), weight = 1)
 
         self.frame_plot.rowconfigure(0, weight = 1)
@@ -85,20 +85,24 @@ class App(CTk):
 
         self.mosq_inf_if_bite.grid(columnspan = 2, row = 5, padx = 1, pady = 1) 
 
+        self.prob_die_h = CTkEntry(self.fram_option, font = ('sans rerif', 12), placeholder_text = "Probabilidad de morir infectado/d",
+                        border_color = c_green, fg_color = c_black, width = 220, height = 40)
+
+        self.prob_die_h.grid(columnspan = 2, row = 6, padx = 1, pady = 1)
 
         self.run_sim = CTkButton(self.fram_option, font = ('sans rerif',12),corner_radius=12, border_color = c_green, 
                             fg_color=c_black, text= "Simular", text_color = c_green, width=220, height=40,
                             border_width=2, command = self.run_sim_callback)
 
 
-        self.run_sim.grid(columnspan=2, row = 6, padx = 1, pady = 1)
+        self.run_sim.grid(columnspan=2, row = 7, padx = 1, pady = 1)
 
         self.clean_graph = CTkButton(self.fram_option, font = ('sans rerif',12),corner_radius=12, border_color = c_green, 
                             fg_color=c_black, text= "Limpiar el grafo", text_color = c_green, width=220, height=40,
                             border_width=2, command = self.destroy_canvas)
 
 
-        self.clean_graph.grid(columnspan=2, row = 7, padx = 1, pady = 1)
+        self.clean_graph.grid(columnspan=2, row = 8, padx = 1, pady = 1)
 
         self.plot_sim = CTkButton(self.frame_plot, font = ('sans rerif',12),corner_radius=12, border_color = c_green, 
                             fg_color=c_black, text= "Graficar simulación", text_color = c_green, width=220, height=40,
@@ -169,8 +173,9 @@ class App(CTk):
             mosquitos = int(self.mosq.get())
             prob_bite = float(self.mosq_prob_bite_ap.get())
             prob_inf = float(self.mosq_inf_if_bite.get())
+            prob_die_h = float(self.prob_die_h.get())
         
-            self.sim = Simulation(people,time,240,prob_of_edges,mosquitos, prob_bite, prob_inf)
+            self.sim = Simulation(people,time,240,prob_of_edges,mosquitos, prob_bite, prob_inf, prob_die_h)
 
             self.graph = self.sim.run_simulation()
 

@@ -10,11 +10,12 @@ import igraph as ig
 Node = TypeVar("Node")
 
 class Graph_m():
-    def __init__(self, amount_nodes, prob_of_edges, market_cost, amount_mosq_per_places, prob_mosq_bite_ap, prob_inf_if_mosq_bite):
+    def __init__(self, amount_nodes, prob_of_edges, market_cost, amount_mosq_per_places, prob_mosq_bite_ap, prob_inf_if_mosq_bite, prob_die_h):
         self.reset()
         self.amount_nodes = amount_nodes
         self.prob_of_edges = prob_of_edges
         self.market_cost = market_cost
+        self.prob_die_h = prob_die_h
         self.prob_mosq_bite_ap = prob_mosq_bite_ap
         self.prob_inf_if_mosq_bite = prob_inf_if_mosq_bite
         self.amount_mosq_per_places = amount_mosq_per_places
@@ -34,7 +35,7 @@ class Graph_m():
         my_list = []
         i=0
         while i < self.amount_nodes:
-            node = person(i)
+            node = person(i, self.prob_die_h)
             my_list.append(node)
             i+=1
         self.graph.vs["person"] = my_list
@@ -44,7 +45,7 @@ class Graph_m():
     def create_nodes(self):
         i = 0
         while i < self.amount_nodes:
-            node = person(i)
+            node = person(i, self.prob_die_h)
             self.nodes[i] = node
             self.edges[i] = set()
             i += 1

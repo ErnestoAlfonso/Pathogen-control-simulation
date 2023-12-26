@@ -6,13 +6,14 @@ import datetime
 import time
 
 class person:
-    def __init__(self, id):
+    def __init__(self, id, prob_die_h):
         self.id = id
         self.state = 0
         self.max_energy = 18
         self.energy = 18
         self.amount_food = 10
         self.count = 0
+        self.prob_die_h = prob_die_h
         self.max_amount_food = 42
         self.money = 10
         self.infected = 0

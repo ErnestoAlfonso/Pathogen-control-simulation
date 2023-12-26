@@ -18,16 +18,17 @@
 \contentsline {subsection}{\numberline {2.1.1}Enfermedades Transmitidas por Vectores (ETV)}{12}{subsection.2.1.1}%
 \contentsline {section}{\numberline {2.2}Dengue}{13}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Modelación del entorno}{14}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Loaclizaciones}{14}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.1}Localizaciones}{14}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}Personas}{15}{subsection.2.3.2}%
 \contentsline {subsection}{\numberline {2.3.3}Vectores}{18}{subsection.2.3.3}%
 \contentsline {section}{\numberline {2.4}Interacción de los agentes con el entorno}{19}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Conceptos (Personas)}{21}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Perspectiva}{21}{subsection.2.5.1}%
+\contentsline {section}{\numberline {2.5}Conceptos (Personas)}{20}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Perspectiva}{20}{subsection.2.5.1}%
 \contentsline {subsection}{\numberline {2.5.2}Sentimientos}{22}{subsection.2.5.2}%
-\contentsline {subsection}{\numberline {2.5.3}Acciones}{23}{subsection.2.5.3}%
-\contentsline {section}{\numberline {2.6}Vectores y sus acciones}{27}{section.2.6}%
-\contentsline {chapter}{\numberline {3}Detalles de Implementación y Experimentos}{29}{chapter.3}%
-\contentsline {chapter}{Conclusiones}{30}{section*.19}%
-\contentsline {chapter}{Recomendaciones}{31}{section*.21}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{32}{chapter*.23}%
+\contentsline {subsection}{\numberline {2.5.3}Acciones}{22}{subsection.2.5.3}%
+\contentsline {section}{\numberline {2.6}Vectores y sus acciones}{26}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Infección, muerte y recuperación de los agentes}{27}{section.2.7}%
+\contentsline {chapter}{\numberline {3}Detalles de Implementación y Experimentos}{30}{chapter.3}%
+\contentsline {chapter}{Conclusiones}{31}{section*.21}%
+\contentsline {chapter}{Recomendaciones}{32}{section*.23}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{33}{chapter*.25}%
