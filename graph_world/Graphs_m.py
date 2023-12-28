@@ -134,6 +134,7 @@ class Bipartite_Graph(Graph_m):
                     # TODO: Delete self.graph.nodes and only use .vs["person"]
             i+=1
         # TODO: Find a the best relation between people and places
+        #region Hospital
         node = Hospital("Hospital" + str(i), self.graph.amount_mosq_per_places)
         self.nodes_L[i] = node
         for item in range(self.nodes_L[i].amount_mosq):
@@ -141,6 +142,24 @@ class Bipartite_Graph(Graph_m):
             self.nodes_L[i].mosquitos.append(mos)
             
         i += 1
+
+        node = Hospital("Hospital" + str(i), self.graph.amount_mosq_per_places)
+        self.nodes_L[i] = node
+        for item in range(self.nodes_L[i].amount_mosq):
+            mos = mosquitos(item, self.graph.prob_mosq_bite_ap)
+            self.nodes_L[i].mosquitos.append(mos)
+            
+        i += 1
+
+        node = Hospital("Hospital" + str(i), self.graph.amount_mosq_per_places)
+        self.nodes_L[i] = node
+        for item in range(self.nodes_L[i].amount_mosq):
+            mos = mosquitos(item, self.graph.prob_mosq_bite_ap)
+            self.nodes_L[i].mosquitos.append(mos)
+            
+        i += 1
+        #endregion
+        #region Work
         node = Work("Work" + str(i), self.graph.amount_mosq_per_places)
         self.nodes_L[i] = node
         for item in range(self.nodes_L[i].amount_mosq):
@@ -148,12 +167,57 @@ class Bipartite_Graph(Graph_m):
             self.nodes_L[i].mosquitos.append(mos)
             self.nodes_L[i].mosquitos[item].infected = True
         i += 1
+
+        node = Work("Work" + str(i), self.graph.amount_mosq_per_places)
+        self.nodes_L[i] = node
+        for item in range(self.nodes_L[i].amount_mosq):
+            mos = mosquitos(item, self.graph.prob_mosq_bite_ap)
+            self.nodes_L[i].mosquitos.append(mos)
+            self.nodes_L[i].mosquitos[item].infected = True
+        i += 1
+
+        node = Work("Work" + str(i), self.graph.amount_mosq_per_places)
+        self.nodes_L[i] = node
+        for item in range(self.nodes_L[i].amount_mosq):
+            mos = mosquitos(item, self.graph.prob_mosq_bite_ap)
+            self.nodes_L[i].mosquitos.append(mos)
+            self.nodes_L[i].mosquitos[item].infected = True
+        i += 1
+
+        node = Work("Work" + str(i), self.graph.amount_mosq_per_places)
+        self.nodes_L[i] = node
+        for item in range(self.nodes_L[i].amount_mosq):
+            mos = mosquitos(item, self.graph.prob_mosq_bite_ap)
+            self.nodes_L[i].mosquitos.append(mos)
+            self.nodes_L[i].mosquitos[item].infected = True
+        i += 1
+        #endregion
+        
+        #region Market
+        node = Market("Market" + str(i), self.graph.amount_mosq_per_places)
+        self.nodes_L[i] = node
+        for item in range(self.nodes_L[i].amount_mosq):
+            mos = mosquitos(item, self.graph.prob_mosq_bite_ap)
+            self.nodes_L[i].mosquitos.append(mos)
+        
+        i += 1
         node = Market("Market" + str(i), self.graph.amount_mosq_per_places)
         self.nodes_L[i] = node
         for item in range(self.nodes_L[i].amount_mosq):
             mos = mosquitos(item, self.graph.prob_mosq_bite_ap)
             self.nodes_L[i].mosquitos.append(mos)
 
+        i += 1
+
+        node = Market("Market" + str(i), self.graph.amount_mosq_per_places)
+        self.nodes_L[i] = node
+        for item in range(self.nodes_L[i].amount_mosq):
+            mos = mosquitos(item, self.graph.prob_mosq_bite_ap)
+            self.nodes_L[i].mosquitos.append(mos)
+
+        i += 1
+
+        #endregion
 # Done
     def replace_edges(self, edges_to_replace: list):
         for item in edges_to_replace:
@@ -161,6 +225,7 @@ class Bipartite_Graph(Graph_m):
             self.edges[item[0]] = set()
             self.edges[item[0]].add(item[2])
             self.graph.graph.vs["person"][item[0]].place_at_moment = list(self.edges[item[0]])[0]
+            self.graph.graph.vs["person"][item[0]].freq_places.add(list(self.edges[item[0]])[0])
         return "edge replaced"
     
     # Find all the type of nodes of one kind. Maked for Hospitals, Works and Markets nodes.

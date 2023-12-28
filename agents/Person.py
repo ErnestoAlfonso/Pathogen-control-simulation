@@ -22,6 +22,7 @@ class person:
         self.last_infection = 0
         self.max_infection = 10
         self.place_at_moment = 0
+        self.result = 0
         self.freq_places = set()
         self.fcm = FCM_Person()
         
@@ -70,7 +71,7 @@ class person:
                 self.infected = 10
 
         if self.infected:
-            r = random.random() < self.infected * 0.001
+            r = random.random() < self.infected * self.prob_die_h
             if r:
                 bgrpah.graph.delete_node(self.id)
                 return 0
@@ -331,12 +332,12 @@ class person:
                 if result_of_prevent <= 0.5:
                     home.mosquitos[i].prob_of_byte -= 0.0001
                     mosq_selected = random.choice(home.mosquitos)
-                    result = random.random() < mosq_selected.prob_of_byte
+                    self.result = random.random() < mosq_selected.prob_of_byte
                 r = random.random() < bgraph.graph.prob_inf_if_mosq_bite
                 if self.infected > 0 and r:
                     home.mosquitos[i].infected = True
                 
-                elif result and mosq_selected.infected and r and not self.i_atleast_one_time:
+                elif self.result and mosq_selected.infected and r and not self.i_atleast_one_time:
                     self.infected = random.random() * 5
                     self.last_infection = self.infected
         

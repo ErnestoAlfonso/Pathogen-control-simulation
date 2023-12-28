@@ -28,13 +28,16 @@ class Simulation:
         # Definir la hora de inicio de la simulación
         hora_actual = datetime.datetime(2023, 10, 22, 8, 0)  # Por ejemplo, 22 de septiembre de 2023 a las 8:00 a.m.
 
-        graph = Graph_m(self.amount_nodes,self.prob_of_edges, self.market_cost, self.amount_mosq_per_place, self.prob_mosq_bite_ap, self.prob_inf_if_mosq_bite, self.prob_die_h)
+        self.graph = Graph_m(self.amount_nodes,self.prob_of_edges, self.market_cost, self.amount_mosq_per_place, self.prob_mosq_bite_ap, self.prob_inf_if_mosq_bite, self.prob_die_h)
         
         self.dictOfHours = {}
         pers = []
         self.dead_person = []
+        self.locations = [x+1 for x in range(len(self.graph.bipartite_graph.nodes_L))]
+        self.amount_loc_visited = [0 for x in range(self.amount_nodes)]
+        self.person_per_places = [0 for x in range(len(self.locations))]
         
-        for key in graph.graph.vs["person"]:
+        for key in self.graph.graph.vs["person"]:
             self.dictOfAction[key.id] = []
         for hour in range(self.dur_hour):
             self.dictOfHours[hour] = []
@@ -53,17 +56,17 @@ class Simulation:
         
         # for process in processes:
         #     process.join()
-            for person in graph.graph.vs["person"]:
+            for person in self.graph.graph.vs["person"]:
                 try:
-                    graph.nodes[person.id]
+                    self.graph.nodes[person.id]
                 except:
                     continue
-                person.get_perception(graph)
+                person.get_perception(self.graph)
                 action = person.choose_action()
-                person.make_action(action, graph.bipartite_graph, hora_actual)
+                person.make_action(action, self.graph.bipartite_graph, hora_actual)
                 person.energy -= 1
                 try:
-                    node = graph.nodes[person.id]
+                    node = self.graph.nodes[person.id]
                 except:
                     self.dead_person.append(person.id)
                     self.dictOfHours[count].append((person.id, "Muerta"))
@@ -81,12 +84,24 @@ class Simulation:
             #             person.infected = 10
 
         list_inf = []
-        for person in graph.graph.vs["person"]:
+        for person in self.graph.graph.vs["person"]:
             list_inf.append("I" if person.infected > 0 else "NI")
+            self.amount_loc_visited[person.id] = len(person.freq_places)
             if person.infected > 0:
                 pers.append(person)
-            graph.graph.vs["infected"] = list_inf
+            self.graph.graph.vs["infected"] = list_inf
         end = time.time()
+        #Para hallar la cantidad de personas que visitan una cantidad de lugares
+        for j in range(len(self.locations)):
+            amount = self.amount_loc_visited.count(j+1)
+            self.person_per_places[j] = amount
+        for i in range(len(self.person_per_places)):
+            if self.person_per_places[i] != 0:
+                pos = i
+        
+        if pos is not None:
+            self.person_per_places = self.person_per_places[:pos+1]
+
         print(f"Hechos que hizo una persona...{self.dictOfAction[3]}")
         print(f"Tiempo sin paralelismo {end - start}")
         print("La ejecución a concluído.")
@@ -95,7 +110,6 @@ class Simulation:
         print("Personas muertas")
         print(self.dead_person)
         # simulat = "Termino la simulacion"
-        return graph.graph
 
 
     def DFActions(self, action, person):

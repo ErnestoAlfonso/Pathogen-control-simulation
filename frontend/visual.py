@@ -177,12 +177,13 @@ class App(CTk):
         
             self.sim = Simulation(people,time,240,prob_of_edges,mosquitos, prob_bite, prob_inf, prob_die_h)
 
-            self.graph = self.sim.run_simulation()
+            self.sim.run_simulation()
+            self.graph = self.sim.graph.graph
 
             self.plot_sim.configure(state = 'normal')
             self.person_action_per_day.configure(state = 'normal')
 
-            color_dict = {"I": "black", "NI": "red"}
+            color_dict = {"I": "black", "NI": "white"}
             self.graph.vs["color"] = [color_dict[infected] for infected in self.graph.vs["infected"]]
             # layout = self.graph.layout('kk')
             layout = self.graph.layout_kamada_kawai()
@@ -190,7 +191,6 @@ class App(CTk):
             fig, ax = plt.subplots()
 
             ig.plot(self.graph, layout=layout, target=ax,vertex_size=10)
-
             # print("Nodes")
             # print(nodes)
             # for node in self.graph.vs["person"]:
@@ -209,6 +209,8 @@ class App(CTk):
         
         except Exception as e:
             print(e)
+            print("Me rompi en run_sim")
+            print(f"people:" + str(people) + " time:" + str(time) + " prob_of_edges:" + str(prob_of_edges) + " mosquitos:" + str(mosquitos) + " prob_of_bite:" + str(prob_bite) + " prob_inf:" + str(prob_inf) + " prob_of_die_h:" + str(prob_die_h))
             # return "ERROR: el valor de las personas, el tiempo y la probabilidad de aristas debe ser un numero"
     
     def simulation_plot(self):
@@ -245,11 +247,12 @@ class App(CTk):
         ventana_grafico.title("Gráfico")
         plt.clf()
 
-        plt.plot(infected_people, color = 'red')
-        plt.plot(healthy_people, color = 'green')
-        plt.plot(dead_people, color = 'black')
+        plt.plot(infected_people, color = 'red', label= 'Personas Infectadas')
+        plt.plot(healthy_people, color = 'green', label = 'Personas Sanas')
+        plt.plot(dead_people, color = 'black', label = 'Personas Fallecidas')
         plt.xlabel('Dias de simulacion')
         plt.ylabel('Personas enfermas')
+        plt.legend(loc = 'upper right')
         plt.title('Grafico de la simulacion')
         plt.show()
 
