@@ -34,7 +34,7 @@ class FCM_Person(FCM):
             "prevent": 22
         } 
         sens = 10
-        internal = 7
+        internal = 6
         actions = 7
         super().__init__(sens, internal, actions)
         self._build_connections()
@@ -47,62 +47,65 @@ class FCM_Person(FCM):
     
     def _build_sensInternal_connections(self):
         #fear
-        self.causal_graph[0,0] = 4
-        self.causal_graph[1,0] = -4
-        self.causal_graph[8,0] = 6
-        self.causal_graph[9,0] = -6
+        self.causal_graph[0,0] = 0.6
+        self.causal_graph[1,0] = -0.6
+        self.causal_graph[8,0] = 1
+        self.causal_graph[9,0] = -1
         #hunger
-        self.causal_graph[2,1] = 2.5#2
-        self.causal_graph[3,1] = -2.5
+        self.causal_graph[2,1] = 0.4#2
+        self.causal_graph[3,1] = -0.4
         #necessity
-        self.causal_graph[2,2] = 2.5
-        self.causal_graph[3,2] = -2.5
-        self.causal_graph[6,2] = 4
-        self.causal_graph[7,2] = -4
+        self.causal_graph[2,2] = 0.4
+        self.causal_graph[3,2] = -0.4
+        self.causal_graph[6,2] = 0.6
+        self.causal_graph[7,2] = -0.6
         #disease
-        self.causal_graph[8,3] = 4
-        self.causal_graph[9,3] = -4
+        self.causal_graph[8,3] = 0.6
+        self.causal_graph[9,3] = -0.6
         #indiference
-        self.causal_graph[0,4] = -1
-        self.causal_graph[1,4] = 0.8
-        self.causal_graph[4,4] = 1
-        self.causal_graph[5,4] = -1
-        self.causal_graph[6,4] = 1
-        self.causal_graph[7,4] = -2
-        self.causal_graph[9,4] = 1
+        self.causal_graph[0,4] = -0.16
+        self.causal_graph[1,4] = 0.13
+        self.causal_graph[4,4] = 0.16
+        self.causal_graph[5,4] = -0.16
+        self.causal_graph[6,4] = 0.16
+        self.causal_graph[7,4] = -0.3
+        self.causal_graph[9,4] = 0.16
         #tiredness
-        self.causal_graph[4,5] = 4
-        self.causal_graph[5,5] = -4
+        self.causal_graph[4,5] = 1
+        self.causal_graph[5,5] = -1
 
     def _build_internalActions_connections(self):
         #go_to_work
-        self.causal_graph[10,6] = -1
+        self.causal_graph[10,6] = -0.16
         # self.causal_graph[11,7] = 1.5
-        self.causal_graph[11,6] = 2
-        self.causal_graph[12,6] = 4
-        self.causal_graph[13,6] = -1.5
-        self.causal_graph[15,6] = -0.8
+        self.causal_graph[11,6] = 0.3
+        self.causal_graph[12,6] = 0.9#1
+        self.causal_graph[13,6] = -0.25
+        self.causal_graph[15,6] = -0.1
         #go_to_market
-        self.causal_graph[10,7] = -1
-        self.causal_graph[11,7] = 4
-        self.causal_graph[14,7] = 0.8
-        self.causal_graph[15,7] = -1
+        self.causal_graph[10,7] = -0.16
+        self.causal_graph[11,7] = 0.6
+        self.causal_graph[14,7] = 0.13
+        self.causal_graph[15,7] = -0.7#0.1
         #go_to_hospital
-        self.causal_graph[10,8] = 0.8
-        self.causal_graph[13,8] = 6
+        self.causal_graph[15,8] = -1
+        self.causal_graph[10,8] = 0.13
+        self.causal_graph[13,8] = 1
         #go_around
-        self.causal_graph[10,9] = -0.5
+        self.causal_graph[10,9] = -0.083
         # self.causal_graph[11,10] = 0.6
-        self.causal_graph[12,9] = -2.5
-        self.causal_graph[14,9] = 0.4
+        self.causal_graph[12,9] = -0.4
+        self.causal_graph[14,9] = 0.06
         #study
-        self.causal_graph[10,10] = 1.6
-        self.causal_graph[12,10] = -1
-        self.causal_graph[14,10] = 0.3
+        self.causal_graph[10,10] = 0.26
+        self.causal_graph[12,10] = -0.16
+        self.causal_graph[14,10] = 0.05
         #rest
         # self.causal_graph[11,12] = -2
-        self.causal_graph[15,11] = 1.5
+        self.causal_graph[11,11] = -0.2
+        self.causal_graph[12,11] = -1
+        self.causal_graph[15,11] = 0.8
         #prevent
-        self.causal_graph[10,12] = 2.5 #11
-        self.causal_graph[12,12] = -1
-        self.causal_graph[14,12] = 0.7
+        self.causal_graph[10,12] = 0.4 #11
+        self.causal_graph[12,12] = -0.16
+        self.causal_graph[14,12] = 0.11

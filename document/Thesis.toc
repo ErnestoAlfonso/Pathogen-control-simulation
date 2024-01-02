@@ -29,6 +29,8 @@
 \contentsline {section}{\numberline {2.6}Vectores y sus acciones}{26}{section.2.6}%
 \contentsline {section}{\numberline {2.7}Infección, muerte y recuperación de los agentes}{27}{section.2.7}%
 \contentsline {chapter}{\numberline {3}Detalles de Implementación y Experimentos}{30}{chapter.3}%
-\contentsline {chapter}{Conclusiones}{31}{section*.21}%
-\contentsline {chapter}{Recomendaciones}{32}{section*.23}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{33}{chapter*.25}%
+\contentsline {section}{\numberline {3.1}Detalles de Implementación}{30}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Experimentación}{31}{section.3.2}%
+\contentsline {chapter}{Conclusiones}{33}{section*.21}%
+\contentsline {chapter}{Recomendaciones}{34}{section*.23}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{35}{chapter*.25}%

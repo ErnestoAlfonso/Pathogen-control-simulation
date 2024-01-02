@@ -187,6 +187,73 @@
       \field{title}{Clinical Considerations for Dengue Virus Infection}
       \field{year}{2022}
     \endentry
+    \entry{Arazoza2010}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=4e88d1316ac72c8f9c2121b678c21a90}{%
+           family={Arazoza},
+           familyi={A\bibinitperiod},
+           given={Héctor},
+           giveni={H\bibinitperiod},
+           givenun=0,
+           prefix={de},
+           prefixi={d\bibinitperiod},
+           suffix={Rodríguez},
+           suffixi={R\bibinitperiod},
+           suffixun=0}}%
+        {{un=0,uniquepart=base,hash=fae8fa2484c745d1b51d7ca1ae5b96f0}{%
+           family={Sánchez},
+           familyi={S\bibinitperiod},
+           given={Andrés},
+           giveni={A\bibinitperiod},
+           givenun=0,
+           suffix={Pérez},
+           suffixi={P\bibinitperiod},
+           suffixun=0}}%
+        {{un=0,uniquepart=base,hash=69842557a02a8871706fd2fe9ff9e054}{%
+           family={Marrero},
+           familyi={M\bibinitperiod},
+           given={Aymée},
+           giveni={A\bibinitperiod},
+           givenun=0,
+           suffix={Severo},
+           suffixi={S\bibinitperiod},
+           suffixun=0}}%
+        {{un=0,uniquepart=base,hash=34d34696f9a17be712ea53efa65a10b4}{%
+           family={Noriega},
+           familyi={N\bibinitperiod},
+           given={Teresita},
+           giveni={T\bibinitperiod},
+           givenun=0,
+           suffix={Sánchez},
+           suffixi={S\bibinitperiod},
+           suffixun=0}}%
+        {{un=0,uniquepart=base,hash=d822986157b398abf8155280095e084b}{%
+           family={García},
+           familyi={G\bibinitperiod},
+           given={Garaluz},
+           giveni={G\bibinitperiod},
+           givenun=0,
+           suffix={Esther},
+           suffixi={E\bibinitperiod},
+           suffixun=0}}%
+      }
+      \strng{namehash}{350c58e0026b8ca3883e63ca80a6f252}
+      \strng{fullhash}{5077efe43b5ae0a38c5445f65946769c}
+      \strng{bibnamehash}{5077efe43b5ae0a38c5445f65946769c}
+      \strng{authorbibnamehash}{5077efe43b5ae0a38c5445f65946769c}
+      \strng{authornamehash}{350c58e0026b8ca3883e63ca80a6f252}
+      \strng{authorfullhash}{5077efe43b5ae0a38c5445f65946769c}
+      \field{sortinit}{d}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ResearchGate}
+      \field{title}{Un enfoque en la modelación matemática y análisis preliminar de problemas epidemiológicos. Una aplicación a un modelo de Dengue en Cuba.}
+      \field{year}{2010}
+    \endentry
     \entry{Epstein2008}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=baaba4ae833250b58d25d0292a11c7ae}{%
@@ -1075,6 +1142,73 @@
       \field{journaltitle}{Clinical Outreach and Comunication Activity}
       \field{title}{Clinical Considerations for Dengue Virus Infection}
       \field{year}{2022}
+    \endentry
+    \entry{Arazoza2010}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=4e88d1316ac72c8f9c2121b678c21a90}{%
+           family={Arazoza},
+           familyi={A\bibinitperiod},
+           given={Héctor},
+           giveni={H\bibinitperiod},
+           givenun=0,
+           prefix={de},
+           prefixi={d\bibinitperiod},
+           suffix={Rodríguez},
+           suffixi={R\bibinitperiod},
+           suffixun=0}}%
+        {{un=0,uniquepart=base,hash=fae8fa2484c745d1b51d7ca1ae5b96f0}{%
+           family={Sánchez},
+           familyi={S\bibinitperiod},
+           given={Andrés},
+           giveni={A\bibinitperiod},
+           givenun=0,
+           suffix={Pérez},
+           suffixi={P\bibinitperiod},
+           suffixun=0}}%
+        {{un=0,uniquepart=base,hash=69842557a02a8871706fd2fe9ff9e054}{%
+           family={Marrero},
+           familyi={M\bibinitperiod},
+           given={Aymée},
+           giveni={A\bibinitperiod},
+           givenun=0,
+           suffix={Severo},
+           suffixi={S\bibinitperiod},
+           suffixun=0}}%
+        {{un=0,uniquepart=base,hash=34d34696f9a17be712ea53efa65a10b4}{%
+           family={Noriega},
+           familyi={N\bibinitperiod},
+           given={Teresita},
+           giveni={T\bibinitperiod},
+           givenun=0,
+           suffix={Sánchez},
+           suffixi={S\bibinitperiod},
+           suffixun=0}}%
+        {{un=0,uniquepart=base,hash=d822986157b398abf8155280095e084b}{%
+           family={García},
+           familyi={G\bibinitperiod},
+           given={Garaluz},
+           giveni={G\bibinitperiod},
+           givenun=0,
+           suffix={Esther},
+           suffixi={E\bibinitperiod},
+           suffixun=0}}%
+      }
+      \strng{namehash}{350c58e0026b8ca3883e63ca80a6f252}
+      \strng{fullhash}{5077efe43b5ae0a38c5445f65946769c}
+      \strng{bibnamehash}{5077efe43b5ae0a38c5445f65946769c}
+      \strng{authorbibnamehash}{5077efe43b5ae0a38c5445f65946769c}
+      \strng{authornamehash}{350c58e0026b8ca3883e63ca80a6f252}
+      \strng{authorfullhash}{5077efe43b5ae0a38c5445f65946769c}
+      \field{sortinit}{d}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ResearchGate}
+      \field{title}{Un enfoque en la modelación matemática y análisis preliminar de problemas epidemiológicos. Una aplicación a un modelo de Dengue en Cuba.}
+      \field{year}{2010}
     \endentry
     \entry{Epstein2008}{article}{}
       \name{author}{1}{}{%

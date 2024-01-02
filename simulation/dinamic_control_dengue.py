@@ -4,7 +4,7 @@ import time
 from graph_world.Graphs_m import Graph_m, Bipartite_Graph
 
 class Simulation:
-    def __init__(self, amount_nodes, dur_hour, market_cost, prob_of_edges, amount_mosq_per_place, prob_mosq_bite_ap, prob_inf_if_mosq_bite, prob_die_h):
+    def __init__(self, amount_nodes, dur_hour, market_cost, prob_of_edges, amount_mosq_per_place, prob_mosq_bite_ap, prob_inf_if_mosq_bite, prob_die_h, action_per_day):
         self.amount_nodes = amount_nodes
         self.dur_hour = dur_hour * 24
         self.market_cost = market_cost
@@ -14,6 +14,7 @@ class Simulation:
         self.prob_die_h = prob_die_h
         self.prob_inf_if_mosq_bite = prob_inf_if_mosq_bite
         self.amount_mosq_per_place = amount_mosq_per_place
+        self.action_per_day = action_per_day
 
 
     def run_simulation(self):
@@ -23,15 +24,16 @@ class Simulation:
         hora_inicial = datetime.datetime(2023, 10, 22, 7, 0)
 
         # Definir el paso de tiempo
-        paso_de_tiempo = datetime.timedelta(hours = 1)
+        paso_de_tiempo = datetime.timedelta(hours = int(24/self.action_per_day))
 
         # Definir la hora de inicio de la simulación
         hora_actual = datetime.datetime(2023, 10, 22, 8, 0)  # Por ejemplo, 22 de septiembre de 2023 a las 8:00 a.m.
 
         self.graph = Graph_m(self.amount_nodes,self.prob_of_edges, self.market_cost, self.amount_mosq_per_place, self.prob_mosq_bite_ap, self.prob_inf_if_mosq_bite, self.prob_die_h)
-        
+        print("Termine de generar el grafo")
         self.dictOfHours = {}
         pers = []
+        # pos = None
         self.dead_person = []
         self.locations = [x+1 for x in range(len(self.graph.bipartite_graph.nodes_L))]
         self.amount_loc_visited = [0 for x in range(self.amount_nodes)]
@@ -39,14 +41,14 @@ class Simulation:
         
         for key in self.graph.graph.vs["person"]:
             self.dictOfAction[key.id] = []
-        for hour in range(self.dur_hour):
+        for hour in range(int(self.dur_hour/(24/self.action_per_day))):
             self.dictOfHours[hour] = []
-        # Realizar la simulación
+        # Realizar la simulación p + p + r + l + p + l + p + h
         # TODO: Use parallelism to make this more efficient.
         processes = []
-        start = time.time()
         count = -1
         while hora_actual <= hora_inicial + duracion_simulacion:
+            start = time.time()
             count += 1
         # for i in range(3):
         #     processes.append(Process(target = action_for_person,args=(graph,hora_actual, hora_inicial, duracion_simulacion, paso_de_tiempo,i)))
@@ -74,6 +76,8 @@ class Simulation:
                 self.dictOfHours[count].append((person.id, True if person.infected > 0 else False))
             # Actualizar la hora actual
 
+            end = time.time()
+            print(f"{hora_actual} demoro {end - start}", end=" ")
             hora_actual += paso_de_tiempo
 
             # if hora_actual.hour == 0 and hora_actual.minute == 0:
@@ -85,12 +89,15 @@ class Simulation:
 
         list_inf = []
         for person in self.graph.graph.vs["person"]:
+            try:
+                node = self.graph.nodes[person.id]
+            except:
+                list_inf.append("M")
             list_inf.append("I" if person.infected > 0 else "NI")
             self.amount_loc_visited[person.id] = len(person.freq_places)
             if person.infected > 0:
                 pers.append(person)
             self.graph.graph.vs["infected"] = list_inf
-        end = time.time()
         #Para hallar la cantidad de personas que visitan una cantidad de lugares
         for j in range(len(self.locations)):
             amount = self.amount_loc_visited.count(j+1)
@@ -103,7 +110,6 @@ class Simulation:
             self.person_per_places = self.person_per_places[:pos+1]
 
         print(f"Hechos que hizo una persona...{self.dictOfAction[3]}")
-        print(f"Tiempo sin paralelismo {end - start}")
         print("La ejecución a concluído.")
         print("Personas infectadas")
         print(pers)

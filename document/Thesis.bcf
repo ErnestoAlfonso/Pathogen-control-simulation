@@ -3093,6 +3093,8 @@
     <bcf:citekey order="33" intorder="1">Saeed2021</bcf:citekey>
     <bcf:citekey order="34" intorder="1">CDC2022</bcf:citekey>
     <bcf:citekey order="35" intorder="1">WHO2023S</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">Arazoza2010</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">Arazoza2010</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="apa">

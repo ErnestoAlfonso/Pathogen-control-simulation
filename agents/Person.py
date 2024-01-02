@@ -57,7 +57,7 @@ class person:
             return 0
         
         return actions.index(sup)
-    
+
     def make_action(self, action, bgrpah, hora_actual):
         self.count += 1
         if self.count % 6 == 0:
@@ -69,6 +69,7 @@ class person:
                 self.recovery_or_not()
             if self.infected > 10:
                 self.infected = 10
+                self.last_infection = 11
 
         if self.infected:
             r = random.random() < self.infected * self.prob_die_h
@@ -87,7 +88,7 @@ class person:
 
         return actions[action](bgrpah)
 
-    
+
     def get_perception(self, graph):
         amount_people = graph.amount_nodes
         self.update_sensitives_concept(self.amount_people_sick, amount_people, graph.market_cost)
@@ -219,12 +220,11 @@ class person:
                 r = random.random() < bgraph.graph.prob_inf_if_mosq_bite
                 if self.infected > 0 and r:
                     work.mosquitos[i].infected = True
-                
+
                 elif result and mosq_selected.infected and r and not self.i_atleast_one_time:
                     self.infected = random.random() * 5
                     self.last_infection = self.infected
-            
-            
+
 
 
     def go_to_market(self, bgraph):
@@ -237,7 +237,7 @@ class person:
 
         list_loc_change = [(self.id, self.place_at_moment, market)]
         bgraph.replace_edges(list_loc_change)
-
+        self.energy -= 1
         if self.money - bgraph.graph.market_cost < 0:
             self.amount_food += 10
             self.money -= bgraph.graph.market_cost
@@ -255,7 +255,7 @@ class person:
                 elif result and mosq_selected.infected and r and not self.i_atleast_one_time:
                     self.infected = random.random() * 5
                     self.last_infection = self.infected
-        
+
     def go_to_hospital(self, bgraph):
         for item in self.freq_places:
             if "Hospital" in str(item):
@@ -266,6 +266,7 @@ class person:
         list_loc_change = [(self.id, self.place_at_moment, hospital)]
         bgraph.replace_edges(list_loc_change)
         ran = random.random() < 0.6
+        self.energy -= 1
         if ran:
             self.infected -= 1
 
@@ -282,18 +283,19 @@ class person:
                 elif result and mosq_selected.infected and r and not self.i_atleast_one_time:
                     self.infected = random.random() * 5
                     self.last_infection = self.infected
-    
+
     def study(self, bgraph):
         self.amount_people_sick = bgraph.graph.amount_people_sick()
 
     def go_around(self, bgraph):
+        self.energy -= 1
         pass
 
     def rest(self, bgraph):
         for item in self.freq_places:
             if "Home" in str(item):
                 home = item
-        
+
         list_loc_change = [(self.id, self.place_at_moment, home)]
         bgraph.replace_edges(list_loc_change)
 
@@ -312,7 +314,7 @@ class person:
                     self.last_infection = self.infected
 
         self.energy +=3
-    
+
     def prevent(self, bgraph):
         for item in self.freq_places:
             if "Home" in str(item):
@@ -326,12 +328,13 @@ class person:
 
         if mosq_can_bite:
             for i in range(int(home.amount_mosq * random.random())):
+                mosq_selected = random.choice(home.mosquitos)
                 if result_of_prevent > 0.5:
                     home.mosquitos[i].prob_of_byte -= 0.0003
+                    self.result = random.random() < mosq_selected.prob_of_byte
 
-                if result_of_prevent <= 0.5:
+                elif result_of_prevent <= 0.5:
                     home.mosquitos[i].prob_of_byte -= 0.0001
-                    mosq_selected = random.choice(home.mosquitos)
                     self.result = random.random() < mosq_selected.prob_of_byte
                 r = random.random() < bgraph.graph.prob_inf_if_mosq_bite
                 if self.infected > 0 and r:
@@ -340,7 +343,7 @@ class person:
                 elif self.result and mosq_selected.infected and r and not self.i_atleast_one_time:
                     self.infected = random.random() * 5
                     self.last_infection = self.infected
-        
+
 
 
 

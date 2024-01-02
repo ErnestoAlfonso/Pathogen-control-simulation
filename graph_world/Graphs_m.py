@@ -165,7 +165,8 @@ class Bipartite_Graph(Graph_m):
         for item in range(self.nodes_L[i].amount_mosq):
             mos = mosquitos(item, self.graph.prob_mosq_bite_ap)
             self.nodes_L[i].mosquitos.append(mos)
-            self.nodes_L[i].mosquitos[item].infected = True
+            if item == 0:
+                self.nodes_L[i].mosquitos[item].infected = True
         i += 1
 
         node = Work("Work" + str(i), self.graph.amount_mosq_per_places)
@@ -173,7 +174,8 @@ class Bipartite_Graph(Graph_m):
         for item in range(self.nodes_L[i].amount_mosq):
             mos = mosquitos(item, self.graph.prob_mosq_bite_ap)
             self.nodes_L[i].mosquitos.append(mos)
-            self.nodes_L[i].mosquitos[item].infected = True
+            # if item == 0:
+            #     self.nodes_L[i].mosquitos[item].infected = True
         i += 1
 
         node = Work("Work" + str(i), self.graph.amount_mosq_per_places)
@@ -181,7 +183,8 @@ class Bipartite_Graph(Graph_m):
         for item in range(self.nodes_L[i].amount_mosq):
             mos = mosquitos(item, self.graph.prob_mosq_bite_ap)
             self.nodes_L[i].mosquitos.append(mos)
-            self.nodes_L[i].mosquitos[item].infected = True
+            # if item == 0:
+            #     self.nodes_L[i].mosquitos[item].infected = True
         i += 1
 
         node = Work("Work" + str(i), self.graph.amount_mosq_per_places)
@@ -189,7 +192,8 @@ class Bipartite_Graph(Graph_m):
         for item in range(self.nodes_L[i].amount_mosq):
             mos = mosquitos(item, self.graph.prob_mosq_bite_ap)
             self.nodes_L[i].mosquitos.append(mos)
-            self.nodes_L[i].mosquitos[item].infected = True
+            # if item == 0:
+            #     self.nodes_L[i].mosquitos[item].infected = True
         i += 1
         #endregion
         

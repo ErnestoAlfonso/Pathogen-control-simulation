@@ -1,1 +1,77 @@
 \chapter{Detalles de Implementación y Experimentos}\label{chapter:implementation}
+La aplicación resultane de esta investigación está implementada en Visual Code, en Python 3.11.5
+debido a la experiencia en el lenguaje y a la no especificación de requerimientos de programación. Cabe 
+recalcar que el diseño del proyecto se puede realizar en casi cualquier lenguaje y plataforma.
+
+\section{Detalles de Implementación}
+El proyecto se encuentra dividido en varios módulos que se pueden representar en dos secciones.
+La primera sería la sección de la lógica del proyecto, en esta se encuentran los módulos dedicados 
+a la lógica de los agentes, la creación del entorno\footnote{Grafo de localizaciones y de relaciones}
+y un último que es el encargado de realizar las simulaciones. La segunda sección es la encargada de 
+la parte visual del proyecto, posee un único módulo denominado $frontend$\footnote{Termino utilizado en 
+Ingeniería de Software para referirse a la parte visual de un aplicación} el cual es el designado para permitirle
+al usuario interactuar con la aplicación; es decir, introducir las variables del modelo, simular, 
+graficar los resultados obtenidos, entre otras acciones.
+
+El conocimiento de la complejidad temporal del modelo generado permite entender la mejor manera de usarlo.
+Esta complejidad temporal está dada por:
+\begin{center}
+    Sea $h$ la cantidad de horas a simular.\\
+    Sea $p$ la cantidad de personas incluidas en la simulación.\\
+    Sea $m_l$ la cantidad de mosquitos por localizaciones escogidos para picar en esa hora.\\
+    Entonces la complejidad temporal del modelo es $O(h \times p \lbrack 3 \times 13 \times 16 + 14 + m_l \rbrack)$
+\end{center}
+
+Es fácil apreciar que si $h = p$ en nuestra simulación entonces la complejidad pasaría a ser cuadrática, ya 
+que sería $p^2$. En el caso de que $m_l = p$, sería cuadrática también, pero $m_l$ es un valor 
+que depende de una probabilidad por lo tanto el modelo no siempre procesaría el conjunto de mosquitos completos,
+por lo que, para el peor caso\footnote{Peor caso: siempre se escogen todos los mosquitos del lugar para que piquen} demoraría
+lo mismo, pero por lo general, sería más rápido.
+
+
+
+\section{Experimentación}
+Para la validación del modelo implementado se hizo necesario generar varios grafos con distintos parámetros.
+En \autocite{Arazoza2010} se proponen unos valores fijos para ciertas variables de interés de este proyecto.\\
+
+\textbf{Datos de estimaciones anteriores:}\autocite{Arazoza2010}
+\begin{itemize}
+    \item Tasa de mortalidad de humanos (0.000024).
+    \item Tasa de recuperación de la enfermedad (0.143).
+    \item Tasa de transmisión de humano a mosquito (entre 0.16346 y 0.16384).
+\end{itemize}
+
+La correcta evolución del modelo propuesto depende en gran medida de los valores de los parámetros que 
+afectan al modelo y que, en su mayoría, se han considerado como constantes\footnote{Constantes para una 
+instancia de simulación, pues pueden variar de una a otra}. La obtención de valores 
+adecuados para estos parámetros es esencial para garantizar que el modelo refleje con precisión el 
+fenómeno que se está estudiando. Para lograrlo, se requiere la contribución de expertos en áreas específicas 
+de la ciencia que posean conocimientos y experiencia en la caracterización y medición de los parámetros.
+Para grafos semejantes o isomorfos el modelo no necesariamente brinda resultados parecidos. Esto no solo 
+se debe a la estocasticidad con la que se define el mismo, puede producirse también por valores de 
+parámetros distintos; pero, grafos semejantes, con valores iguales de parámetros brindarían 
+resultados muy parecidos. Con la idea de reflejar esto se realizaron simulaciones con valores distintos
+para cada variable en cuestión.
+
+Una idea seguida para la experimentación se basa en:
+\begin{center}
+    Sean $G_1=(V_1, E_1)$ y $G_2=(V_2, E_2)$ grafos de la simulación.\\
+    $V_1 > V_2$ y $E_1 > E_2$.\\
+    Sea $C_1$, $C_2$ el parámetro que define la conectividad de $G_1$, $G_2$ respectivamente.\\
+    Si $C_1 = C_2$ se podría decir que estos grafos describen el mismo problema, es decir
+    la curva de infección de $G_1$ sería similar a la de $G_2$.
+\end{center} 
+
+Por como se modeló el proyecto no solo influye el grado de conectividad para la infección o no de las personas,
+también influyen las acciones que realizan y la estocasticidad debido a los parámetros de 
+infección\footnote{Probabilidad de picar y Probabilidad de infectarse}, pero dejando a un lado estos dos 
+últimos puntos se puede afirmar que se cumple la implicación anterior.
+
+Debido a esto se entiende que es suficiente simular el proceso con una cantidad considerable de personas,
+pero no es necesario hacerlo para el número exacto que se quiere simular. Por ejemplo,
+si se desea simular para $p = 1000000$\footnote{$p$ cantidad de personas} en caso de que para $p = 1000$ 
+se encontrara un grado de conectividad similar al del primer grafo, entonces la curva de infección
+de este segundo, describiría la del primero. Sin embargo, si se cuenta 
+con el tiempo necesario, podría ser útil hacerlo para el número de personas que se quiera. 
+
+Se presentan los resultados a continuación:

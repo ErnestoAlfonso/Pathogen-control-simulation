@@ -11,11 +11,10 @@ y propagación.\autocite{Reisen2010}
 
 Según la OMS, las enfermedades airborne (arthropod-borne)\footnote{enfermedades infecciosas que 
 se transmiten a través de la picadura de artrópodos, como mosquitos, garrapatas, pulgas o moscas.} 
-representan 17 por ciento del total de 
-las enfermedades infecciosas en el mundo, con 1,000 millones de casos y un millón de defunciones 
-anuales \autocite{OMS2020}. Los vectores biológicos más comunes son los insectos hematófagos que 
-al alimentarse de la sangre de un portador infectado, ingieren microorganismos patógenos que 
-posteriormente inoculan a otro individuo.
+representan 17 por ciento del total de las enfermedades infecciosas en el mundo, con 1,000 millones 
+de casos y un millón de defunciones anuales \autocite{OMS2020}. Los vectores biológicos más 
+comunes son los insectos hematófagos que al alimentarse de la sangre de un portador infectado, 
+ingieren microorganismos patógenos que posteriormente inoculan a otro individuo.
 
 \textbf{Características generales de los vectores:}\autocite{OMS2020}
 \begin{enumerate}
@@ -214,7 +213,7 @@ las localizaciones como las personas ya que esto nos acerca más a lo que ocurre
 
 Los vectores se modelan con la posibilidad de picar y de infectarse. Estos, según mecanismos estocásticos,
 deciden si picar o no y teniendo en cuenta el nivel de infección de la persona y la susceptibilidad del mismo este
-se infecta o no. También poseen un parámetro que representa la probabilidad de infectarse debido a una mordida, mientras
+se infecta o no. También poseen un parámetro que representa la probabilidad de infectarse debido a una picada, mientras
 mayor sea el valor de dicho parámetro, más probable será que el mosquito se infecte si pica a una persona enferma.
 
 \begin{figure}[htb]
@@ -320,7 +319,7 @@ El proceso de $fuzzificaci$ó$n$ es distinto para cada concepto, pero por regla 
 \begin{enumerate}
     \item Se toma un valor del entorno del agente que tenga relación con el concepto a $fuzzificar$, llamémosle $variable$ $de$ $fuzzificaci$ó$n$.
     \item Se obtiene un intervalo de valores utilizando el parámetro del concepto, llamémosle $intervalo$ $de$ $fuzzificaci$ó$n$.
-    \item Se compara la $variable$ $de$ $fuzzificaci$ó$n$ con los extremos del $intervalo$ $de$ $fuzzificaci$ó$n$, en el caso de encontrarse incluida en este se decide si es más importante que este cerca del máximo o del mínimo del $intervalo$ $de$ $fuzzificaci$ó$n$ y se $fuzzifica$ de acuerdo al intervalo, teniendo en cuenta cual extremo es considerado $1$ y cual $0$ en el proceso de $fuzzificaci$ó$n$.
+    \item Se compara la $variable$ $de$ $fuzzificaci$ó$n$ con los extremos del $intervalo$ $de$ $fuzzificaci$ó$n$, en el caso de encontrarse incluida en este se decide si es más importante que se encuentre cerca del máximo o del mínimo del $intervalo$ $de$ $fuzzificaci$ó$n$ y se $fuzzifica$ de acuerdo al intervalo, teniendo en cuenta cual extremo es considerado $1$ y cual $0$ en el proceso de $fuzzificaci$ó$n$.
 \end{enumerate}
 
 \begin{center}
@@ -403,7 +402,7 @@ para calcular su valor sigmoide.
 
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=0.9\textwidth]{Graphics/Pesos_aristas_Pers_Sent.png}
+    \includegraphics[width=0.9\textwidth]{Graphics/Pesos_Perc_Sent.png}
     \caption{Matriz de adyacencia del grafo de la figura 2.6 con los pesos de las aristas.}
 \end{figure}
 
@@ -411,10 +410,10 @@ Una vez obtenidos los grados de pertenencias de los parámetros a los conceptos 
 a encontrar los valores sigmoides de los conceptos de $sentimientos$. Se ejemplifica a continuación la dinámica
 para encontrar el valor del concepto $Miedo$.
 \begin{center}
-    Sea $M$ la matriz de adyacencia de la figura 2.7.\\
+    Sea $M$ la matriz de adyacencia de la figura 2.6.\\
     Sea $n$ el número total de filas de $M$.\\
     Sea $x$ el valor sigmoide del concepto $Miedo$ y $m$ la columna que representa a $Miedo$ en la matriz.\\
-    $\Rightarrow x = \frac{1}{1+ exp(-t)}$ siendo $t = \sum_{i=0}^{n}M[i,m]\times oldConcept$ con $oldConcept$
+    $\Rightarrow x = \frac{1}{1+ exp(-t)}$ siendo $t = \displaystyle\sum_{i=0}^{n}M[i,m]\times oldConcept$ con $oldConcept$
     representando el valor anterior del concepto i-ésimo.
 \end{center}
 
@@ -436,7 +435,7 @@ utilizan a las percepciones.
 
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=0.9\textwidth]{Graphics/Pesos_aristas_Sent_Acc.png}
+    \includegraphics[width=0.9\textwidth]{Graphics/Pesos_Sen_acc.png}
     \caption{Matriz de adyacencia del grafo de la figura 2.8 con los pesos de las aristas.}
 \end{figure}
 

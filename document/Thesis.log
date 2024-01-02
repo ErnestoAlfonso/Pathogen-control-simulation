@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.22)  26 DEC 2023 12:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.22)  1 JAN 2024 23:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1159,7 +1159,7 @@ Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count500
-<Graphics/uhlogo.pdf, id=139, 375.98297pt x 481.67456pt>
+<Graphics/uhlogo.pdf, id=147, 375.98297pt x 481.67456pt>
 File: Graphics/uhlogo.pdf Graphic file (type pdf)
 <use Graphics/uhlogo.pdf>
 Package pdftex.def Info: Graphics/uhlogo.pdf  used on input line 81.
@@ -1310,6 +1310,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--15
 LaTeX Info: Redefining \. on input line 58.
 LaTeX Info: Redefining \% on input line 58.
  [6]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 72.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7.4> on input line 72.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 72.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 72.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 72.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 72.
+
 Underfull \hbox (badness 10000) in paragraph at lines 72--77
 
  []
@@ -1327,7 +1340,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--89
 LaTeX Info: Redefining \. on input line 93.
 LaTeX Info: Redefining \% on input line 93.
 [7{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}]
-<Graphics/fcm_example.png, id=349, 334.851pt x 248.127pt>
+<Graphics/fcm_example.png, id=363, 334.851pt x 248.127pt>
 File: Graphics/fcm_example.png Graphic file (type png)
 <use Graphics/fcm_example.png>
 Package pdftex.def Info: Graphics/fcm_example.png  used on input line 127.
@@ -1349,163 +1362,151 @@ LaTeX Info: Redefining \% on input line 92.
 
  (./MainMatter/Proposal.tex
 Cap\'{\i }tulo 2.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 13.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7.4> on input line 13.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 13.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 13.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 13.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 13.
 [11
 
 
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 33--38
+Underfull \hbox (badness 10000) in paragraph at lines 32--37
 
  []
 
-<Graphics/EnfVec.jpeg, id=400, 735.49782pt x 253.69781pt>
+<Graphics/EnfVec.jpeg, id=412, 735.49782pt x 253.69781pt>
 File: Graphics/EnfVec.jpeg Graphic file (type jpg)
 <use Graphics/EnfVec.jpeg>
-Package pdftex.def Info: Graphics/EnfVec.jpeg  used on input line 41.
+Package pdftex.def Info: Graphics/EnfVec.jpeg  used on input line 40.
 (pdftex.def)             Requested size: 433.62pt x 149.57202pt.
-LaTeX Info: Redefining \. on input line 50.
-LaTeX Info: Redefining \% on input line 50.
+LaTeX Info: Redefining \. on input line 49.
+LaTeX Info: Redefining \% on input line 49.
 [12 <./Graphics/EnfVec.jpeg>]
-Underfull \hbox (badness 10000) in paragraph at lines 77--82
+Underfull \hbox (badness 10000) in paragraph at lines 76--81
 
  []
 
-LaTeX Info: Redefining \. on input line 82.
-LaTeX Info: Redefining \% on input line 82.
+LaTeX Info: Redefining \. on input line 81.
+LaTeX Info: Redefining \% on input line 81.
 [13]
-LaTeX Info: Redefining \. on input line 115.
-LaTeX Info: Redefining \% on input line 115.
+LaTeX Info: Redefining \. on input line 114.
+LaTeX Info: Redefining \% on input line 114.
  [14]
-LaTeX Info: Redefining \. on input line 157.
-LaTeX Info: Redefining \% on input line 157.
+LaTeX Info: Redefining \. on input line 156.
+LaTeX Info: Redefining \% on input line 156.
  [15]
-<Graphics/Grafo_Pers.png, id=458, 611.886pt x 460.72125pt>
+<Graphics/Grafo_Pers.png, id=470, 611.886pt x 460.72125pt>
 File: Graphics/Grafo_Pers.png Graphic file (type png)
 <use Graphics/Grafo_Pers.png>
-Package pdftex.def Info: Graphics/Grafo_Pers.png  used on input line 164.
+Package pdftex.def Info: Graphics/Grafo_Pers.png  used on input line 163.
 (pdftex.def)             Requested size: 346.89731pt x 261.2008pt.
-<Graphics/Grafo_Familias.jpeg, id=459, 505.89pt x 285.065pt>
+<Graphics/Grafo_Familias.jpeg, id=471, 505.89pt x 285.065pt>
 File: Graphics/Grafo_Familias.jpeg Graphic file (type jpg)
 <use Graphics/Grafo_Familias.jpeg>
-Package pdftex.def Info: Graphics/Grafo_Familias.jpeg  used on input line 170.
+Package pdftex.def Info: Graphics/Grafo_Familias.jpeg  used on input line 169.
 (pdftex.def)             Requested size: 130.08731pt x 73.30174pt.
-LaTeX Info: Redefining \. on input line 186.
-LaTeX Info: Redefining \% on input line 186.
+LaTeX Info: Redefining \. on input line 185.
+LaTeX Info: Redefining \% on input line 185.
  [16 <./Graphics/Grafo_Pers.png>]
-<Graphics/Grafo_Loc_Pers.jpeg, id=470, 310.15875pt x 370.38374pt>
+<Graphics/Grafo_Loc_Pers.jpeg, id=482, 310.15875pt x 370.38374pt>
 File: Graphics/Grafo_Loc_Pers.jpeg Graphic file (type jpg)
 <use Graphics/Grafo_Loc_Pers.jpeg>
-Package pdftex.def Info: Graphics/Grafo_Loc_Pers.jpeg  used on input line 190.
+Package pdftex.def Info: Graphics/Grafo_Loc_Pers.jpeg  used on input line 189.
 (pdftex.def)             Requested size: 130.08731pt x 155.34534pt.
-LaTeX Info: Redefining \. on input line 210.
-LaTeX Info: Redefining \% on input line 210.
+LaTeX Info: Redefining \. on input line 209.
+LaTeX Info: Redefining \% on input line 209.
  [17 <./Graphics/Grafo_Familias.jpeg> <./Graphics/Grafo_Loc_Pers.jpeg>]
-<Graphics/Pers_Loc_Vec.png, id=477, 545.6385pt x 370.986pt>
+<Graphics/Pers_Loc_Vec.png, id=489, 545.6385pt x 370.986pt>
 File: Graphics/Pers_Loc_Vec.png Graphic file (type png)
 <use Graphics/Pers_Loc_Vec.png>
-Package pdftex.def Info: Graphics/Pers_Loc_Vec.png  used on input line 222.
+Package pdftex.def Info: Graphics/Pers_Loc_Vec.png  used on input line 221.
 (pdftex.def)             Requested size: 390.25534pt x 265.34354pt.
-LaTeX Info: Redefining \. on input line 229.
-LaTeX Info: Redefining \% on input line 229.
+LaTeX Info: Redefining \. on input line 228.
+LaTeX Info: Redefining \% on input line 228.
  [18 <./Graphics/Pers_Loc_Vec.png>]
-LaTeX Info: Redefining \. on input line 260.
-LaTeX Info: Redefining \% on input line 260.
+LaTeX Info: Redefining \. on input line 259.
+LaTeX Info: Redefining \% on input line 259.
  [19]
-Underfull \hbox (badness 10000) in paragraph at lines 289--295
+Underfull \hbox (badness 10000) in paragraph at lines 288--294
 
  []
 
-LaTeX Info: Redefining \. on input line 302.
-LaTeX Info: Redefining \% on input line 302.
+LaTeX Info: Redefining \. on input line 301.
+LaTeX Info: Redefining \% on input line 301.
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 319--320
+Underfull \hbox (badness 10000) in paragraph at lines 318--319
 
  []
 
-LaTeX Info: Redefining \. on input line 335.
-LaTeX Info: Redefining \% on input line 335.
+LaTeX Info: Redefining \. on input line 334.
+LaTeX Info: Redefining \% on input line 334.
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 342--346
+Underfull \hbox (badness 10000) in paragraph at lines 341--345
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 356--359
+Underfull \hbox (badness 10000) in paragraph at lines 355--358
 
  []
 
-<Graphics/Grafo_Pers-Sent.png, id=510, 687.16725pt x 292.09125pt>
+<Graphics/Grafo_Pers-Sent.png, id=522, 687.16725pt x 292.09125pt>
 File: Graphics/Grafo_Pers-Sent.png Graphic file (type png)
 <use Graphics/Grafo_Pers-Sent.png>
-Package pdftex.def Info: Graphics/Grafo_Pers-Sent.png  used on input line 371.
+Package pdftex.def Info: Graphics/Grafo_Pers-Sent.png  used on input line 370.
 (pdftex.def)             Requested size: 390.25534pt x 165.88312pt.
-LaTeX Info: Redefining \. on input line 374.
-LaTeX Info: Redefining \% on input line 374.
+LaTeX Info: Redefining \. on input line 373.
+LaTeX Info: Redefining \% on input line 373.
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 386--389
+Underfull \hbox (badness 10000) in paragraph at lines 385--388
 
  []
 
-LaTeX Info: Redefining \. on input line 403.
-LaTeX Info: Redefining \% on input line 403.
+LaTeX Info: Redefining \. on input line 402.
+LaTeX Info: Redefining \% on input line 402.
 [23 <./Graphics/Grafo_Pers-Sent.png>]
-<Graphics/Pesos_aristas_Pers_Sent.png, id=525, 499.26524pt x 163.812pt>
-File: Graphics/Pesos_aristas_Pers_Sent.png Graphic file (type png)
-<use Graphics/Pesos_aristas_Pers_Sent.png>
-Package pdftex.def Info: Graphics/Pesos_aristas_Pers_Sent.png  used on input line 406.
-(pdftex.def)             Requested size: 390.25534pt x 128.04778pt.
+<Graphics/Pesos_Perc_Sent.png, id=537, 507.0945pt x 167.4255pt>
+File: Graphics/Pesos_Perc_Sent.png Graphic file (type png)
+<use Graphics/Pesos_Perc_Sent.png>
+Package pdftex.def Info: Graphics/Pesos_Perc_Sent.png  used on input line 405.
+(pdftex.def)             Requested size: 390.25534pt x 128.8567pt.
 
-Overfull \hbox (27.79836pt too wide) in paragraph at lines 421--426
+Overfull \hbox (27.79836pt too wide) in paragraph at lines 420--425
 []\T1/lmr/m/n/12 De es-ta ma-ne-ra se ob-tie-nen los va-lo-res co-rres-pon-dien-tes a los con-cep-tos de $\OML/lmm/m/it/12 sentimientos$\T1/lmr/m/n/12 .
  []
 
-<Graphics/Grafo_Sent-Acciones.png, id=527, 656.4525pt x 277.63725pt>
+<Graphics/Grafo_Sent-Acciones.png, id=539, 656.4525pt x 277.63725pt>
 File: Graphics/Grafo_Sent-Acciones.png Graphic file (type png)
 <use Graphics/Grafo_Sent-Acciones.png>
-Package pdftex.def Info: Graphics/Grafo_Sent-Acciones.png  used on input line 433.
+Package pdftex.def Info: Graphics/Grafo_Sent-Acciones.png  used on input line 432.
 (pdftex.def)             Requested size: 390.25534pt x 165.05429pt.
-<Graphics/Pesos_aristas_Sent_Acc.png, id=528, 786.5385pt x 106.59825pt>
-File: Graphics/Pesos_aristas_Sent_Acc.png Graphic file (type png)
-<use Graphics/Pesos_aristas_Sent_Acc.png>
-Package pdftex.def Info: Graphics/Pesos_aristas_Sent_Acc.png  used on input line 439.
-(pdftex.def)             Requested size: 390.25534pt x 52.89072pt.
-LaTeX Info: Redefining \. on input line 449.
-LaTeX Info: Redefining \% on input line 449.
-[24 <./Graphics/Pesos_aristas_Pers_Sent.png>]
-LaTeX Info: Redefining \. on input line 464.
-LaTeX Info: Redefining \% on input line 464.
- [25 <./Graphics/Grafo_Sent-Acciones.png> <./Graphics/Pesos_aristas_Sent_Acc.png>]
-LaTeX Info: Redefining \. on input line 499.
-LaTeX Info: Redefining \% on input line 499.
+<Graphics/Pesos_Sen_acc.png, id=540, 781.11826pt x 105.996pt>
+File: Graphics/Pesos_Sen_acc.png Graphic file (type png)
+<use Graphics/Pesos_Sen_acc.png>
+Package pdftex.def Info: Graphics/Pesos_Sen_acc.png  used on input line 438.
+(pdftex.def)             Requested size: 390.25534pt x 52.95743pt.
+LaTeX Info: Redefining \. on input line 448.
+LaTeX Info: Redefining \% on input line 448.
+[24 <./Graphics/Pesos_Perc_Sent.png>]
+LaTeX Info: Redefining \. on input line 463.
+LaTeX Info: Redefining \% on input line 463.
+ [25 <./Graphics/Grafo_Sent-Acciones.png> <./Graphics/Pesos_Sen_acc.png>]
+LaTeX Info: Redefining \. on input line 498.
+LaTeX Info: Redefining \% on input line 498.
  [26]
-LaTeX Info: Redefining \. on input line 531.
-LaTeX Info: Redefining \% on input line 531.
+LaTeX Info: Redefining \. on input line 530.
+LaTeX Info: Redefining \% on input line 530.
  [27]
-<Graphics/Grafico_Proceso_Picada.jpg, id=566, 2589.675pt x 1406.25375pt>
+<Graphics/Grafico_Proceso_Picada.jpg, id=578, 2589.675pt x 1406.25375pt>
 File: Graphics/Grafico_Proceso_Picada.jpg Graphic file (type jpg)
 <use Graphics/Grafico_Proceso_Picada.jpg>
-Package pdftex.def Info: Graphics/Grafico_Proceso_Picada.jpg  used on input line 540.
+Package pdftex.def Info: Graphics/Grafico_Proceso_Picada.jpg  used on input line 539.
 (pdftex.def)             Requested size: 390.25534pt x 211.91602pt.
-LaTeX Info: Redefining \. on input line 554.
-LaTeX Info: Redefining \% on input line 554.
+LaTeX Info: Redefining \. on input line 553.
+LaTeX Info: Redefining \% on input line 553.
  [28 <./Graphics/Grafico_Proceso_Picada.jpg>]
-<Graphics/Diagrama_Recuperacion.png, id=573, 481.19775pt x 306.54526pt>
+<Graphics/Diagrama_Recuperacion.png, id=585, 481.19775pt x 306.54526pt>
 File: Graphics/Diagrama_Recuperacion.png Graphic file (type png)
 <use Graphics/Diagrama_Recuperacion.png>
-Package pdftex.def Info: Graphics/Diagrama_Recuperacion.png  used on input line 557.
+Package pdftex.def Info: Graphics/Diagrama_Recuperacion.png  used on input line 556.
 (pdftex.def)             Requested size: 346.89731pt x 220.99306pt.
 )
 LaTeX Info: Redefining \. on input line 93.
@@ -1515,15 +1516,25 @@ LaTeX Info: Redefining \% on input line 93.
 
  (./MainMatter/Implementation.tex
 Cap\'{\i }tulo 3.
-) [30
+[30
 
 
 
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 34--36
+
+ []
+
+LaTeX Info: Redefining \. on input line 69.
+LaTeX Info: Redefining \% on input line 69.
+[31])
+LaTeX Info: Redefining \. on input line 94.
+LaTeX Info: Redefining \% on input line 94.
+ [32]
 \openout2 = `BackMatter/Conclusions.aux'.
 
- (./BackMatter/Conclusions.tex) [31
+ (./BackMatter/Conclusions.tex) [33
 
 
 
@@ -1532,7 +1543,7 @@ Cap\'{\i }tulo 3.
 ]
 \openout2 = `BackMatter/Recomendations.aux'.
 
- (./BackMatter/Recomendations.tex) [32
+ (./BackMatter/Recomendations.tex) [34
 
 
 
@@ -1541,12 +1552,12 @@ Cap\'{\i }tulo 3.
 ]
 \openout2 = `BackMatter/Bibliography.aux'.
 
- (./BackMatter/Bibliography.tex [33
+ (./BackMatter/Bibliography.tex [35
 
 
 
 
-]) [34] (./Thesis.aux
+]) [36] (./Thesis.aux
 LaTeX Info: Redefining \sptext on input line 13.
 LaTeX Info: Redefining \. on input line 13.
 LaTeX Info: Redefining \% on input line 13.
@@ -1556,24 +1567,24 @@ LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-09>
  ***********
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 9F732483D941E39418017E7905312B98;5356.
+(rerunfilecheck)             Checksum: 60A935B6844FD94EA748CC6B62392004;5683.
 Package logreq Info: Writing requests to 'Thesis.run.xml'.
 \openout1 = `Thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37121 strings out of 474267
- 696842 string characters out of 5751464
+ 37152 strings out of 474267
+ 697201 string characters out of 5751464
  1937558 words of memory out of 5000000
- 58506 multiletter control sequences out of 15000+600000
+ 58517 multiletter control sequences out of 15000+600000
  649007 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  125i,13n,121p,719b,4333s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi9.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmro10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy9.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb>
-Output written on Thesis.pdf (44 pages, 1508868 bytes).
+Output written on Thesis.pdf (46 pages, 1528580 bytes).
 PDF statistics:
- 751 PDF objects out of 1000 (max. 8388607)
- 638 compressed objects within 7 object streams
- 171 named destinations out of 1000 (max. 500000)
- 342 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 802 PDF objects out of 1000 (max. 8388607)
+ 687 compressed objects within 7 object streams
+ 191 named destinations out of 1000 (max. 500000)
+ 358 words of extra memory for PDF output out of 10000 (max. 10000000)
 
