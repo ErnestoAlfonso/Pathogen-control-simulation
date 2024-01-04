@@ -109,7 +109,7 @@ class Simulation:
         if pos is not None:
             self.person_per_places = self.person_per_places[:pos+1]
 
-        print(f"Hechos que hizo una persona...{self.dictOfAction[3]}")
+        # print(f"Hechos que hizo una persona...{self.dictOfAction[3]}")
         print("La ejecución a concluído.")
         print("Personas infectadas")
         print(pers)

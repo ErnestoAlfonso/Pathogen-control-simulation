@@ -94,6 +94,7 @@ class person:
         self.update_sensitives_concept(self.amount_people_sick, amount_people, graph.market_cost)
         for i in range(3):
             self.fcm.update_concepts()
+            print(f"Conceptos de acciones: {self.fcm.concepts[16]} {self.fcm.concepts[17]} {self.fcm.concepts[18]} {self.fcm.concepts[19]} {self.fcm.concepts[20]} {self.fcm.concepts[21]} {self.fcm.concepts[22]}")
 
     def update_sensitives_concept(self, amount_people_sick, amount_people, market_cost):
         sens = self.fcm._sens_index_params

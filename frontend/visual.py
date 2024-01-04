@@ -21,6 +21,7 @@ class App(CTk):
 
         self.graph = 0
         self.available = False
+        self.graf = False
 
         
         label = CTkLabel(self, font=('sans rerif', 32), text="Bienvenido", fg_color=c_black, bg_color=c_black)
@@ -45,7 +46,7 @@ class App(CTk):
         self.frame_legend.columnconfigure((0,1,2,3,4,5,6,7,8,9), weight = 1, pad=0)
         self.frame_legend.rowconfigure((0,1), weight = 1)
 
-        self.frame_plot.rowconfigure(0, weight = 1)
+        self.frame_plot.rowconfigure((0,1), weight = 1)
         self.frame_plot.columnconfigure(0, weight = 1)
 
         
@@ -208,16 +209,16 @@ class App(CTk):
             # layout = self.graph.layout('kk')
             layout = self.graph.layout_kamada_kawai()
 
-            fig, ax = plt.subplots()
+            self.fig, self.ax = plt.subplots()
 
-            ig.plot(self.graph, layout=layout, target=ax,vertex_size=10)
+            ig.plot(self.graph, layout=layout, target=self.ax,vertex_size=10)
             # print("Nodes")
             # print(nodes)
             # for node in self.graph.vs["person"]:
             #     if node.infected > 0:
             #         nodes._facecolors[node.index] = 'black'
                 
-            self.canvas = FigureCanvasTkAgg(fig, master=self.frame_graph)
+            self.canvas = FigureCanvasTkAgg(self.fig, master=self.frame_graph)
             self.canvas.draw()
             self.canvas.get_tk_widget().grid(sticky='nsew')
 
@@ -234,7 +235,7 @@ class App(CTk):
             # return "ERROR: el valor de las personas, el tiempo y la probabilidad de aristas debe ser un numero"
     
     def simulation_plot(self):
-        ventana_grafico = CTk()
+        # ventana_grafico = CTk()
         contact = []
         pers_hour = self.sim.dictOfHours
         infected_people = [0 for x in range(int(len(pers_hour)/self.actions_per_day) + 1)]
@@ -277,31 +278,35 @@ class App(CTk):
         if pos is not None:
             contact_per_person_count = contact_per_person_count[:pos+1]
 
-        fig, ax = plt.subplots(2,2,sharey=True)
+        plt.clf()
 
-        fig.set_size_inches(16, 16)
+        plt.close(self.fig)
+
+        self.fig1, ax1 = plt.subplots(2,2,sharey=True)
+
+        self.fig1.set_size_inches(16, 16)
 
         r = [x+1 for x in range(len(self.sim.person_per_places))]
         print(self.sim.person_per_places)
-        ax[0,0].bar(r,self.sim.person_per_places)
-        ax[0,0].set_ylabel('No. de personas')
-        ax[0,0].set_xlabel('No. de localizaciones visitadas')
+        ax1[0,0].bar(r,self.sim.person_per_places)
+        ax1[0,0].set_ylabel('No. de personas')
+        ax1[0,0].set_xlabel('No. de localizaciones visitadas')
 
-        ax[0,1].plot(infected_people, color = 'red', label= 'Personas Infectadas')
-        ax[0,1].plot(healthy_people, color = 'green', label = 'Personas Sanas')
-        ax[0,1].plot(dead_people, color = 'black', label = 'Personas Fallecidas')
-        ax[0,1].set_xlabel('Dias de simulacion')
-        ax[0,1].set_ylabel('Personas enfermas')
-        ax[0,1].legend(loc = 'upper right')
+        ax1[0,1].plot(infected_people, color = 'red', label= 'Personas Infectadas')
+        ax1[0,1].plot(healthy_people, color = 'green', label = 'Personas Sanas')
+        ax1[0,1].plot(dead_people, color = 'black', label = 'Personas Fallecidas')
+        ax1[0,1].set_xlabel('Dias de simulacion')
+        ax1[0,1].set_ylabel('Personas enfermas')
+        ax1[0,1].legend(loc = 'upper right')
 
-        ax[1,0].scatter([x for x in range(len(contact_per_person_count))], contact_per_person_count)
-        ax[1,0].set_ylabel('No. de personas con k contactos')
-        ax[1,0].set_xlabel('No. de contactos')
+        ax1[1,0].scatter([x for x in range(len(contact_per_person_count))], contact_per_person_count)
+        ax1[1,0].set_ylabel('No. de personas con k contactos')
+        ax1[1,0].set_xlabel('No. de contactos')
 
         print(f'Person hour values {len(pers_hour)}')
         print(f'Infected people {infected_people} len de la lista {len(infected_people)}' )
 
-        ventana_grafico.title('Gráfico de la simulación')
+        # ventana_grafico.title('Gráfico de la simulación')
 
         plt.show()
         # pers_hour = self.sim.dictOfHours

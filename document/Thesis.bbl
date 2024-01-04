@@ -19,6 +19,34 @@
 
 \refsection{0}
   \datalist[entry]{apa/apasortcite//global/global}
+    \entry{Aguilar2010}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8fdd89e392bd352ad03ebb786c6e86e3}{%
+           family={Aguilar},
+           familyi={A\bibinitperiod},
+           given={Jose},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8fdd89e392bd352ad03ebb786c6e86e3}
+      \strng{fullhash}{8fdd89e392bd352ad03ebb786c6e86e3}
+      \strng{bibnamehash}{8fdd89e392bd352ad03ebb786c6e86e3}
+      \strng{authorbibnamehash}{8fdd89e392bd352ad03ebb786c6e86e3}
+      \strng{authornamehash}{8fdd89e392bd352ad03ebb786c6e86e3}
+      \strng{authorfullhash}{8fdd89e392bd352ad03ebb786c6e86e3}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Studies in Fuzziness and Soft Computing}
+      \field{title}{Dynamic Fuzzy Cognitive Maps for the Supervision of Multiagent Systems}
+      \field{volume}{247}
+      \field{year}{2010}
+      \true{nocite}
+    \endentry
     \entry{Bagni2002}{article}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=c63e6f8824ab16b72b57cc5ad85629d8}{%
@@ -189,60 +217,60 @@
     \endentry
     \entry{Arazoza2010}{article}{}
       \name{author}{5}{}{%
-        {{un=0,uniquepart=base,hash=4e88d1316ac72c8f9c2121b678c21a90}{%
+        {{un=0,uniquepart=base,hash=19ffb37a5583b6c19b8ea01cb32c86bd}{%
            family={Arazoza},
            familyi={A\bibinitperiod},
-           given={Héctor},
-           giveni={H\bibinitperiod},
+           given={Rodríguez},
+           giveni={R\bibinitperiod},
            givenun=0,
            prefix={de},
            prefixi={d\bibinitperiod},
-           suffix={Rodríguez},
-           suffixi={R\bibinitperiod},
+           suffix={Héctor},
+           suffixi={H\bibinitperiod},
            suffixun=0}}%
-        {{un=0,uniquepart=base,hash=fae8fa2484c745d1b51d7ca1ae5b96f0}{%
+        {{un=0,uniquepart=base,hash=404f1bf9455dc32b86de95f98de9c3a6}{%
            family={Sánchez},
            familyi={S\bibinitperiod},
-           given={Andrés},
-           giveni={A\bibinitperiod},
+           given={Pérez},
+           giveni={P\bibinitperiod},
            givenun=0,
-           suffix={Pérez},
-           suffixi={P\bibinitperiod},
+           suffix={Andrés},
+           suffixi={A\bibinitperiod},
            suffixun=0}}%
-        {{un=0,uniquepart=base,hash=69842557a02a8871706fd2fe9ff9e054}{%
+        {{un=0,uniquepart=base,hash=073909b6d50a28fc5f820142d98e4dad}{%
            family={Marrero},
            familyi={M\bibinitperiod},
-           given={Aymée},
-           giveni={A\bibinitperiod},
+           given={Severo},
+           giveni={S\bibinitperiod},
            givenun=0,
-           suffix={Severo},
-           suffixi={S\bibinitperiod},
+           suffix={Aymée\bibnamedelimb de\bibnamedelimb los\bibnamedelima Ángeles},
+           suffixi={A\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim l\bibinitperiod\bibinitdelim Á\bibinitperiod},
            suffixun=0}}%
-        {{un=0,uniquepart=base,hash=34d34696f9a17be712ea53efa65a10b4}{%
+        {{un=0,uniquepart=base,hash=8158cbd58033d4c566c5f0ee65335e61}{%
            family={Noriega},
            familyi={N\bibinitperiod},
-           given={Teresita},
-           giveni={T\bibinitperiod},
+           given={Sánchez},
+           giveni={S\bibinitperiod},
            givenun=0,
-           suffix={Sánchez},
-           suffixi={S\bibinitperiod},
+           suffix={Teresita},
+           suffixi={T\bibinitperiod},
            suffixun=0}}%
-        {{un=0,uniquepart=base,hash=d822986157b398abf8155280095e084b}{%
+        {{un=0,uniquepart=base,hash=1fd74ea113b4e1f607fb6d0e974780fe}{%
            family={García},
            familyi={G\bibinitperiod},
-           given={Garaluz},
-           giveni={G\bibinitperiod},
+           given={Esther},
+           giveni={E\bibinitperiod},
            givenun=0,
-           suffix={Esther},
-           suffixi={E\bibinitperiod},
+           suffix={Garaluz},
+           suffixi={G\bibinitperiod},
            suffixun=0}}%
       }
-      \strng{namehash}{350c58e0026b8ca3883e63ca80a6f252}
-      \strng{fullhash}{5077efe43b5ae0a38c5445f65946769c}
-      \strng{bibnamehash}{5077efe43b5ae0a38c5445f65946769c}
-      \strng{authorbibnamehash}{5077efe43b5ae0a38c5445f65946769c}
-      \strng{authornamehash}{350c58e0026b8ca3883e63ca80a6f252}
-      \strng{authorfullhash}{5077efe43b5ae0a38c5445f65946769c}
+      \strng{namehash}{cfb08250dfa318a80f5703d0c73e8373}
+      \strng{fullhash}{c24a2beea71c265754a938e19e6e95d3}
+      \strng{bibnamehash}{c24a2beea71c265754a938e19e6e95d3}
+      \strng{authorbibnamehash}{c24a2beea71c265754a938e19e6e95d3}
+      \strng{authornamehash}{cfb08250dfa318a80f5703d0c73e8373}
+      \strng{authorfullhash}{c24a2beea71c265754a938e19e6e95d3}
       \field{sortinit}{d}
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
       \field{extradatescope}{labelyear}
@@ -410,6 +438,52 @@
       \field{volume}{1}
       \field{year}{1995}
     \endentry
+    \entry{Hasan2016}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=16279e6c3492feb118c5fb40af34b3a8}{%
+           family={Hasan},
+           familyi={H\bibinitperiod},
+           given={S},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1e1827fc2db6db7f81774eea0e6471b9}{%
+           family={Jamdar},
+           familyi={J\bibinitperiod},
+           given={SF},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=067d60b4e0ceb662c48f3a422e0a99b3}{%
+           family={Alalowi},
+           familyi={A\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=087eace165255fcbe36d36b259dd4dcc}{%
+           family={Al\bibnamedelima Ageel},
+           familyi={A\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={Al\bibnamedelima Beaiji},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c88befa2036e4c25b467c034db8d5adc}
+      \strng{fullhash}{659c10f2a1bbf1ce15269b3448b8413a}
+      \strng{bibnamehash}{659c10f2a1bbf1ce15269b3448b8413a}
+      \strng{authorbibnamehash}{659c10f2a1bbf1ce15269b3448b8413a}
+      \strng{authornamehash}{c88befa2036e4c25b467c034db8d5adc}
+      \strng{authorfullhash}{659c10f2a1bbf1ce15269b3448b8413a}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{J Int Soc Prev Community Dent.}
+      \field{number}{1}
+      \field{title}{Dengue virus: A global human threat: Review of literature.}
+      \field{volume}{6}
+      \field{year}{2016}
+    \endentry
     \entry{Jennings2000}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=1fb1b859fa7fe89eeae563907c07b4e4}{%
@@ -533,6 +607,55 @@
       \field{title}{Tutorial on agent-based modelling and simulation}
       \field{volume}{151–162}
       \field{year}{2010}
+    \endentry
+    \entry{Massón2015}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=6d8725947702abba5c8eb7368b9b7b04}{%
+           family={Massón},
+           familyi={M\bibinitperiod},
+           given={López},
+           giveni={L\bibinitperiod},
+           givenun=0,
+           suffix={Ana\bibnamedelimb del\bibnamedelima Carmen},
+           suffixi={A\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim C\bibinitperiod},
+           suffixun=0}}%
+        {{un=0,uniquepart=base,hash=1087290a9ae89ed9bf9f37d6a5e170ee}{%
+           family={González},
+           familyi={G\bibinitperiod},
+           given={Valladares},
+           giveni={V\bibinitperiod},
+           givenun=0,
+           suffix={Gustavo\bibnamedelima Jorge},
+           suffixi={G\bibinitperiod\bibinitdelim J\bibinitperiod},
+           suffixun=0}}%
+        {{un=0,uniquepart=base,hash=90ee5558c6fb378b8ab3ef31f6b20abb}{%
+           family={Espinosa},
+           familyi={E\bibinitperiod},
+           given={Álvarez},
+           giveni={Á\bibinitperiod},
+           givenun=0,
+           suffix={René\bibnamedelima Faustino},
+           suffixi={R\bibinitperiod\bibinitdelim F\bibinitperiod},
+           suffixun=0}}%
+      }
+      \strng{namehash}{9a6a07c3b026492f5588310d67f280aa}
+      \strng{fullhash}{1ffb510952fce544c79c68da3244a634}
+      \strng{bibnamehash}{1ffb510952fce544c79c68da3244a634}
+      \strng{authorbibnamehash}{1ffb510952fce544c79c68da3244a634}
+      \strng{authornamehash}{9a6a07c3b026492f5588310d67f280aa}
+      \strng{authorfullhash}{1ffb510952fce544c79c68da3244a634}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Revista Cubana de Medicina General Integral}
+      \field{number}{1}
+      \field{title}{Comportamiento clínico y epidemiológico del Dengue en el municipio 10 de Octubre}
+      \field{volume}{31}
+      \field{year}{2015}
     \endentry
     \entry{Morens2004}{article}{}
       \name{author}{3}{}{%
@@ -975,6 +1098,34 @@
     \endentry
   \enddatalist
   \datalist[entry]{apa/global//global/global}
+    \entry{Aguilar2010}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8fdd89e392bd352ad03ebb786c6e86e3}{%
+           family={Aguilar},
+           familyi={A\bibinitperiod},
+           given={Jose},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8fdd89e392bd352ad03ebb786c6e86e3}
+      \strng{fullhash}{8fdd89e392bd352ad03ebb786c6e86e3}
+      \strng{bibnamehash}{8fdd89e392bd352ad03ebb786c6e86e3}
+      \strng{authorbibnamehash}{8fdd89e392bd352ad03ebb786c6e86e3}
+      \strng{authornamehash}{8fdd89e392bd352ad03ebb786c6e86e3}
+      \strng{authorfullhash}{8fdd89e392bd352ad03ebb786c6e86e3}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Studies in Fuzziness and Soft Computing}
+      \field{title}{Dynamic Fuzzy Cognitive Maps for the Supervision of Multiagent Systems}
+      \field{volume}{247}
+      \field{year}{2010}
+      \true{nocite}
+    \endentry
     \entry{Bagni2002}{article}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=c63e6f8824ab16b72b57cc5ad85629d8}{%
@@ -1145,60 +1296,60 @@
     \endentry
     \entry{Arazoza2010}{article}{}
       \name{author}{5}{}{%
-        {{un=0,uniquepart=base,hash=4e88d1316ac72c8f9c2121b678c21a90}{%
+        {{un=0,uniquepart=base,hash=19ffb37a5583b6c19b8ea01cb32c86bd}{%
            family={Arazoza},
            familyi={A\bibinitperiod},
-           given={Héctor},
-           giveni={H\bibinitperiod},
+           given={Rodríguez},
+           giveni={R\bibinitperiod},
            givenun=0,
            prefix={de},
            prefixi={d\bibinitperiod},
-           suffix={Rodríguez},
-           suffixi={R\bibinitperiod},
+           suffix={Héctor},
+           suffixi={H\bibinitperiod},
            suffixun=0}}%
-        {{un=0,uniquepart=base,hash=fae8fa2484c745d1b51d7ca1ae5b96f0}{%
+        {{un=0,uniquepart=base,hash=404f1bf9455dc32b86de95f98de9c3a6}{%
            family={Sánchez},
            familyi={S\bibinitperiod},
-           given={Andrés},
-           giveni={A\bibinitperiod},
+           given={Pérez},
+           giveni={P\bibinitperiod},
            givenun=0,
-           suffix={Pérez},
-           suffixi={P\bibinitperiod},
+           suffix={Andrés},
+           suffixi={A\bibinitperiod},
            suffixun=0}}%
-        {{un=0,uniquepart=base,hash=69842557a02a8871706fd2fe9ff9e054}{%
+        {{un=0,uniquepart=base,hash=073909b6d50a28fc5f820142d98e4dad}{%
            family={Marrero},
            familyi={M\bibinitperiod},
-           given={Aymée},
-           giveni={A\bibinitperiod},
+           given={Severo},
+           giveni={S\bibinitperiod},
            givenun=0,
-           suffix={Severo},
-           suffixi={S\bibinitperiod},
+           suffix={Aymée\bibnamedelimb de\bibnamedelimb los\bibnamedelima Ángeles},
+           suffixi={A\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim l\bibinitperiod\bibinitdelim Á\bibinitperiod},
            suffixun=0}}%
-        {{un=0,uniquepart=base,hash=34d34696f9a17be712ea53efa65a10b4}{%
+        {{un=0,uniquepart=base,hash=8158cbd58033d4c566c5f0ee65335e61}{%
            family={Noriega},
            familyi={N\bibinitperiod},
-           given={Teresita},
-           giveni={T\bibinitperiod},
+           given={Sánchez},
+           giveni={S\bibinitperiod},
            givenun=0,
-           suffix={Sánchez},
-           suffixi={S\bibinitperiod},
+           suffix={Teresita},
+           suffixi={T\bibinitperiod},
            suffixun=0}}%
-        {{un=0,uniquepart=base,hash=d822986157b398abf8155280095e084b}{%
+        {{un=0,uniquepart=base,hash=1fd74ea113b4e1f607fb6d0e974780fe}{%
            family={García},
            familyi={G\bibinitperiod},
-           given={Garaluz},
-           giveni={G\bibinitperiod},
+           given={Esther},
+           giveni={E\bibinitperiod},
            givenun=0,
-           suffix={Esther},
-           suffixi={E\bibinitperiod},
+           suffix={Garaluz},
+           suffixi={G\bibinitperiod},
            suffixun=0}}%
       }
-      \strng{namehash}{350c58e0026b8ca3883e63ca80a6f252}
-      \strng{fullhash}{5077efe43b5ae0a38c5445f65946769c}
-      \strng{bibnamehash}{5077efe43b5ae0a38c5445f65946769c}
-      \strng{authorbibnamehash}{5077efe43b5ae0a38c5445f65946769c}
-      \strng{authornamehash}{350c58e0026b8ca3883e63ca80a6f252}
-      \strng{authorfullhash}{5077efe43b5ae0a38c5445f65946769c}
+      \strng{namehash}{cfb08250dfa318a80f5703d0c73e8373}
+      \strng{fullhash}{c24a2beea71c265754a938e19e6e95d3}
+      \strng{bibnamehash}{c24a2beea71c265754a938e19e6e95d3}
+      \strng{authorbibnamehash}{c24a2beea71c265754a938e19e6e95d3}
+      \strng{authornamehash}{cfb08250dfa318a80f5703d0c73e8373}
+      \strng{authorfullhash}{c24a2beea71c265754a938e19e6e95d3}
       \field{sortinit}{d}
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
       \field{extradatescope}{labelyear}
@@ -1366,6 +1517,52 @@
       \field{volume}{1}
       \field{year}{1995}
     \endentry
+    \entry{Hasan2016}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=16279e6c3492feb118c5fb40af34b3a8}{%
+           family={Hasan},
+           familyi={H\bibinitperiod},
+           given={S},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1e1827fc2db6db7f81774eea0e6471b9}{%
+           family={Jamdar},
+           familyi={J\bibinitperiod},
+           given={SF},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=067d60b4e0ceb662c48f3a422e0a99b3}{%
+           family={Alalowi},
+           familyi={A\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=087eace165255fcbe36d36b259dd4dcc}{%
+           family={Al\bibnamedelima Ageel},
+           familyi={A\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={Al\bibnamedelima Beaiji},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c88befa2036e4c25b467c034db8d5adc}
+      \strng{fullhash}{659c10f2a1bbf1ce15269b3448b8413a}
+      \strng{bibnamehash}{659c10f2a1bbf1ce15269b3448b8413a}
+      \strng{authorbibnamehash}{659c10f2a1bbf1ce15269b3448b8413a}
+      \strng{authornamehash}{c88befa2036e4c25b467c034db8d5adc}
+      \strng{authorfullhash}{659c10f2a1bbf1ce15269b3448b8413a}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{J Int Soc Prev Community Dent.}
+      \field{number}{1}
+      \field{title}{Dengue virus: A global human threat: Review of literature.}
+      \field{volume}{6}
+      \field{year}{2016}
+    \endentry
     \entry{Jennings2000}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=1fb1b859fa7fe89eeae563907c07b4e4}{%
@@ -1489,6 +1686,55 @@
       \field{title}{Tutorial on agent-based modelling and simulation}
       \field{volume}{151–162}
       \field{year}{2010}
+    \endentry
+    \entry{Massón2015}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=6d8725947702abba5c8eb7368b9b7b04}{%
+           family={Massón},
+           familyi={M\bibinitperiod},
+           given={López},
+           giveni={L\bibinitperiod},
+           givenun=0,
+           suffix={Ana\bibnamedelimb del\bibnamedelima Carmen},
+           suffixi={A\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim C\bibinitperiod},
+           suffixun=0}}%
+        {{un=0,uniquepart=base,hash=1087290a9ae89ed9bf9f37d6a5e170ee}{%
+           family={González},
+           familyi={G\bibinitperiod},
+           given={Valladares},
+           giveni={V\bibinitperiod},
+           givenun=0,
+           suffix={Gustavo\bibnamedelima Jorge},
+           suffixi={G\bibinitperiod\bibinitdelim J\bibinitperiod},
+           suffixun=0}}%
+        {{un=0,uniquepart=base,hash=90ee5558c6fb378b8ab3ef31f6b20abb}{%
+           family={Espinosa},
+           familyi={E\bibinitperiod},
+           given={Álvarez},
+           giveni={Á\bibinitperiod},
+           givenun=0,
+           suffix={René\bibnamedelima Faustino},
+           suffixi={R\bibinitperiod\bibinitdelim F\bibinitperiod},
+           suffixun=0}}%
+      }
+      \strng{namehash}{9a6a07c3b026492f5588310d67f280aa}
+      \strng{fullhash}{1ffb510952fce544c79c68da3244a634}
+      \strng{bibnamehash}{1ffb510952fce544c79c68da3244a634}
+      \strng{authorbibnamehash}{1ffb510952fce544c79c68da3244a634}
+      \strng{authornamehash}{9a6a07c3b026492f5588310d67f280aa}
+      \strng{authorfullhash}{1ffb510952fce544c79c68da3244a634}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Revista Cubana de Medicina General Integral}
+      \field{number}{1}
+      \field{title}{Comportamiento clínico y epidemiológico del Dengue en el municipio 10 de Octubre}
+      \field{volume}{31}
+      \field{year}{2015}
     \endentry
     \entry{Morens2004}{article}{}
       \name{author}{3}{}{%

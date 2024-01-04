@@ -1,19 +1,20 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'Thesis.blg'
-[94] biber-MSWIN64:340> INFO - === 
-[129] Biber.pm:419> INFO - Reading 'Thesis.bcf'
-[235] Biber.pm:979> INFO - Found 26 citekeys in bib section 0
-[254] Biber.pm:4419> INFO - Processing section 0
-[265] Biber.pm:4610> INFO - Looking for bibtex file 'Bibliography.bib' for section 0
-[306] bibtex.pm:1713> INFO - LaTeX decoding ...
-[333] bibtex.pm:1519> INFO - Found BibTeX data source 'Bibliography.bib'
-[467] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[467] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[467] Biber.pm:4239> INFO - Sorting list 'apa/apasortcite//global/global' of type 'entry' with template 'apa' and locale 'es-ES'
-[513] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[513] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[513] Biber.pm:4239> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'es-ES'
-[536] bbl.pm:660> INFO - Writing 'Thesis.bbl' with encoding 'UTF-8'
-[561] bbl.pm:763> INFO - Output to Thesis.bbl
-[562] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\tesla\AppData\Local\Temp\biber_tmp_iI8Q\d8dddbe32000187f5d36edf5881fa0cc_24484.utf8, line 242, warning: 172 characters of junk seen at toplevel
-[562] Biber.pm:133> INFO - WARNINGS: 1
+[175] biber-MSWIN64:340> INFO - === 
+[255] Biber.pm:419> INFO - Reading 'Thesis.bcf'
+[367] Biber.pm:979> INFO - Found 29 citekeys in bib section 0
+[392] Biber.pm:4419> INFO - Processing section 0
+[414] Biber.pm:4610> INFO - Looking for bibtex file 'Bibliography.bib' for section 0
+[470] bibtex.pm:1713> INFO - LaTeX decoding ...
+[501] bibtex.pm:1519> INFO - Found BibTeX data source 'Bibliography.bib'
+[761] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[762] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[762] Biber.pm:4239> INFO - Sorting list 'apa/apasortcite//global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[818] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[818] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[818] Biber.pm:4239> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[847] bbl.pm:660> INFO - Writing 'Thesis.bbl' with encoding 'UTF-8'
+[887] bbl.pm:763> INFO - Output to Thesis.bbl
+[887] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\tesla\AppData\Local\Temp\biber_tmp_0uSA\d8dddbe32000187f5d36edf5881fa0cc_10304.utf8, line 242, warning: 172 characters of junk seen at toplevel
+[887] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\tesla\AppData\Local\Temp\biber_tmp_0uSA\d8dddbe32000187f5d36edf5881fa0cc_10304.utf8, line 254, warning: 113 characters of junk seen at toplevel
+[887] Biber.pm:133> INFO - WARNINGS: 2

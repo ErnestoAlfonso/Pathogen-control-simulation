@@ -135,7 +135,7 @@ no ordenados de aristas.
     \end{enumerate}
 \end{center}
 
-En nuestro proyecto se construye un grafo que representa la relación $\textbf{ser familia}$ y la relación \textbf{ser conocidos}, brindando
+En nuestro proyecto se construye un grafo que representa la relación \textbf{ser familia} y la relación \textbf{ser conocidos}, brindando
 la posibilidad de escoger la probabilidad con la que se genere una arista entre dos nodos y la cantidad de nodos a crear. 
 En este, un nodo $v_{i}$ representa a la persona $i$ de la simulación y una arista ($v_{i}$, $v_{j}$) simboliza,
 o bien la relación $i$ $\rightarrow$ $j$ son familiares, o son conocidos, es decir no existe un tipo de arista para cada
@@ -202,8 +202,7 @@ personas tienen $outdegree$\footnote{Hace referencia a la cantidad de aristas qu
 se mantiene el término en inglés pues es lo usado en el ámbito científico} igual a 1)
 
 \subsection{Vectores}
-Los vectores son seres vivos al igual que las personas, pero a diferencia de ellas, estos poseen menos movilidad que las
-personas. Para la representación de los vectores en el modelo no se tiene en cuenta la relación que 
+Los vectores son seres vivos al igual que las personas, pero a diferencia de ellas, estos poseen menos movilidad. Para la representación de los vectores en el modelo no se tiene en cuenta la relación que 
 poseen entre ellos pues se entiende que es suficiente con las relaciones de las personas para lograr simular 
 la propagación de una enfermedad.
 
@@ -218,13 +217,13 @@ mayor sea el valor de dicho parámetro, más probable será que el mosquito se i
 
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=0.9\textwidth]{Graphics/Pers_Loc_Vec.png}
+    \includegraphics[width=0.9\textwidth]{Graphics/Modelo.png}
     \caption{Esquema que representa el entorno modelado.}
 \end{figure}
 En la figura 2.5 se observa como se encuentra modelado el entorno de la simulación. Existen unos agentes que son las
 personas y los vectores, los cuales poseen ciertas características y estos interactúan con las localizaciones para
 cumplir sus propósitos; el de las personas trabajar y socializar y el de los vectores alimentarse, logrando así
-acercarnos a un modelo que representa de forma precisa cómo se propaga un efermedad transmitida por vectores.
+acercarnos a un modelo que representa de forma precisa cómo se propaga un enfermedad transmitida por vectores.
 
 \section{Interacción de los agentes con el entorno}
 Una vez diseñado el entorno y los agentes que conviven en el mismo, se abre paso al siguiente aspecto:
@@ -284,13 +283,13 @@ es híbrida, cada pequeño cambio, ya sea, en el entorno, o en el mapa cognitivo
 del $FCM$ de los agentes restantes.
 
 \section{Conceptos (Personas)}
-\subsection{Perspectiva}
+\subsection{Percepciones}
 Para la sección de los conceptos de percepción se observa que una idea útil es que, para cada concepto, se crea su contrapuesto
 como concepto, por ejemplo, si se definiese el concepto $"cercan$í$a de hospital"$, entonces sería útil definir el concepto
 $"lejan$í$a de hospital"$ pues las posibles acciones a ejecutar se beneficiarían por uno y se perjudicarían por el otro,
 añadiendo facilidad a la decisión del agente.\\
 \\
-\textbf{Conceptos definidos para la categoría Perspectiva:}
+\textbf{Conceptos definidos para la categoría Percepciones:}
 \begin{itemize}
     \item Personas enfermas alta. (1.4)
     \item Personas enfermas baja. (1.4)
@@ -306,16 +305,16 @@ añadiendo facilidad a la decisión del agente.\\
 
 Cada concepto en esta categoría, tiene un parámetro que representa cuán grande es el intervalo que se considera para darle un valor en la 
 $fuzzificaci$ó$n$ entre $(0,1)$ al concepto\footnote{el número que se encuentra entre paréntesis al lado del concepto}, en caso 
-de que sea menor o mayor a los límites del intervalo, su valor final es $0$ o $1$ respectivamente, pero, ¿por qué
+de que sea menor o mayor a los límites del intervalo, su valor final es $0$ o $1$, pero, ¿por qué
 se realiza este procedimiento?
 
-La idea de implentar de esta forma esta categoría es para $fuzzificar$ teniendo en cuenta lo que se percibe 
+La idea de implementar de esta forma esta categoría es para $fuzzificar$ teniendo en cuenta lo que se percibe 
 del entorno. El valor de este parámetro por concepto nunca cambia, entonces surge la interrogante siguiente: 
 ¿cómo modelar que la perspectiva del entorno varía? Este valor pasa por un proceso en el cual se toman variables que sí
 cambian en el entorno y se utiliza el mismo para $fuzzificar$ el valor del concepto, el cual es distinto al parámetro 
 representado en la lista anterior.
 
-El proceso de $fuzzificaci$ó$n$ es distinto para cada concepto, pero por regla general se sigue la siguiente idea:\\
+El proceso de $fuzzificaci$ó$n$ es distinto para cada concepto, pero por regla general se sigue la siguiente idea:
 \begin{enumerate}
     \item Se toma un valor del entorno del agente que tenga relación con el concepto a $fuzzificar$, llamémosle $variable$ $de$ $fuzzificaci$ó$n$.
     \item Se obtiene un intervalo de valores utilizando el parámetro del concepto, llamémosle $intervalo$ $de$ $fuzzificaci$ó$n$.
@@ -386,12 +385,17 @@ Si la $cantidad$ $de$ $personas$ $enfermas$ se encuentra por encima del máximo 
 de pertenencia de este parámetro tiene valor 1, si es inferior al mínimo es 0 y si se encuentra dentro de 
 este se le otorga un número	entre 0 y 1.\\
 
-Se define el concepto de función sigmoidal necesario para comprender el siguiente proceso utilizado.\autocite{Saeed2021}
+Se define una función sigmoide necesaria para comprender el siguiente proceso utilizado.\autocite{Saeed2021}
 \begin{center}
     Una función sigmoidal está definida por:\\
-    $\sigma(x)= \frac{1}{1+exp(-x)}$
+    $\sigma(x)= \frac{1}{1+e^(-x)}$
 \end{center}
 
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.6\textwidth]{Graphics/Sigmoidal.png}
+    \caption{Función sigmoide}
+\end{figure}
 Las aristas, al igual que los nodos, poseen pesos, pero estos no son utilizados para establecer los intervalos
 de pertenencia de los conceptos radicados en el conjunto de $sentimientos$. En cambio, se utiliza una función 
 sigmoidal para establecer el valor final del concepto que se trata, pues como no existe un parámetro del 
@@ -495,7 +499,7 @@ Es importante destacar que el uso de valores aleatorios en los procesos relacion
 simulación no implica que los resultados sean impredecibles, la idea es reflejar la 
 naturaleza probabilística de estos procesos en un entorno.
 
-Las acciones de vectores y la de los humanos son de importancia modelar, pues el comportamiento de los 
+Modelar las acciones de los vectores y humanos es importante, pues el comportamiento de los 
 agentes en caso de epidemia es vital para evitar la propagación de la misma. Sin embargo teniendo una modelación
 de las acciones no es suficiente, es necesario indagar sobre la probabilidad de transmisión de la enfermedad en 
 cuestión y la probabilidad de infección de los agentes, para cuando estos realicen sus labores diarias
@@ -522,23 +526,23 @@ período se contabilizaron $1302$ muertes con una tasa de mortalidad del $0.04\%
 
 El proceso de infección de un agente está definido por las picadas. Se expresa a continuación
 cómo se infecta una persona. Luego de transcurrir una hora de simulación
-o de llegar a una nueva localización, la persona se sometida a un proceso aleatorio para obtener la 
+o de llegar a una nueva localización, la persona es sometida a un proceso aleatorio para obtener la 
 cantidad de vectores que decidirán picarla\footnote{Cada vector tiene una probabilidad de intentar 
 picar del $50\%$}. La ocurrencia o no del hecho de picar, depende también de un valor aleatorio, el cual es 
 definido por el usuario de la aplicación en el momento de su uso, al igual que la probabilidad de infectarse
 en cada picadura.
-
-En el proyecto se presenta una escala del $0$ al $10$ que representa cuan enfermo se encuentra una persona, siendo
-$10$ la máxima y $0$ la mínima. La máxima infección que puede obtener un agente por una picada es de $5$ en esta 
-escala. El hecho de que una persona poseea una infección de $10$ no significa que esta fallezca, en cambio,
-el número de infección es multiplicado por un valor que representa la realdiad\footnote{Este valor es escogido 
-por el usuario} del proceso para obtener una probabilidad de que el agente en cuestión muera.
 
 \begin{figure}[htb]
     \centering
     \includegraphics[width=0.9\textwidth]{Graphics/Grafico_Proceso_Picada.jpg}
     \caption{Diagrama que representa el proceso de picar.}
 \end{figure}
+En el proyecto se presenta una escala del $0$ al $10$ que representa cuán enfermo se encuentra una persona, siendo
+$10$ la máxima y $0$ la mínima. La máxima infección que puede obtener un agente por una picada es de $5$ en esta 
+escala. El hecho de que una persona poseea una infección de $10$ no significa que esta fallezca, en cambio,
+el número de infección es multiplicado por un valor que representa la realidad\footnote{Este valor es escogido 
+por el usuario} del proceso para obtener una probabilidad de que el agente en cuestión muera.
+
 
 El caso de los vectores es similar. Al igual que los humanos, estos tienen la misma escala de infección con 
 idénticos parámetros e igual probabilidad de infectarse por picada. Al momento de decidir la muerte o no
@@ -550,10 +554,9 @@ posibilidad de recuperarse, ya sea mediante atención médica en un hospital o d
 de recuperación de las personas se modelan nuevamente de manera estocástica, es decir, teniendo en cuenta la 
 incertidumbre y variabilidad inherente.
 
-\newpage
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=0.8\textwidth]{Graphics/Diagrama_Recuperacion.png}
+    \includegraphics[width=0.9\textwidth]{Graphics/Diagrama_Recuperacion.png}
     \caption{Diagrama que representa el proceso de recuperación.}
 \end{figure}
 

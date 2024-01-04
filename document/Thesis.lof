@@ -1,16 +1,26 @@
 \babel@toc {spanish}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Ejemplo de un FCM}}{9}{figure.caption.9}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Ejemplo de un FCM}}{9}{figure.caption.8}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Algunas enfermedades transmitidas por vectores.\blx@tocontentsinit {0}\autocite {Tercero2008}}}{12}{figure.caption.10}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Ejemplo de grafo de relaciones personales generados por el modelo. Personas: 300, probabilidad de arista: 0.05}}{16}{figure.caption.11}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Ejemplo de grafo de relaciones personales para ilustrar.}}{17}{figure.caption.12}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Ejemplo de grafo que representa a la red de contactos sociales.}}{17}{figure.caption.13}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Esquema que representa el entorno modelado.}}{18}{figure.caption.14}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Grafo que representa las relaciones entre los nodos de $percepci$ó$n$ y $sentimientos$ del $FCM$ inicial de cada persona}}{23}{figure.caption.15}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Matriz de adyacencia del grafo de la figura 2.6 con los pesos de las aristas.}}{24}{figure.caption.16}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Grafo que representa las relaciones entre los nodos de $sentimientos$ y $acciones$ del $FCM$ inicial de cada persona}}{25}{figure.caption.17}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Matriz de adyacencia del grafo de la figura 2.8 con los pesos de las aristas.}}{25}{figure.caption.18}%
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Diagrama que representa el proceso de picar.}}{28}{figure.caption.19}%
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Diagrama que representa el proceso de recuperación.}}{29}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Algunas enfermedades transmitidas por vectores.\blx@tocontentsinit {0}\autocite {Tercero2008}}}{12}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Ejemplo de grafo de relaciones personales generados por el modelo. Personas: 300, probabilidad de arista: 0.05}}{16}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Ejemplo de grafo de relaciones personales para ilustrar.}}{17}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Ejemplo de grafo que representa a la red de contactos sociales.}}{17}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Esquema que representa el entorno modelado.}}{18}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Grafo que representa las relaciones entre los nodos de $percepci$ó$n$ y $sentimientos$ del $FCM$ inicial de cada persona}}{23}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Función sigmoide}}{24}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Matriz de adyacencia del grafo de la figura 2.6 con los pesos de las aristas.}}{24}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Grafo que representa las relaciones entre los nodos de $sentimientos$ y $acciones$ del $FCM$ inicial de cada persona}}{25}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Matriz de adyacencia del grafo de la figura 2.8 con los pesos de las aristas.}}{26}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Diagrama que representa el proceso de picar.}}{28}{figure.caption.19}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Diagrama que representa el proceso de recuperación.}}{29}{figure.caption.20}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Valores de los Conceptos de Acciones para nueve iteraciones de una persona}}{33}{figure.caption.21}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Gráfica de la simulación}}{35}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Cantidad de personas que visitaron $x$ localizaciones}}{35}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Cantidad de personas con $k$ contactos}}{36}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Datos y estimaciones de humanos infectados del modelo (1000)}}{36}{figure.caption.24}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Datos y estimaciones de humanos infectados \blx@tocontentsinit {0}\autocite {Arazoza2010}}}{36}{figure.caption.24}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Datos y estimaciones de humanos infectados del modelo para 43000 personas}}{38}{figure.caption.25}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Cantidad de personas que visitaron $x$ localizaciones (43000)}}{38}{figure.caption.25}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Cantidad de personas que visitaron $x$ localizaciones (43000)}}{38}{figure.caption.26}%
