@@ -4,7 +4,7 @@ import time
 from graph_world.Graphs_m import Graph_m, Bipartite_Graph
 
 class Simulation:
-    def __init__(self, amount_nodes, dur_hour, market_cost, prob_of_edges, amount_mosq_per_place, prob_mosq_bite_ap, prob_inf_if_mosq_bite, prob_die_h, action_per_day):
+    def __init__(self, amount_nodes, dur_hour, market_cost, prob_of_edges, amount_mosq_per_place, prob_mosq_bite_ap, prob_inf_if_mosq_bite, prob_die_h, action_per_day,amount_work, amount_hosp, amount_market):
         self.amount_nodes = amount_nodes
         self.dur_hour = dur_hour * 24
         self.market_cost = market_cost
@@ -15,6 +15,9 @@ class Simulation:
         self.prob_inf_if_mosq_bite = prob_inf_if_mosq_bite
         self.amount_mosq_per_place = amount_mosq_per_place
         self.action_per_day = action_per_day
+        self.amount_work = amount_work
+        self.amount_hosp = amount_hosp
+        self.amount_market = amount_market
 
 
     def run_simulation(self):
@@ -29,7 +32,7 @@ class Simulation:
         # Definir la hora de inicio de la simulación
         hora_actual = datetime.datetime(2023, 10, 22, 8, 0)  # Por ejemplo, 22 de septiembre de 2023 a las 8:00 a.m.
 
-        self.graph = Graph_m(self.amount_nodes,self.prob_of_edges, self.market_cost, self.amount_mosq_per_place, self.prob_mosq_bite_ap, self.prob_inf_if_mosq_bite, self.prob_die_h)
+        self.graph = Graph_m(self.amount_nodes,self.prob_of_edges, self.market_cost, self.amount_mosq_per_place, self.prob_mosq_bite_ap, self.prob_inf_if_mosq_bite, self.prob_die_h,self.amount_work, self.amount_hosp, self.amount_market)
         print("Termine de generar el grafo")
         self.dictOfHours = {}
         pers = []
@@ -77,7 +80,7 @@ class Simulation:
             # Actualizar la hora actual
 
             end = time.time()
-            print(f"{hora_actual} demoro {end - start}", end=" ")
+            # print(f"{hora_actual} demoro {end - start}", end=" ")
             hora_actual += paso_de_tiempo
 
             # if hora_actual.hour == 0 and hora_actual.minute == 0:

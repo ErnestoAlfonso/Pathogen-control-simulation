@@ -10,7 +10,7 @@ import igraph as ig
 Node = TypeVar("Node")
 
 class Graph_m():
-    def __init__(self, amount_nodes, prob_of_edges, market_cost, amount_mosq_per_places, prob_mosq_bite_ap, prob_inf_if_mosq_bite, prob_die_h):
+    def __init__(self, amount_nodes, prob_of_edges, market_cost, amount_mosq_per_places, prob_mosq_bite_ap, prob_inf_if_mosq_bite, prob_die_h, amount_work, amount_hosp, amount_market):
         self.reset()
         self.amount_nodes = amount_nodes
         self.prob_of_edges = prob_of_edges
@@ -19,6 +19,9 @@ class Graph_m():
         self.prob_mosq_bite_ap = prob_mosq_bite_ap
         self.prob_inf_if_mosq_bite = prob_inf_if_mosq_bite
         self.amount_mosq_per_places = amount_mosq_per_places
+        self.amount_work = amount_work
+        self.amount_hosp = amount_hosp
+        self.amount_market = amount_market
         self.graph = ig.Graph.GRG(self.amount_nodes, prob_of_edges)
         
         self.add_prop_person()
@@ -135,91 +138,35 @@ class Bipartite_Graph(Graph_m):
             i+=1
         # TODO: Find a the best relation between people and places
         #region Hospital
-        node = Hospital("Hospital" + str(i), self.graph.amount_mosq_per_places)
-        self.nodes_L[i] = node
-        for item in range(self.nodes_L[i].amount_mosq):
-            mos = mosquitos(item, self.graph.prob_mosq_bite_ap)
-            self.nodes_L[i].mosquitos.append(mos)
-            
-        i += 1
-
-        node = Hospital("Hospital" + str(i), self.graph.amount_mosq_per_places)
-        self.nodes_L[i] = node
-        for item in range(self.nodes_L[i].amount_mosq):
-            mos = mosquitos(item, self.graph.prob_mosq_bite_ap)
-            self.nodes_L[i].mosquitos.append(mos)
-            
-        i += 1
-
-        node = Hospital("Hospital" + str(i), self.graph.amount_mosq_per_places)
-        self.nodes_L[i] = node
-        for item in range(self.nodes_L[i].amount_mosq):
-            mos = mosquitos(item, self.graph.prob_mosq_bite_ap)
-            self.nodes_L[i].mosquitos.append(mos)
-            
-        i += 1
+        for x in range(self.graph.amount_hosp):
+            node = Hospital("Hospital" + str(i), self.graph.amount_mosq_per_places)
+            self.nodes_L[i] = node
+            for item in range(self.nodes_L[i].amount_mosq):
+                mos = mosquitos(item, self.graph.prob_mosq_bite_ap)
+                self.nodes_L[i].mosquitos.append(mos)
+                
+            i += 1
         #endregion
         #region Work
-        node = Work("Work" + str(i), self.graph.amount_mosq_per_places)
-        self.nodes_L[i] = node
-        for item in range(self.nodes_L[i].amount_mosq):
-            mos = mosquitos(item, self.graph.prob_mosq_bite_ap)
-            self.nodes_L[i].mosquitos.append(mos)
-            if item == 0:
-                self.nodes_L[i].mosquitos[item].infected = True
-        i += 1
-
-        node = Work("Work" + str(i), self.graph.amount_mosq_per_places)
-        self.nodes_L[i] = node
-        for item in range(self.nodes_L[i].amount_mosq):
-            mos = mosquitos(item, self.graph.prob_mosq_bite_ap)
-            self.nodes_L[i].mosquitos.append(mos)
-            # if item == 0:
-            #     self.nodes_L[i].mosquitos[item].infected = True
-        i += 1
-
-        node = Work("Work" + str(i), self.graph.amount_mosq_per_places)
-        self.nodes_L[i] = node
-        for item in range(self.nodes_L[i].amount_mosq):
-            mos = mosquitos(item, self.graph.prob_mosq_bite_ap)
-            self.nodes_L[i].mosquitos.append(mos)
-            # if item == 0:
-            #     self.nodes_L[i].mosquitos[item].infected = True
-        i += 1
-
-        node = Work("Work" + str(i), self.graph.amount_mosq_per_places)
-        self.nodes_L[i] = node
-        for item in range(self.nodes_L[i].amount_mosq):
-            mos = mosquitos(item, self.graph.prob_mosq_bite_ap)
-            self.nodes_L[i].mosquitos.append(mos)
-            # if item == 0:
-            #     self.nodes_L[i].mosquitos[item].infected = True
-        i += 1
+        for x in range(self.graph.amount_work):
+            node = Work("Work" + str(i), self.graph.amount_mosq_per_places)
+            self.nodes_L[i] = node
+            for item in range(self.nodes_L[i].amount_mosq):
+                mos = mosquitos(item, self.graph.prob_mosq_bite_ap)
+                self.nodes_L[i].mosquitos.append(mos)
+                if item == 0:
+                    self.nodes_L[i].mosquitos[item].infected = True
+            i += 1
         #endregion
         
         #region Market
-        node = Market("Market" + str(i), self.graph.amount_mosq_per_places)
-        self.nodes_L[i] = node
-        for item in range(self.nodes_L[i].amount_mosq):
-            mos = mosquitos(item, self.graph.prob_mosq_bite_ap)
-            self.nodes_L[i].mosquitos.append(mos)
-        
-        i += 1
-        node = Market("Market" + str(i), self.graph.amount_mosq_per_places)
-        self.nodes_L[i] = node
-        for item in range(self.nodes_L[i].amount_mosq):
-            mos = mosquitos(item, self.graph.prob_mosq_bite_ap)
-            self.nodes_L[i].mosquitos.append(mos)
-
-        i += 1
-
-        node = Market("Market" + str(i), self.graph.amount_mosq_per_places)
-        self.nodes_L[i] = node
-        for item in range(self.nodes_L[i].amount_mosq):
-            mos = mosquitos(item, self.graph.prob_mosq_bite_ap)
-            self.nodes_L[i].mosquitos.append(mos)
-
-        i += 1
+        for x in range(self.graph.amount_market):
+            node = Market("Market" + str(i), self.graph.amount_mosq_per_places)
+            self.nodes_L[i] = node
+            for item in range(self.nodes_L[i].amount_mosq):
+                mos = mosquitos(item, self.graph.prob_mosq_bite_ap)
+                self.nodes_L[i].mosquitos.append(mos)
+            i += 1
 
         #endregion
 # Done

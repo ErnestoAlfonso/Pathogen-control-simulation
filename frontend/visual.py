@@ -24,8 +24,8 @@ class App(CTk):
         self.graf = False
 
         
-        label = CTkLabel(self, font=('sans rerif', 32), text="Bienvenido", fg_color=c_black, bg_color=c_black)
-        label.grid(row=0, sticky = 'new', columnspan = 5)
+        # label = CTkLabel(self, font=('sans rerif', 32), text="Bienvenido", fg_color=c_black, bg_color=c_black)
+        # label.grid(row=0, sticky = 'new', columnspan = 5)
 
         self.fram_option = CTkFrame(self, fg_color= c_black, bg_color=c_black, border_color= c_black)
         self.fram_option.grid(column = 0, row = 1, sticky = 'ns', padx = 100, pady = 100)
@@ -34,14 +34,14 @@ class App(CTk):
         self.frame_graph.grid(column = 1, row = 1, sticky = 'nsew', padx = 50, pady = 50, columnspan = 3, rowspan = 3)
 
         self.frame_plot = CTkFrame(self,fg_color= c_black, bg_color=c_black, border_color= c_black)
-        self.frame_plot.grid(column = 0, row = 3, sticky = 'nsew', padx = 50, pady = 50, columnspan =1)
+        self.frame_plot.grid(column = 0, row = 3, sticky = 'nsew', padx = 20, pady = 20, columnspan =1)
 
         self.frame_legend = CTkFrame(self,fg_color = c_black, bg_color = c_black, border_color = c_black)
-        self.frame_legend.grid(column = 1, row = 3, sticky = 'nsew', padx = 50, pady = 50, columnspan = 3)
+        self.frame_legend.grid(column = 1, row = 3, sticky = 'nsew', padx = 40, pady = 40, columnspan = 3)
 
 
         self.fram_option.columnconfigure(0, weight = 1)
-        self.fram_option.rowconfigure((0,1,2,3,4,5,6,7,8,9), weight = 1)
+        self.fram_option.rowconfigure((0,1,2,3,4,5,6,7,8,9,10,11,12), weight = 1)
 
         self.frame_legend.columnconfigure((0,1,2,3,4,5,6,7,8,9), weight = 1, pad=0)
         self.frame_legend.rowconfigure((0,1), weight = 1)
@@ -96,19 +96,34 @@ class App(CTk):
         
         self.action_per_day.grid(columnspan = 2, row = 7, padx = 1, pady = 1)
 
+        self.amount_hosp = CTkEntry(self.fram_option, font = ('sans rerif', 12), placeholder_text = "Cantidad Hospitales",
+                        border_color = c_green, fg_color = c_black, width = 220, height = 40)
+        
+        self.amount_hosp.grid(columnspan = 2, row = 8, padx = 1, pady = 1)
+
+        self.amount_work = CTkEntry(self.fram_option, font = ('sans rerif', 12), placeholder_text = "Cantidad Trabajos",
+                        border_color = c_green, fg_color = c_black, width = 220, height = 40)
+        
+        self.amount_work.grid(columnspan = 2, row = 9, padx = 1, pady = 1)
+
+        self.amount_market = CTkEntry(self.fram_option, font = ('sans rerif', 12), placeholder_text = "Cantidad Mercados",
+                        border_color = c_green, fg_color = c_black, width = 220, height = 40)
+        
+        self.amount_market.grid(columnspan = 2, row = 10, padx = 1, pady = 1)
+
         self.run_sim = CTkButton(self.fram_option, font = ('sans rerif',12),corner_radius=12, border_color = c_green, 
                             fg_color=c_black, text= "Simular", text_color = c_green, width=220, height=40,
                             border_width=2, command = self.run_sim_callback)
 
 
-        self.run_sim.grid(columnspan=2, row = 8, padx = 1, pady = 1)
+        self.run_sim.grid(columnspan=2, row = 11, padx = 1, pady = 1)
 
         self.clean_graph = CTkButton(self.fram_option, font = ('sans rerif',12),corner_radius=12, border_color = c_green, 
                             fg_color=c_black, text= "Limpiar el grafo", text_color = c_green, width=220, height=40,
                             border_width=2, command = self.destroy_canvas)
 
 
-        self.clean_graph.grid(columnspan=2, row = 9, padx = 1, pady = 1)
+        self.clean_graph.grid(columnspan=2, row = 12, padx = 1, pady = 1)
 
         self.plot_sim = CTkButton(self.frame_plot, font = ('sans rerif',12),corner_radius=12, border_color = c_green, 
                             fg_color=c_black, text= "Graficar simulación", text_color = c_green, width=220, height=40,
@@ -195,8 +210,11 @@ class App(CTk):
             prob_inf = float(self.mosq_inf_if_bite.get())
             prob_die_h = float(self.prob_die_h.get())
             self.actions_per_day = int(self.action_per_day.get())
+            amount_hosp = int(self.amount_hosp.get())
+            amount_work = int(self.amount_work.get())
+            amount_market = int(self.amount_market.get())
         
-            self.sim = Simulation(people,time,240,prob_of_edges,mosquitos, prob_bite, prob_inf, prob_die_h, self.actions_per_day)
+            self.sim = Simulation(people,time,240,prob_of_edges,mosquitos, prob_bite, prob_inf, prob_die_h, self.actions_per_day, amount_work, amount_hosp, amount_market)
 
             self.sim.run_simulation()
             self.graph = self.sim.graph.graph
@@ -238,12 +256,15 @@ class App(CTk):
         # ventana_grafico = CTk()
         contact = []
         pers_hour = self.sim.dictOfHours
+        i_p = 0
         infected_people = [0 for x in range(int(len(pers_hour)/self.actions_per_day) + 1)]
         healthy_people = [0 for x in range(int(len(pers_hour)/self.actions_per_day) + 1)]
         dead_people = [0 for x in range(int(len(pers_hour)/self.actions_per_day) + 1)]
         pers_counted_i = []
         pers_counted_h = []
         pers_counted_d = []
+        total_infected = 0
+        total_dead = 0
         count = -1
         indice = 0
         for lista in pers_hour.values():
@@ -255,15 +276,28 @@ class App(CTk):
                 pers_counted_h.clear()
                 pers_counted_d.clear()
             for i in range(len(lista)):
-                if lista[i][1] and lista[i][0] not in pers_counted_i:
+                if lista[i][1] == "Muerta":
+                    pers_counted_d.append(lista[i][0])
+                    dead_people[indice] += 1
+                    total_dead += 1
+                elif lista[i][1] and lista[i][0] not in pers_counted_i:
                     pers_counted_i.append(lista[i][0])
                     infected_people[indice] += 1
                 elif not lista[i][1] and lista[i][0] not in pers_counted_h:
                     pers_counted_h.append(lista[i][0])
                     healthy_people[indice] += 1
+        
+        pers_counted_i.clear()
+        pers_counted_d.clear()
+
+        for lista in pers_hour.values():
+            for i in range(len(lista)):
+                if lista[i][1] and lista[i][0] not in pers_counted_i:
+                    pers_counted_i.append(lista[i][0])
+                    i_p += 1
                 elif lista[i][1] == "Muerta":
-                    pers_counted_d.append(lista[i][0])
-                    dead_people[indice] += 1
+                    i_p += 1
+        print(f"personas infectadas {i_p}")
 
         for item in self.sim.graph.graph.vs:
             contact.append(len(self.sim.graph.graph.neighbors(item)))
@@ -277,6 +311,9 @@ class App(CTk):
                 
         if pos is not None:
             contact_per_person_count = contact_per_person_count[:pos+1]
+        
+        d_i = [total_dead, i_p]
+        bar_d_i = ["Fallecidos", "Infectados"]
 
         plt.clf()
 
@@ -302,6 +339,9 @@ class App(CTk):
         ax1[1,0].scatter([x for x in range(len(contact_per_person_count))], contact_per_person_count)
         ax1[1,0].set_ylabel('No. de personas con k contactos')
         ax1[1,0].set_xlabel('No. de contactos')
+
+        ax1[1,1].bar(bar_d_i, d_i)
+        ax1[1,1].set_ylabel('No. de infectados y fallecidos')
 
         print(f'Person hour values {len(pers_hour)}')
         print(f'Infected people {infected_people} len de la lista {len(infected_people)}' )
